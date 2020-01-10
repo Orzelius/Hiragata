@@ -1,0 +1,7238 @@
+{
+  "katakana": [
+    {
+      "katakana": "アパート",
+      "english": "apartment",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "エレベーター",
+      "english": "elevator",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "カップ",
+      "english": "cup",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "カメラ",
+      "english": "camera",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "カレー",
+      "english": "curry",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "カレンダー",
+      "english": "calendar",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ギター",
+      "english": "guitar",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "クラス",
+      "english": "class",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "グラム",
+      "english": "gram",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "コート",
+      "english": "coat,tennis court",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "コーヒー",
+      "english": "coffee",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "コップ",
+      "english": "a glass",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "シャツ",
+      "english": "shirt",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "シャワー",
+      "english": "shower",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "スカート",
+      "english": "skirt",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ストーブ",
+      "english": "heater",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "スプーン",
+      "english": "spoon",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "スポーツ",
+      "english": "sport",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ズボン",
+      "english": "trousers",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "スリッパ",
+      "english": "slippers",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "セーター",
+      "english": "sweater,jumper",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ゼロ",
+      "english": "zero",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "タクシー",
+      "english": "taxi",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "テープ",
+      "english": "tape",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "テーブル",
+      "english": "table",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "テープレコーダー",
+      "english": "tape recorder",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "テスト",
+      "english": "test",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "デパート",
+      "english": "department store",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "テレビ",
+      "english": "television",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ドア",
+      "english": "Western style door",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "トイレ",
+      "english": "toilet",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ナイフ",
+      "english": "knife",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ニュース",
+      "english": "news",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ネクタイ",
+      "english": "tie,necktie",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ノート",
+      "english": "notebook,exercise book",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "パーティー",
+      "english": "party",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "バス",
+      "english": "bus",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "バター",
+      "english": "butter",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "パン",
+      "english": "bread",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ハンカチ",
+      "english": "handkerchief",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "フィルム",
+      "english": "roll of film",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "プール",
+      "english": "swimming pool",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "フォーク",
+      "english": "fork",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ページ",
+      "english": "page",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ベッド",
+      "english": "bed",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ペット",
+      "english": "pet",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ペン",
+      "english": "pen",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ボールペン",
+      "english": "ball-point pen",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ポケット",
+      "english": "pocket",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ポスト",
+      "english": "post",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ボタン",
+      "english": "button",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ホテル",
+      "english": "hotel",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "マッチ",
+      "english": "match",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "メートル",
+      "english": "metre",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ラジオ",
+      "english": "radio",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "レコード",
+      "english": "record",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "レストラン",
+      "english": "restaurant",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ワイシャツ",
+      "english": "business shirt",
+      "jlpt": "n5"
+    },
+    {
+      "katakana": "ガス",
+      "english": "gas",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "アクセサリー",
+      "english": "accessory",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "アジア",
+      "english": "Asia",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "アナウンサー",
+      "english": "announcer",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "アフリカ",
+      "english": "Africa",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "アメリカ",
+      "english": "America",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "アルコール",
+      "english": "alcohol",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "アルバイト",
+      "english": "part-time job",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "エスカレーター",
+      "english": "escalator",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "オートバイ",
+      "english": "motorcycle",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "カーテン",
+      "english": "curtain",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ガス",
+      "english": "gas",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ガソリン",
+      "english": "petrol",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ガソリンスタンド",
+      "english": "petrol station",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ガラス",
+      "english": "a glass pane",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ケーキ",
+      "english": "cake",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "コンサート",
+      "english": "concert",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "コンピューター",
+      "english": "computer",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "サラダ",
+      "english": "salad",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "サンダル",
+      "english": "sandal",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "サンドイッチ",
+      "english": "sandwich",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ジャム",
+      "english": "jam",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "スーツ",
+      "english": "suit",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "スーツケース",
+      "english": "suitcase",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "スクリーン",
+      "english": "screen",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ステーキ",
+      "english": "steak",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ステレオ",
+      "english": "stereo",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ソフト",
+      "english": "soft",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "タイプ",
+      "english": "type,style",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "テキスト",
+      "english": "text,text book",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "テニス",
+      "english": "tennis",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "パート",
+      "english": "part time",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "パソコン",
+      "english": "personal computer",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ハンドバッグ",
+      "english": "handbag　",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ピアノ",
+      "english": "piano",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ビル",
+      "english": "building or bill",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ファックス",
+      "english": "fax",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "プレゼント",
+      "english": "present",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ベル",
+      "english": "bell",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "レジ",
+      "english": "register",
+      "jlpt": "n4"
+    },
+    {
+      "katakana": "ワープロ",
+      "english": "word processor",
+      "jlpt": "n4"
+    }
+  ],
+  "kanji": [
+    {
+      "kanji": "会う",
+      "hiragana": "あう",
+      "english": "to meet",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "青",
+      "hiragana": "あお",
+      "english": "blue",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "青い",
+      "hiragana": "あおい",
+      "english": "blue",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "赤",
+      "hiragana": "あか",
+      "english": "red",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "赤い",
+      "hiragana": "あかい",
+      "english": "red",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "明い",
+      "hiragana": "あかるい",
+      "english": "bright",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "秋",
+      "hiragana": "あき",
+      "english": "autumn",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "開く",
+      "hiragana": "あく",
+      "english": "to open,to become open",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "開ける",
+      "hiragana": "あける",
+      "english": "to open",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "上げる",
+      "hiragana": "あげる",
+      "english": "to give",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "朝",
+      "hiragana": "あさ",
+      "english": "morning",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "朝御飯",
+      "hiragana": "あさごはん",
+      "english": "breakfast",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "足",
+      "hiragana": "あし",
+      "english": "foot,leg",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "明日",
+      "hiragana": "あした",
+      "english": "tomorrow",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "遊ぶ",
+      "hiragana": "あそぶ",
+      "english": "to play,to make a visit",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "暖かい",
+      "hiragana": "あたたかい",
+      "english": "warm",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "頭",
+      "hiragana": "あたま",
+      "english": "head",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "新しい",
+      "hiragana": "あたらしい",
+      "english": "new",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "暑い",
+      "hiragana": "あつい",
+      "english": "hot",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "熱い",
+      "hiragana": "あつい",
+      "english": "hot to the touch",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "厚い",
+      "hiragana": "あつい",
+      "english": "kind, deep, thick",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "後",
+      "hiragana": "あと",
+      "english": "afterwards",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "兄",
+      "hiragana": "あに",
+      "english": "(humble) older brother",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "姉",
+      "hiragana": "あね",
+      "english": "(humble) older sister",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "危ない",
+      "hiragana": "あぶない",
+      "english": "dangerous",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "甘い",
+      "hiragana": "あまい",
+      "english": "sweet",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "雨",
+      "hiragana": "あめ",
+      "english": "rain",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "飴",
+      "hiragana": "あめ",
+      "english": "candy",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "洗う",
+      "hiragana": "あらう",
+      "english": "to wash",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "歩く",
+      "hiragana": "あるく",
+      "english": "to walk",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "いい / よい",
+      "english": "good",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "言う",
+      "hiragana": "いう",
+      "english": "to say",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "家",
+      "hiragana": "いえ",
+      "english": "house",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "行く",
+      "hiragana": "いく",
+      "english": "to go",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "池",
+      "hiragana": "いけ",
+      "english": "pond",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "医者",
+      "hiragana": "いしゃ",
+      "english": "medical doctor",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "忙しい",
+      "hiragana": "いそがしい",
+      "english": "busy,irritated",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "痛い",
+      "hiragana": "いたい",
+      "english": "painful",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "一",
+      "hiragana": "いち",
+      "english": "one",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "一日",
+      "hiragana": "いちにち",
+      "english": "one day, first of month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "五日",
+      "hiragana": "いつか",
+      "english": "five days, fifth day",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "一緒",
+      "hiragana": "いっしょ",
+      "english": "together",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "五つ",
+      "hiragana": "いつつ",
+      "english": "five",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "犬",
+      "hiragana": "いぬ",
+      "english": "dog",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "今",
+      "hiragana": "いま",
+      "english": "now",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "意味",
+      "hiragana": "いみ",
+      "english": "meaning",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "妹",
+      "hiragana": "いもうと",
+      "english": "(humble) younger sister",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "嫌",
+      "hiragana": "いや",
+      "english": "unpleasant",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "入口",
+      "hiragana": "いりぐち",
+      "english": "entrance",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "居る",
+      "hiragana": "いる",
+      "english": "to be, to have (used for people and animals)",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "要る",
+      "hiragana": "いる",
+      "english": "to need",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "入れる",
+      "hiragana": "いれる",
+      "english": "to put in",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "色",
+      "hiragana": "いろ",
+      "english": "colour",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "上",
+      "hiragana": "うえ",
+      "english": "on top of",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "後ろ",
+      "hiragana": "うしろ",
+      "english": "behind",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "薄い",
+      "hiragana": "うすい",
+      "english": "thin,weak",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "歌",
+      "hiragana": "うた",
+      "english": "song",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "歌う",
+      "hiragana": "うたう",
+      "english": "to sing",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "生まれる",
+      "hiragana": "うまれる",
+      "english": "to be born",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "海",
+      "hiragana": "うみ",
+      "english": "sea",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "売る",
+      "hiragana": "うる",
+      "english": "to sell",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "煩い",
+      "hiragana": "うるさい",
+      "english": "noisy,annoying",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "上着",
+      "hiragana": "うわぎ",
+      "english": "jacket",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "絵",
+      "hiragana": "え",
+      "english": "picture",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "映画",
+      "hiragana": "えいが",
+      "english": "movie",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "映画館",
+      "hiragana": "えいがかん",
+      "english": "cinema",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "英語",
+      "hiragana": "えいご",
+      "english": "English language",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "駅",
+      "hiragana": "えき",
+      "english": "station",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "鉛筆",
+      "hiragana": "えんぴつ",
+      "english": "pencil",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "多い",
+      "hiragana": "おおい",
+      "english": "many",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "大きい",
+      "hiragana": "おおきい",
+      "english": "big",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "大きな",
+      "hiragana": "おおきな",
+      "english": "big",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "大勢",
+      "hiragana": "おおぜい",
+      "english": "great number of people",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お母さん",
+      "hiragana": "おかあさん",
+      "english": "(honorable) mother",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お菓子",
+      "hiragana": "おかし",
+      "english": "sweets, candy",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お金",
+      "hiragana": "おかね",
+      "english": "money",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "起きる",
+      "hiragana": "おきる",
+      "english": "to get up",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "置く",
+      "hiragana": "おく",
+      "english": "to put",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "奥さん",
+      "hiragana": "おくさん",
+      "english": "(honorable) wife",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お酒",
+      "hiragana": "おさけ",
+      "english": "alcohol, rice wine",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お皿",
+      "hiragana": "おさら",
+      "english": "plate, dish",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "伯父 / 叔父",
+      "hiragana": "おじいさん",
+      "english": "grandfather,male senior citizen",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "教える",
+      "hiragana": "おしえる",
+      "english": "to teach,to tell",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "伯父 / 叔父",
+      "hiragana": "おじさん",
+      "english": "uncle,middle aged gentleman",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "押す",
+      "hiragana": "おす",
+      "english": "to push, to stamp something",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "遅い",
+      "hiragana": "おそい",
+      "english": "late,slow",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お茶",
+      "hiragana": "おちゃ",
+      "english": "green tea",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お手洗い",
+      "hiragana": "おてあらい",
+      "english": "bathroom",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お父さん",
+      "hiragana": "おとうさん",
+      "english": "(honorable) father",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "弟",
+      "hiragana": "おとうと",
+      "english": "younger brother",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "男",
+      "hiragana": "おとこ",
+      "english": "man",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "男の子",
+      "hiragana": "おとこのこ",
+      "english": "boy",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "一昨日",
+      "hiragana": "おととい",
+      "english": "day before yesterday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "一昨年",
+      "hiragana": "おととし",
+      "english": "year before last",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "大人",
+      "hiragana": "おとな",
+      "english": "adult",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "同じ",
+      "hiragana": "おなじ",
+      "english": "same",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お兄さん",
+      "hiragana": "おにいさん",
+      "english": "(honorable) older brother",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お姉さん",
+      "hiragana": "おねえさん",
+      "english": "(honorable) older sister",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "伯母さん / 叔母さん",
+      "hiragana": "おばさん",
+      "english": "aunt",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お風呂",
+      "hiragana": "おふろ",
+      "english": "bath",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "お弁当",
+      "hiragana": "おべんとう",
+      "english": "boxed lunch",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "覚える",
+      "hiragana": "おぼえる",
+      "english": "to remember",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "重い",
+      "hiragana": "おもい",
+      "english": "heavy",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "泳ぐ",
+      "hiragana": "およぐ",
+      "english": "to swim",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "降りる",
+      "hiragana": "おりる",
+      "english": "to get off, to descend",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "終る",
+      "hiragana": "おわる",
+      "english": "to finish",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "音楽",
+      "hiragana": "おんがく",
+      "english": "music",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "女",
+      "hiragana": "おんな",
+      "english": "woman",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "女の子",
+      "hiragana": "おんなのこ",
+      "english": "girl",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "外国",
+      "hiragana": "がいこく",
+      "english": "foreign country",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "外国人",
+      "hiragana": "がいこくじん",
+      "english": "foreigner",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "会社",
+      "hiragana": "かいしゃ",
+      "english": "company",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "階段",
+      "hiragana": "かいだん",
+      "english": "stairs",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "買い物",
+      "hiragana": "かいもの",
+      "english": "shopping",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "買う",
+      "hiragana": "かう",
+      "english": "to buy",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "返す",
+      "hiragana": "かえす",
+      "english": "to return something",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "帰る",
+      "hiragana": "かえる",
+      "english": "to go back",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "書く",
+      "hiragana": "かく",
+      "english": "to write",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "学生",
+      "hiragana": "がくせい",
+      "english": "student",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "傘",
+      "hiragana": "かさ",
+      "english": "umbrella",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "貸す",
+      "hiragana": "かす",
+      "english": "to lend",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "風",
+      "hiragana": "かぜ",
+      "english": "wind",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "風邪",
+      "hiragana": "かぜ",
+      "english": "a cold",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "家族",
+      "hiragana": "かぞく",
+      "english": "family",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "方",
+      "hiragana": "かた",
+      "english": "person, way of doing",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "学校",
+      "hiragana": "がっこう",
+      "english": "school",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "家庭",
+      "hiragana": "かてい",
+      "english": "household",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "角",
+      "hiragana": "かど",
+      "english": "a corner",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "花瓶",
+      "hiragana": "かびん",
+      "english": "a vase",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "紙",
+      "hiragana": "かみ",
+      "english": "paper",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "火曜日",
+      "hiragana": "かようび",
+      "english": "Tuesday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "辛い",
+      "hiragana": "からい",
+      "english": "spicy",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "体",
+      "hiragana": "からだ",
+      "english": "body",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "借りる",
+      "hiragana": "かりる",
+      "english": "to borrow",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "軽い",
+      "hiragana": "かるい",
+      "english": "light",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "川 / 河",
+      "hiragana": "かわ",
+      "english": "river",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "漢字",
+      "hiragana": "かんじ",
+      "english": "Chinese character",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "木",
+      "hiragana": "き",
+      "english": "tree,wood",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "黄色",
+      "hiragana": "きいろ",
+      "english": "yellow",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "黄色い",
+      "hiragana": "きいろい",
+      "english": "yellow",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "消える",
+      "hiragana": "きえる",
+      "english": "to disappear",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "聞く",
+      "hiragana": "きく",
+      "english": "to hear,to listen to,to ask",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "北",
+      "hiragana": "きた",
+      "english": "north",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "汚い",
+      "hiragana": "きたない",
+      "english": "dirty",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "喫茶店",
+      "hiragana": "きっさてん",
+      "english": "coffee lounge",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "切手",
+      "hiragana": "きって",
+      "english": "postage stamp",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "切符",
+      "hiragana": "きっぷ",
+      "english": "ticket",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "昨日",
+      "hiragana": "きのう",
+      "english": "yesterday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "九",
+      "hiragana": "きゅう / く",
+      "english": "nine",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "牛肉",
+      "hiragana": "ぎゅうにく",
+      "english": "beef",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "牛乳",
+      "hiragana": "ぎゅうにゅう",
+      "english": "milk",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "今日",
+      "hiragana": "きょう",
+      "english": "today",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "教室",
+      "hiragana": "きょうしつ",
+      "english": "classroom",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "兄弟",
+      "hiragana": "きょうだい",
+      "english": "(humble) siblings",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "去年",
+      "hiragana": "きょねん",
+      "english": "last year",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "嫌い",
+      "hiragana": "きらい",
+      "english": "hate",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "切る",
+      "hiragana": "きる",
+      "english": "to cut",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "着る",
+      "hiragana": "きる",
+      "english": "to put on from the shoulders down",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "キロ / キログラム",
+      "english": "kilogram",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "キロ / キロメートル",
+      "english": "kilometre",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "銀行",
+      "hiragana": "ぎんこう",
+      "english": "bank",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "金曜日",
+      "hiragana": "きんようび",
+      "english": "Friday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "薬",
+      "hiragana": "くすり",
+      "english": "medicine",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "果物",
+      "hiragana": "くだもの",
+      "english": "fruit",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "口",
+      "hiragana": "くち",
+      "english": "mouth,opening",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "靴",
+      "hiragana": "くつ",
+      "english": "shoes",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "靴下",
+      "hiragana": "くつした",
+      "english": "socks",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "国",
+      "hiragana": "くに",
+      "english": "country",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "曇り",
+      "hiragana": "くもり",
+      "english": "cloudy weather",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "曇る",
+      "hiragana": "くもる",
+      "english": "to become cloudy,to become dim",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "暗い",
+      "hiragana": "くらい",
+      "english": "gloomy",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "来る",
+      "hiragana": "くる",
+      "english": "to come",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "車",
+      "hiragana": "くるま",
+      "english": "car,vehicle",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "黒",
+      "hiragana": "くろ",
+      "english": "black",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "黒い",
+      "hiragana": "くろい",
+      "english": "black",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "警官",
+      "hiragana": "けいかん",
+      "english": "policeman",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "今朝",
+      "hiragana": "けさ",
+      "english": "this morning",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "消す",
+      "hiragana": "けす",
+      "english": "to erase,to turn off power",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "結構",
+      "hiragana": "けっこう",
+      "english": "splendid,enough",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "結婚",
+      "hiragana": "けっこん",
+      "english": "marriage",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "月曜日",
+      "hiragana": "げつようび",
+      "english": "Monday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "玄関",
+      "hiragana": "げんかん",
+      "english": "entry hall",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "元気",
+      "hiragana": "げんき",
+      "english": "health, vitality",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "五",
+      "hiragana": "ご",
+      "english": "five",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "公園",
+      "hiragana": "こうえん",
+      "english": "park",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "交差点",
+      "hiragana": "こうさてん",
+      "english": "intersection",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "紅茶",
+      "hiragana": "こうちゃ",
+      "english": "black tea",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "交番",
+      "hiragana": "こうばん",
+      "english": "police box",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "声",
+      "hiragana": "こえ",
+      "english": "voice",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "午後",
+      "hiragana": "ごご",
+      "english": "afternoon",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "九日",
+      "hiragana": "ここのか",
+      "english": "nine days, ninth day",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "九つ",
+      "hiragana": "ここのつ",
+      "english": "nine",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "午前",
+      "hiragana": "ごぜん",
+      "english": "morning",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "答える",
+      "hiragana": "こたえる",
+      "english": "to answer",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "今年",
+      "hiragana": "ことし",
+      "english": "this year",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "言葉",
+      "hiragana": "ことば",
+      "english": "word,language",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "子供",
+      "hiragana": "こども",
+      "english": "child",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "御飯",
+      "hiragana": "ごはん",
+      "english": "cooked rice,meal",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "困る",
+      "hiragana": "こまる",
+      "english": "to be worried",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "今月",
+      "hiragana": "こんげつ",
+      "english": "this month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "今週",
+      "hiragana": "こんしゅう",
+      "english": "this week",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "今晩",
+      "hiragana": "こんばん",
+      "english": "this evening",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "財布",
+      "hiragana": "さいふ",
+      "english": "wallet",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "魚",
+      "hiragana": "さかな",
+      "english": "fish",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "先",
+      "hiragana": "さき",
+      "english": "the future,previous",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "咲く",
+      "hiragana": "さく",
+      "english": "to bloom",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "作文",
+      "hiragana": "さくぶん",
+      "english": "composition,writing",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "差す",
+      "hiragana": "さす",
+      "english": "to stretch out hands,to raise an umbrella",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "雑誌",
+      "hiragana": "ざっし",
+      "english": "magazine",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "砂糖",
+      "hiragana": "さとう",
+      "english": "sugar",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "寒い",
+      "hiragana": "さむい",
+      "english": "cold",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "さ来年",
+      "hiragana": "さらいねん",
+      "english": "year after next",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "三",
+      "hiragana": "さん",
+      "english": "three",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "散歩",
+      "hiragana": "さんぽする",
+      "english": "to stroll",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "四",
+      "hiragana": "し / よん",
+      "english": "four",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "塩",
+      "hiragana": "しお",
+      "english": "salt",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "時間",
+      "hiragana": "じかん",
+      "english": "time",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "仕事",
+      "hiragana": "しごと",
+      "english": "job",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "辞書",
+      "hiragana": "じしょ",
+      "english": "dictionary",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "静か",
+      "hiragana": "しずか",
+      "english": "quiet",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "下",
+      "hiragana": "した",
+      "english": "below",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "七",
+      "hiragana": "しち / なな",
+      "english": "seven",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "質問",
+      "hiragana": "しつもん",
+      "english": "question",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "自転車",
+      "hiragana": "じてんしゃ",
+      "english": "bicycle",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "自動車",
+      "hiragana": "じどうしゃ",
+      "english": "automobile",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "死ぬ",
+      "hiragana": "しぬ",
+      "english": "to die",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "字引",
+      "hiragana": "じびき",
+      "english": "dictionary",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "自分",
+      "hiragana": "じぶん",
+      "english": "oneself",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "閉まる",
+      "hiragana": "しまる",
+      "english": "to close,to be closed",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "閉める",
+      "hiragana": "しめる",
+      "english": "to close something",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "締める",
+      "hiragana": "しめる",
+      "english": "to tie",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "じゃ / じゃあ",
+      "english": "well then…",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "写真",
+      "hiragana": "しゃしん",
+      "english": "photograph",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "十",
+      "hiragana": "じゅう / とお",
+      "english": "ten",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "授業",
+      "hiragana": "じゅぎょう",
+      "english": "lesson,class work",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "宿題",
+      "hiragana": "しゅくだい",
+      "english": "homework",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "上手",
+      "hiragana": "じょうず",
+      "english": "skillful",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "丈夫",
+      "hiragana": "じょうぶ",
+      "english": "strong,durable",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "食堂",
+      "hiragana": "しょくどう",
+      "english": "dining hall",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "知る",
+      "hiragana": "しる",
+      "english": "to know",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "白",
+      "hiragana": "しろ",
+      "english": "white",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "白い",
+      "hiragana": "しろい",
+      "english": "white",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "新聞",
+      "hiragana": "しんぶん",
+      "english": "newspaper",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "水曜日",
+      "hiragana": "すいようび",
+      "english": "Wednesday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "吸う",
+      "hiragana": "すう",
+      "english": "to smoke,to suck",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "好き",
+      "hiragana": "すき",
+      "english": "likeable",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "少ない",
+      "hiragana": "すくない",
+      "english": "a few",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "少し",
+      "hiragana": "すこし",
+      "english": "few",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "涼しい",
+      "hiragana": "すずしい",
+      "english": "refreshing",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "住む",
+      "hiragana": "すむ",
+      "english": "to live in",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "座る",
+      "hiragana": "すわる",
+      "english": "to sit",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "背",
+      "hiragana": "せ",
+      "english": "height,stature",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "生徒",
+      "hiragana": "せいと",
+      "english": "pupil",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "背広",
+      "hiragana": "せびろ",
+      "english": "business suit",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "狭い",
+      "hiragana": "せまい",
+      "english": "narrow",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "千",
+      "hiragana": "せん",
+      "english": "thousand",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "先月",
+      "hiragana": "せんげつ",
+      "english": "last month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "先週",
+      "hiragana": "せんしゅう",
+      "english": "last week",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "先生",
+      "hiragana": "せんせい",
+      "english": "teacher,doctor",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "洗濯",
+      "hiragana": "せんたく",
+      "english": "washing",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "全部",
+      "hiragana": "ぜんぶ",
+      "english": "all",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "掃除",
+      "hiragana": "そうじ",
+      "english": "　cleaning, sweeping",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "そうして / そして",
+      "english": "and",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "外",
+      "hiragana": "そと",
+      "english": "outside",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "空",
+      "hiragana": "そら",
+      "english": "sky",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "大学",
+      "hiragana": "だいがく",
+      "english": "university",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "大使館",
+      "hiragana": "たいしかん",
+      "english": "embassy",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "大丈夫",
+      "hiragana": "だいじょうぶ",
+      "english": "all right",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "大好き",
+      "hiragana": "だいすき",
+      "english": "to be very likeable",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "大切",
+      "hiragana": "たいせつ",
+      "english": "important",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "台所",
+      "hiragana": "だいどころ",
+      "english": "kitchen",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "高い",
+      "hiragana": "たかい",
+      "english": "tall, expensive",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "出す",
+      "hiragana": "だす",
+      "english": "to put out",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "立つ",
+      "hiragana": "たつ",
+      "english": "to stand",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "建物",
+      "hiragana": "たてもの",
+      "english": "building",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "楽しい",
+      "hiragana": "たのしい",
+      "english": "enjoyable",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "頼む",
+      "hiragana": "たのむ",
+      "english": "to ask",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "食べ物",
+      "hiragana": "たべもの",
+      "english": "food",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "食べる",
+      "hiragana": "たべる",
+      "english": "to eat",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "卵",
+      "hiragana": "たまご",
+      "english": "egg",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "誰",
+      "hiragana": "だれ",
+      "english": "who",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "誰",
+      "hiragana": "だれか",
+      "english": "somebody",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "誕生日",
+      "hiragana": "たんじょうび",
+      "english": "birthday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "小さい",
+      "hiragana": "ちいさい",
+      "english": "little",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "小さな",
+      "hiragana": "ちいさな",
+      "english": "little",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "近い",
+      "hiragana": "ちかい",
+      "english": "near",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "違う",
+      "hiragana": "ちがう",
+      "english": "to differ",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "近く",
+      "hiragana": "ちかく",
+      "english": "near",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "地下鉄",
+      "hiragana": "ちかてつ",
+      "english": "underground train",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "地図",
+      "hiragana": "ちず",
+      "english": "map",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "茶色",
+      "hiragana": "ちゃいろ",
+      "english": "brown",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "一日",
+      "hiragana": "ついたち",
+      "english": "first of month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "使う",
+      "hiragana": "つかう",
+      "english": "to use",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "疲れる",
+      "hiragana": "つかれる",
+      "english": "to get tired",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "次",
+      "hiragana": "つぎ",
+      "english": "next",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "着く",
+      "hiragana": "つく",
+      "english": "to arrive at",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "机",
+      "hiragana": "つくえ",
+      "english": "desk",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "作る",
+      "hiragana": "つくる",
+      "english": "to make",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "勤める",
+      "hiragana": "つとめる",
+      "english": "to work for someone",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "冷たい",
+      "hiragana": "つめたい",
+      "english": "cold to the touch",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "強い",
+      "hiragana": "つよい",
+      "english": "powerful",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "手",
+      "hiragana": "て",
+      "english": "hand",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "出かける",
+      "hiragana": "でかける",
+      "english": "to go out",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "手紙",
+      "hiragana": "てがみ",
+      "english": "letter",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "出口",
+      "hiragana": "でぐち",
+      "english": "exit",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "出る",
+      "hiragana": "でる",
+      "english": "to appear,to leave",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "天気",
+      "hiragana": "てんき",
+      "english": "weather",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "電気",
+      "hiragana": "でんき",
+      "english": "electricity,electric light",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "電車",
+      "hiragana": "でんしゃ",
+      "english": "electric train",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "電話",
+      "hiragana": "でんわ",
+      "english": "telephone",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "戸",
+      "hiragana": "と",
+      "english": "Japanese style door",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "動物",
+      "hiragana": "どうぶつ",
+      "english": "animal",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "遠い",
+      "hiragana": "とおい",
+      "english": "far",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "十日",
+      "hiragana": "とおか",
+      "english": "ten days,the tenth day",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "時々",
+      "hiragana": "ときどき",
+      "english": "sometimes",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "時計",
+      "hiragana": "とけい",
+      "english": "watch,clock",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "所",
+      "hiragana": "ところ",
+      "english": "place",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "年",
+      "hiragana": "とし",
+      "english": "year",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "図書館",
+      "hiragana": "としょかん",
+      "english": "library",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "隣",
+      "hiragana": "となり",
+      "english": "next door to",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "飛ぶ",
+      "hiragana": "とぶ",
+      "english": "to fly,to hop",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "止まる",
+      "hiragana": "とまる",
+      "english": "to come to a halt",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "友達",
+      "hiragana": "ともだち",
+      "english": "friend",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "土曜日",
+      "hiragana": "どようび",
+      "english": "Saturday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "鳥",
+      "hiragana": "とり",
+      "english": "bird",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "とり肉",
+      "hiragana": "とりにく",
+      "english": "chicken meat",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "取る",
+      "hiragana": "とる",
+      "english": "to take something",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "撮る",
+      "hiragana": "とる",
+      "english": "to take a photo or record a film",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "中",
+      "hiragana": "なか",
+      "english": "middle",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "長い",
+      "hiragana": "ながい",
+      "english": "long",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "鳴く",
+      "hiragana": "なく",
+      "english": "animal noise. to chirp, roar or croak etc.",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "無くす",
+      "hiragana": "なくす",
+      "english": "to lose something",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "夏",
+      "hiragana": "なつ",
+      "english": "summer",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "夏休み",
+      "hiragana": "なつやすみ",
+      "english": "summer holiday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "七つ",
+      "hiragana": "ななつ",
+      "english": "seven",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "七日",
+      "hiragana": "なのか",
+      "english": "seven days,the seventh day",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "名前",
+      "hiragana": "なまえ",
+      "english": "name",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "習う",
+      "hiragana": "ならう",
+      "english": "to learn",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "並ぶ",
+      "hiragana": "ならぶ",
+      "english": "to line up,to stand in a line",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "並べる",
+      "hiragana": "ならべる",
+      "english": "to line up,to set up",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "何",
+      "hiragana": "なん / なに",
+      "english": "what",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "二",
+      "hiragana": "に",
+      "english": "two",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "賑やか",
+      "hiragana": "にぎやか",
+      "english": "bustling,busy",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "肉",
+      "hiragana": "にく",
+      "english": "meat",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "西",
+      "hiragana": "にし",
+      "english": "west",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "日曜日",
+      "hiragana": "にちようび",
+      "english": "Sunday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "荷物",
+      "hiragana": "にもつ",
+      "english": "luggage",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "庭",
+      "hiragana": "にわ",
+      "english": "garden",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "脱ぐ",
+      "hiragana": "ぬぐ",
+      "english": "to take off clothes",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "温い",
+      "hiragana": "ぬるい",
+      "english": "luke warm",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "猫",
+      "hiragana": "ねこ",
+      "english": "cat",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "寝る",
+      "hiragana": "ねる",
+      "english": "to go to bed,to sleep",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "登る",
+      "hiragana": "のぼる",
+      "english": "to climb",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "飲み物",
+      "hiragana": "のみもの",
+      "english": "a drink",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "飲む",
+      "hiragana": "のむ",
+      "english": "to drink",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "乗る",
+      "hiragana": "のる",
+      "english": "to get on,to ride",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "歯",
+      "hiragana": "は",
+      "english": "tooth",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "灰皿",
+      "hiragana": "はいざら",
+      "english": "ashtray",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "入る",
+      "hiragana": "はいる",
+      "english": "to enter,to contain",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "葉書",
+      "hiragana": "はがき",
+      "english": "postcard",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "箱",
+      "hiragana": "はこ",
+      "english": "box",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "橋",
+      "hiragana": "はし",
+      "english": "bridge",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "始まる",
+      "hiragana": "はじまる",
+      "english": "to begin",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "初め / 始め",
+      "hiragana": "はじめ",
+      "english": "beginning",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "初めて",
+      "hiragana": "はじめて",
+      "english": "for the first time",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "走る",
+      "hiragana": "はしる",
+      "english": "to run",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "二十歳",
+      "hiragana": "はたち",
+      "english": "20 years old, 20th year",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "働く",
+      "hiragana": "はたらく",
+      "english": "to work",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "八",
+      "hiragana": "はち",
+      "english": "eight",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "二十日",
+      "hiragana": "はつか",
+      "english": "twenty days,twentieth",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "花",
+      "hiragana": "はな",
+      "english": "flower",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "鼻",
+      "hiragana": "はな",
+      "english": "nose",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "話",
+      "hiragana": "はなし",
+      "english": "talk,story",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "話す",
+      "hiragana": "はなす",
+      "english": "to speak",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "早い",
+      "hiragana": "はやい",
+      "english": "early",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "速い",
+      "hiragana": "はやい",
+      "english": "quick",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "春",
+      "hiragana": "はる",
+      "english": "spring",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "貼る",
+      "hiragana": "はる",
+      "english": "to stick",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "晴れ",
+      "hiragana": "はれ",
+      "english": "clear weather",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "晴れる",
+      "hiragana": "はれる",
+      "english": "to be sunny",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "半",
+      "hiragana": "はん",
+      "english": "half",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "晩",
+      "hiragana": "ばん",
+      "english": "evening",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "番号",
+      "hiragana": "ばんごう",
+      "english": "number",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "晩御飯",
+      "hiragana": "ばんごはん",
+      "english": "evening meal",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "半分",
+      "hiragana": "はんぶん",
+      "english": "half minute",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "東",
+      "hiragana": "ひがし",
+      "english": "east",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "引く",
+      "hiragana": "ひく",
+      "english": "to pull",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "弾く",
+      "hiragana": "ひく",
+      "english": "to play an instrument with strings, including piano",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "低い",
+      "hiragana": "ひくい",
+      "english": "short,low",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "飛行機",
+      "hiragana": "ひこうき",
+      "english": "aeroplane",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "左",
+      "hiragana": "ひだり",
+      "english": "left hand side",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "人",
+      "hiragana": "ひと",
+      "english": "person",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "一つ",
+      "hiragana": "ひとつ",
+      "english": "one",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "一月",
+      "hiragana": "ひとつき",
+      "english": "one month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "一人",
+      "hiragana": "ひとり",
+      "english": "one person",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "暇",
+      "hiragana": "ひま",
+      "english": "free time",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "百",
+      "hiragana": "ひゃく",
+      "english": "hundred",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "病院",
+      "hiragana": "びょういん",
+      "english": "hospital",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "病気",
+      "hiragana": "びょうき",
+      "english": "illness",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "昼",
+      "hiragana": "ひる",
+      "english": "noon, daytime",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "昼御飯",
+      "hiragana": "ひるごはん",
+      "english": "midday meal",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "広い",
+      "hiragana": "ひろい",
+      "english": "spacious,wide",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "封筒",
+      "hiragana": "ふうとう",
+      "english": "envelope",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "吹く",
+      "hiragana": "ふく",
+      "english": "to blow",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "服",
+      "hiragana": "ふく",
+      "english": "clothes",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "二つ",
+      "hiragana": "ふたつ",
+      "english": "two",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "豚肉",
+      "hiragana": "ぶたにく",
+      "english": "pork",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "二人",
+      "hiragana": "ふたり",
+      "english": "two people",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "二日",
+      "hiragana": "ふつか",
+      "english": "two days, second day of the month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "太い",
+      "hiragana": "ふとい",
+      "english": "fat",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "冬",
+      "hiragana": "ふゆ",
+      "english": "winter",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "降る",
+      "hiragana": "ふる",
+      "english": "to fall, e.g. rain or snow",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "古い",
+      "hiragana": "ふるい",
+      "english": "old (not used for people)",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "文章",
+      "hiragana": "ぶんしょう",
+      "english": "sentence,text",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "下手",
+      "hiragana": "へた",
+      "english": "unskillful",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "部屋",
+      "hiragana": "へや",
+      "english": "room",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "辺",
+      "hiragana": "へん",
+      "english": "area",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "勉強",
+      "hiragana": "べんきょうする",
+      "english": "to study",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "便利",
+      "hiragana": "べんり",
+      "english": "useful, convenient",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "帽子",
+      "hiragana": "ぼうし",
+      "english": "hat",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "欲しい",
+      "hiragana": "ほしい",
+      "english": "want",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "細い",
+      "hiragana": "ほそい",
+      "english": "thin",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "本",
+      "hiragana": "ほん",
+      "english": "book",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "本棚",
+      "hiragana": "ほんだな",
+      "english": "bookshelves",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "毎朝",
+      "hiragana": "まいあさ",
+      "english": "every morning",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "毎月",
+      "hiragana": "まいげつ / まいつき",
+      "english": "every month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "毎週",
+      "hiragana": "まいしゅう",
+      "english": "every week",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "毎日",
+      "hiragana": "まいにち",
+      "english": "every day",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "毎年",
+      "hiragana": "まいねん / まいとし",
+      "english": "every year",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "毎晩",
+      "hiragana": "まいばん",
+      "english": "every night",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "前",
+      "hiragana": "まえ",
+      "english": "before",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "曲る",
+      "hiragana": "まがる",
+      "english": "to turn,to bend",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "町",
+      "hiragana": "まち",
+      "english": "town,city",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "待つ",
+      "hiragana": "まつ",
+      "english": "to wait",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "窓",
+      "hiragana": "まど",
+      "english": "window",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "丸い / 円い",
+      "hiragana": "まるい",
+      "english": "round,circular",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "万",
+      "hiragana": "まん",
+      "english": "ten thousand",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "万年筆",
+      "hiragana": "まんねんひつ",
+      "english": "fountain pen",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "磨く",
+      "hiragana": "みがく",
+      "english": "to brush teeth, to polish",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "右",
+      "hiragana": "みぎ",
+      "english": "right side",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "短い",
+      "hiragana": "みじかい",
+      "english": "short",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "水",
+      "hiragana": "みず",
+      "english": "water",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "店",
+      "hiragana": "みせ",
+      "english": "shop",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "見せる",
+      "hiragana": "みせる",
+      "english": "to show",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "道",
+      "hiragana": "みち",
+      "english": "street",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "三日",
+      "hiragana": "みっか",
+      "english": "three days, third day of the month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "三つ",
+      "hiragana": "みっつ",
+      "english": "three",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "緑",
+      "hiragana": "みどり",
+      "english": "green",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "皆さん",
+      "hiragana": "みなさん",
+      "english": "everyone",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "南",
+      "hiragana": "みなみ",
+      "english": "south",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "耳",
+      "hiragana": "みみ",
+      "english": "ear",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "見る / 観る",
+      "hiragana": "みる",
+      "english": "to see, to watch",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "六日",
+      "hiragana": "むいか",
+      "english": "six days, sixth day of the month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "向こう",
+      "hiragana": "むこう",
+      "english": "over there",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "難しい",
+      "hiragana": "むずかしい",
+      "english": "difficult",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "六つ",
+      "hiragana": "むっつ",
+      "english": "six",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "村",
+      "hiragana": "むら",
+      "english": "village",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "目",
+      "hiragana": "め",
+      "english": "eye",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "眼鏡",
+      "hiragana": "めがね",
+      "english": "glasses",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "もう一度",
+      "hiragana": "もういちど",
+      "english": "again",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "木曜日",
+      "hiragana": "もくようび",
+      "english": "Thursday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "持つ",
+      "hiragana": "もつ",
+      "english": "to hold",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "物",
+      "hiragana": "もの",
+      "english": "thing",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "門",
+      "hiragana": "もん",
+      "english": "gate",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "問題",
+      "hiragana": "もんだい",
+      "english": "problem",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "八百屋",
+      "hiragana": "やおや",
+      "english": "greengrocer",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "野菜",
+      "hiragana": "やさい",
+      "english": "vegetable",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "易しい",
+      "hiragana": "やさしい",
+      "english": "easy, simple",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "安い",
+      "hiragana": "やすい",
+      "english": "cheap",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "休み",
+      "hiragana": "やすみ",
+      "english": "rest,holiday",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "休む",
+      "hiragana": "やすむ",
+      "english": "to rest",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "八つ",
+      "hiragana": "やっつ",
+      "english": "eight",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "山",
+      "hiragana": "やま",
+      "english": "mountain",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "夕方",
+      "hiragana": "ゆうがた",
+      "english": "evening",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "夕飯",
+      "hiragana": "ゆうはん",
+      "english": "dinner",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "郵便局",
+      "hiragana": "ゆうびんきょく",
+      "english": "post office",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "昨夜",
+      "hiragana": "ゆうべ",
+      "english": "last night",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "有名",
+      "hiragana": "ゆうめい",
+      "english": "famous",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "雪",
+      "hiragana": "ゆき",
+      "english": "snow",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "行く",
+      "hiragana": "ゆく",
+      "english": "to go",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "八日",
+      "hiragana": "ようか",
+      "english": "eight days, eighth day of the month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "洋服",
+      "hiragana": "ようふく",
+      "english": "western-style clothes",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "横",
+      "hiragana": "よこ",
+      "english": "beside,side,width",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "四日",
+      "hiragana": "よっか",
+      "english": "four days, fouth day of the month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "四つ",
+      "hiragana": "よっつ",
+      "english": "four",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "呼ぶ",
+      "hiragana": "よぶ",
+      "english": "to call out,to invite",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "読む",
+      "hiragana": "よむ",
+      "english": "to read",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "夜",
+      "hiragana": "よる",
+      "english": "evening,night",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "弱い",
+      "hiragana": "よわい",
+      "english": "weak",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "来月",
+      "hiragana": "らいげつ",
+      "english": "next month",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "来週",
+      "hiragana": "らいしゅう",
+      "english": "next week",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "来年",
+      "hiragana": "らいねん",
+      "english": "next year",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "ラジカセ / ラジオカセット",
+      "english": "radio cassette player",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "留学生",
+      "hiragana": "りゅうがくせい",
+      "english": "overseas student",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "両親",
+      "hiragana": "りょうしん",
+      "english": "both parents",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "料理",
+      "hiragana": "りょうり",
+      "english": "cuisine",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "旅行",
+      "hiragana": "りょこう",
+      "english": "travel",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "零",
+      "hiragana": "れい",
+      "english": "zero",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "冷蔵庫",
+      "hiragana": "れいぞうこ",
+      "english": "refrigerator",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "練習",
+      "hiragana": "れんしゅうする",
+      "english": "to practice",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "廊下",
+      "hiragana": "ろうか",
+      "english": "corridor",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "六",
+      "hiragana": "ろく",
+      "english": "six",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "若い",
+      "hiragana": "わかい",
+      "english": "young",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "分かる",
+      "hiragana": "わかる",
+      "english": "to be understood",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "忘れる",
+      "hiragana": "わすれる",
+      "english": "to forget",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "私",
+      "hiragana": "わたくし",
+      "english": "(humble) I,myself",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "私",
+      "hiragana": "わたし",
+      "english": "I,myself",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "渡す",
+      "hiragana": "わたす",
+      "english": "to hand over",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "渡る",
+      "hiragana": "わたる",
+      "english": "to go across",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "悪い",
+      "hiragana": "わるい",
+      "english": "bad",
+      "jlpt": "n5"
+    },
+    {
+      "kanji": "間",
+      "hiragana": "あいだ",
+      "english": "a space",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "合う",
+      "hiragana": "あう",
+      "english": "to match",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "上る",
+      "hiragana": "あがる",
+      "english": "to rise",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "赤ん坊",
+      "hiragana": "あかんぼう",
+      "english": "baby",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "空く",
+      "hiragana": "あく",
+      "english": "to open, to become empty",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "浅い",
+      "hiragana": "あさい",
+      "english": "shallow, superficial",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "味",
+      "hiragana": "あじ",
+      "english": "flavour",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "明日",
+      "hiragana": "あす / あした",
+      "english": "tomorrow",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "遊び",
+      "hiragana": "あそび",
+      "english": "play",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "集る",
+      "hiragana": "あつまる",
+      "english": "to gather",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "集める",
+      "hiragana": "あつめる",
+      "english": "to collect something",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "謝る",
+      "hiragana": "あやまる",
+      "english": "to apologize",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "安心",
+      "hiragana": "あんしん",
+      "english": "relief",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "安全",
+      "hiragana": "あんぜん",
+      "english": "safety",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "以下",
+      "hiragana": "いか",
+      "english": "less than",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "以外",
+      "hiragana": "いがい",
+      "english": "with the exception of",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "医学",
+      "hiragana": "いがく",
+      "english": "medical science",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "生きる",
+      "hiragana": "いきる",
+      "english": "to live",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "意見",
+      "hiragana": "いけん",
+      "english": "opinion",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "石",
+      "hiragana": "いし",
+      "english": "stone",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "以上",
+      "hiragana": "いじょう",
+      "english": "more than, this is all",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "急ぐ",
+      "hiragana": "いそぐ",
+      "english": "to hurry",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "致す",
+      "hiragana": "いたす",
+      "english": "(humble) to do",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "一度",
+      "hiragana": "いちど",
+      "english": "once",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "一生懸命",
+      "hiragana": "いっしょうけんめい",
+      "english": "with utmost effort",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "糸",
+      "hiragana": "いと",
+      "english": "thread",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "以内",
+      "hiragana": "いない",
+      "english": "within",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "田舎",
+      "hiragana": "いなか",
+      "english": "countryside",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "祈る",
+      "hiragana": "いのる",
+      "english": "to pray",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "植える",
+      "hiragana": "うえる",
+      "english": "to plant, to grow",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "受付",
+      "hiragana": "うけつけ",
+      "english": "receipt",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "受ける",
+      "hiragana": "うける",
+      "english": "to take a lesson or test",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "動く",
+      "hiragana": "うごく",
+      "english": "to move",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "打つ",
+      "hiragana": "うつ",
+      "english": "to hit",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "美しい",
+      "hiragana": "うつくしい",
+      "english": "beautiful",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "写す",
+      "hiragana": "うつす",
+      "english": "to copy or photograph",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "移る",
+      "hiragana": "うつる",
+      "english": "to move house or transfer",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "腕",
+      "hiragana": "うで",
+      "english": "arm",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "裏",
+      "hiragana": "うら",
+      "english": "reverse side",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "売り場",
+      "hiragana": "うりば",
+      "english": "place where things are sold",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "運転手",
+      "hiragana": "うんてんしゅ",
+      "english": "driver",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "枝",
+      "hiragana": "えだ",
+      "english": "branch, twig",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "選ぶ",
+      "hiragana": "えらぶ",
+      "english": "to choose",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "遠慮",
+      "hiragana": "えんりょする",
+      "english": "to be reserved, to be restrained",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "お祝い",
+      "hiragana": "おいわい",
+      "english": "congratulation",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "億",
+      "hiragana": "おく",
+      "english": "one hundred million",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "屋上",
+      "hiragana": "おくじょう",
+      "english": "rooftop",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "贈り物",
+      "hiragana": "おくりもの",
+      "english": "gift",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "送る",
+      "hiragana": "おくる",
+      "english": "to send",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "遅れる",
+      "hiragana": "おくれる",
+      "english": "to be late",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "起す",
+      "hiragana": "おこす",
+      "english": "to wake",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "行う",
+      "hiragana": "おこなう",
+      "english": "to do",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "怒る",
+      "hiragana": "おこる",
+      "english": "to get angry, to be angry",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "押し入れ",
+      "hiragana": "おしいれ",
+      "english": "closet",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "お嬢さん",
+      "hiragana": "おじょうさん",
+      "english": "young lady",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "お宅",
+      "hiragana": "おたく",
+      "english": "(polite) your house",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "落ちる",
+      "hiragana": "おちる",
+      "english": "to fall or drop",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "夫",
+      "hiragana": "おっと",
+      "english": "husband",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "音",
+      "hiragana": "おと",
+      "english": "sound, note",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "落す",
+      "hiragana": "おとす",
+      "english": "to drop",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "踊り",
+      "hiragana": "おどり",
+      "english": "a dance",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "踊る",
+      "hiragana": "おどる",
+      "english": "to dance",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "驚く",
+      "hiragana": "おどろく",
+      "english": "to be surprised",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "お祭り",
+      "hiragana": "おまつり",
+      "english": "festival",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "お見舞い",
+      "hiragana": "おみまい",
+      "english": "calling on someone who is ill, enquiry",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "お土産",
+      "hiragana": "おみやげ",
+      "english": "souvenir",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "思い出す",
+      "hiragana": "おもいだす",
+      "english": "to remember",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "思う",
+      "hiragana": "おもう",
+      "english": "to think, to feel",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "表",
+      "hiragana": "おもて",
+      "english": "the front",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "親",
+      "hiragana": "おや",
+      "english": "parents",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "泳ぎ方",
+      "hiragana": "およぎかた",
+      "english": "way of swimming",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "下りる",
+      "hiragana": "おりる",
+      "english": "to get off, to descend",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "折る",
+      "hiragana": "おる",
+      "english": "to break or to fold",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "お礼",
+      "hiragana": "おれい",
+      "english": "expression of gratitude",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "折れる",
+      "hiragana": "おれる",
+      "english": "to break or be folded",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "終わり",
+      "hiragana": "おわり",
+      "english": "the end",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "海岸",
+      "hiragana": "かいがん",
+      "english": "coast",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "会議",
+      "hiragana": "かいぎ",
+      "english": "meeting",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "会議室",
+      "hiragana": "かいぎしつ",
+      "english": "meeting room",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "会場",
+      "hiragana": "かいじょう",
+      "english": "assembly hall or meeting place",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "会話",
+      "hiragana": "かいわ",
+      "english": "conversation",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "帰り",
+      "hiragana": "かえり",
+      "english": "return",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "変える",
+      "hiragana": "かえる",
+      "english": "to change",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "科学",
+      "hiragana": "かがく",
+      "english": "science",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "鏡",
+      "hiragana": "かがみ",
+      "english": "mirror",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "掛ける",
+      "hiragana": "かける",
+      "english": "to hang something",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "飾る",
+      "hiragana": "かざる",
+      "english": "to decorate",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "火事",
+      "hiragana": "かじ",
+      "english": "fire",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "堅 / 硬, 固い, かたい",
+      "english": "hard",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "形",
+      "hiragana": "かたち",
+      "english": "shape",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "片付ける",
+      "hiragana": "かたづける",
+      "english": "to tidy up",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "課長",
+      "hiragana": "かちょう",
+      "english": "section manager",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "勝つ",
+      "hiragana": "かつ",
+      "english": "to win",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "家内",
+      "hiragana": "かない",
+      "english": "housewife",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "悲しい",
+      "hiragana": "かなしい",
+      "english": "sad",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "必ず",
+      "hiragana": "かならず",
+      "english": "certainly,necessarily",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "お金持ち",
+      "hiragana": "かねもち / おかねもち",
+      "english": "rich man",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "彼女",
+      "hiragana": "かのじょ",
+      "english": "she,girlfriend",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "壁",
+      "hiragana": "かべ",
+      "english": "wall",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "髪",
+      "hiragana": "かみ",
+      "english": "hair",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "噛む",
+      "hiragana": "かむ",
+      "english": "to bite,to chew",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "通う",
+      "hiragana": "かよう",
+      "english": "to commute",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "彼",
+      "hiragana": "かれ",
+      "english": "he,boyfriend",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "乾く",
+      "hiragana": "かわく",
+      "english": "to get dry",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "代わり",
+      "hiragana": "かわり",
+      "english": "substitute,alternate",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "変わる",
+      "hiragana": "かわる",
+      "english": "to change",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "考える",
+      "hiragana": "かんがえる",
+      "english": "to consider",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "関係",
+      "hiragana": "かんけい",
+      "english": "relationship",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "看護師",
+      "hiragana": "かんごし",
+      "english": "nurse",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "簡単",
+      "hiragana": "かんたん",
+      "english": "simple",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "気",
+      "hiragana": "き",
+      "english": "spirit,mood",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "機会",
+      "hiragana": "きかい",
+      "english": "opportunity",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "危険",
+      "hiragana": "きけん",
+      "english": "danger",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "聞こえる",
+      "hiragana": "きこえる",
+      "english": "to be heard",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "汽車",
+      "hiragana": "きしゃ",
+      "english": "steam train",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "技術",
+      "hiragana": "ぎじゅつ",
+      "english": "art,technology,skill",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "季節",
+      "hiragana": "きせつ",
+      "english": "season",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "規則",
+      "hiragana": "きそく",
+      "english": "regulations",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "絹",
+      "hiragana": "きぬ",
+      "english": "silk",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "厳しい",
+      "hiragana": "きびしい",
+      "english": "strict",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "気分",
+      "hiragana": "きぶん",
+      "english": "mood",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "決る",
+      "hiragana": "きまる",
+      "english": "to be decided",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "君",
+      "hiragana": "きみ",
+      "english": "(informal) You",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "決める",
+      "hiragana": "きめる",
+      "english": "to decide",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "気持ち",
+      "hiragana": "きもち",
+      "english": "feeling,mood",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "着物",
+      "hiragana": "きもの",
+      "english": "kimono",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "客",
+      "hiragana": "きゃく",
+      "english": "guest,customer",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "急",
+      "hiragana": "きゅう",
+      "english": "urgent, steep",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "急行",
+      "hiragana": "きゅうこう",
+      "english": "speedy, express",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "教育",
+      "hiragana": "きょういく",
+      "english": "education",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "教会",
+      "hiragana": "きょうかい",
+      "english": "church",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "競争",
+      "hiragana": "きょうそう",
+      "english": "competition",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "興味",
+      "hiragana": "きょうみ",
+      "english": "an interest",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "近所",
+      "hiragana": "きんじょ",
+      "english": "neighbourhood",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "具合",
+      "hiragana": "ぐあい",
+      "english": "condition,health",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "空気",
+      "hiragana": "くうき",
+      "english": "air,atmosphere",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "空港",
+      "hiragana": "くうこう",
+      "english": "airport",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "草",
+      "hiragana": "くさ",
+      "english": "grass",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "首",
+      "hiragana": "くび",
+      "english": "neck",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "雲",
+      "hiragana": "くも",
+      "english": "cloud",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "比べる",
+      "hiragana": "くらべる",
+      "english": "to compare",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "暮れる",
+      "hiragana": "くれる",
+      "english": "to get dark,to come to an end",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "君",
+      "hiragana": "くん",
+      "english": "suffix for familiar young male",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "毛",
+      "hiragana": "け",
+      "english": "hair or fur",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "経済",
+      "hiragana": "けいざい",
+      "english": "finance,economy",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "警察",
+      "hiragana": "けいさつ",
+      "english": "police",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "景色",
+      "hiragana": "けしき",
+      "english": "scene,landscape",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "消しゴム",
+      "hiragana": "けしゴム",
+      "english": "eraser",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "下宿",
+      "hiragana": "げしゅく",
+      "english": "lodging",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "決して",
+      "hiragana": "けっして",
+      "english": "never",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "けれど / けれども",
+      "english": "however",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "原因",
+      "hiragana": "げんいん",
+      "english": "cause,source",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "研究",
+      "hiragana": "けんきゅう",
+      "english": "research",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "研究室",
+      "hiragana": "けんきゅうしつ",
+      "english": "study room,laboratory",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "見物",
+      "hiragana": "けんぶつ",
+      "english": "sightseeing",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "子",
+      "hiragana": "こ",
+      "english": "child",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "郊外",
+      "hiragana": "こうがい",
+      "english": "outskirts",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "講義",
+      "hiragana": "こうぎ",
+      "english": "lecture",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "工業",
+      "hiragana": "こうぎょう",
+      "english": "the manufacturing industry",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "高校",
+      "hiragana": "こうこう",
+      "english": "high school",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "高校生",
+      "hiragana": "こうこうせい",
+      "english": "high school student",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "工場",
+      "hiragana": "こうじょう / こうば",
+      "english": "factory,plant,mill,workshop",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "校長",
+      "hiragana": "こうちょう",
+      "english": "headmaster",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "交通",
+      "hiragana": "こうつう",
+      "english": "traffic,transportation",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "講堂",
+      "hiragana": "こうどう",
+      "english": "auditorium",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "高等学校",
+      "hiragana": "こうとうがっこう",
+      "english": "high school",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "公務員",
+      "hiragana": "こうむいん",
+      "english": "civil servant, government worker",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "国際",
+      "hiragana": "こくさい",
+      "english": "international",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "心",
+      "hiragana": "こころ",
+      "english": "heart, mind, core",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "御主人",
+      "hiragana": "ごしゅじん",
+      "english": "(honorable) your husband",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "故障",
+      "hiragana": "こしょうする",
+      "english": "to break-down",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "ご存じ",
+      "hiragana": "ごぞんじ",
+      "english": "(respect form ) to know",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "答",
+      "hiragana": "こたえ",
+      "english": "response",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "小鳥",
+      "hiragana": "ことり",
+      "english": "small bird",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "細かい",
+      "hiragana": "こまかい",
+      "english": "small, fine",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "込む",
+      "hiragana": "こむ",
+      "english": "to include",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "米",
+      "hiragana": "こめ",
+      "english": "uncooked rice",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "怖い",
+      "hiragana": "こわい",
+      "english": "frightening",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "壊す",
+      "hiragana": "こわす",
+      "english": "to break",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "壊れる",
+      "hiragana": "こわれる",
+      "english": "to be broken",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "今度",
+      "hiragana": "こんど",
+      "english": "now,next time",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "今夜",
+      "hiragana": "こんや",
+      "english": "tonight",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "最近",
+      "hiragana": "さいきん",
+      "english": "latest,nowadays",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "最後",
+      "hiragana": "さいご",
+      "english": "last,end",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "最初",
+      "hiragana": "さいしょ",
+      "english": "beginning,first",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "坂",
+      "hiragana": "さか",
+      "english": "slope,hill",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "探す",
+      "hiragana": "さがす",
+      "english": "to look for",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "下る",
+      "hiragana": "さがる",
+      "english": "to get down,to descend",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "盛ん",
+      "hiragana": "さかん",
+      "english": "popularity,prosperous",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "下げる",
+      "hiragana": "さげる",
+      "english": "to hang,to lower,to move back",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "差し上げる",
+      "hiragana": "さしあげる",
+      "english": "(polite) to give",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "寂しい",
+      "hiragana": "さびしい",
+      "english": "lonely",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "さ来月",
+      "hiragana": "さらいげつ",
+      "english": "the month after next",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "さ来週",
+      "hiragana": "さらいしゅう",
+      "english": "the week after next",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "騒ぐ",
+      "hiragana": "さわぐ",
+      "english": "to make noise,to be excited",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "触る",
+      "hiragana": "さわる",
+      "english": "to touch",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "産業",
+      "hiragana": "さんぎょう",
+      "english": "industry",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "残念",
+      "hiragana": "ざんねん",
+      "english": "disappointment",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "市",
+      "hiragana": "し",
+      "english": "city",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "字",
+      "hiragana": "じ",
+      "english": "character",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "試合",
+      "hiragana": "しあい",
+      "english": "match,game",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "仕方",
+      "hiragana": "しかた",
+      "english": "method",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "試験",
+      "hiragana": "しけん",
+      "english": "examination",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "事故",
+      "hiragana": "じこ",
+      "english": "accident",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "地震",
+      "hiragana": "じしん",
+      "english": "earthquake",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "時代",
+      "hiragana": "じだい",
+      "english": "era",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "下着",
+      "hiragana": "したぎ",
+      "english": "underwear",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "失敗",
+      "hiragana": "しっぱい",
+      "english": "failure,mistake",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "辞典",
+      "hiragana": "じてん",
+      "english": "dictionary",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "品物",
+      "hiragana": "しなもの",
+      "english": "goods",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "島",
+      "hiragana": "しま",
+      "english": "island",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "市民",
+      "hiragana": "しみん",
+      "english": "citizen",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "事務所",
+      "hiragana": "じむしょ",
+      "english": "office",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "社会",
+      "hiragana": "しゃかい",
+      "english": "society,public",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "社長",
+      "hiragana": "しゃちょう",
+      "english": "company president",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "自由",
+      "hiragana": "じゆう",
+      "english": "freedom",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "習慣",
+      "hiragana": "しゅうかん",
+      "english": "custom,manners",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "住所",
+      "hiragana": "じゅうしょ",
+      "english": "an address,a residence",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "柔道",
+      "hiragana": "じゅうどう",
+      "english": "judo",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "十分",
+      "hiragana": "じゅうぶん",
+      "english": "enough",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "趣味",
+      "hiragana": "しゅみ",
+      "english": "hobby",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "紹介",
+      "hiragana": "しょうかい",
+      "english": "introduction",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "小学校",
+      "hiragana": "しょうがっこう",
+      "english": "elementary school",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "小説",
+      "hiragana": "しょうせつ",
+      "english": "novel",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "将来",
+      "hiragana": "しょうらい",
+      "english": "future,prospects",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "食料品",
+      "hiragana": "しょくりょうひん",
+      "english": "groceries",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "女性",
+      "hiragana": "じょせい",
+      "english": "woman",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "知らせる",
+      "hiragana": "しらせる",
+      "english": "to notify",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "調べる",
+      "hiragana": "しらべる",
+      "english": "to investigate",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "人口",
+      "hiragana": "じんこう",
+      "english": "population",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "神社",
+      "hiragana": "じんじゃ",
+      "english": "Shinto shrine",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "親切",
+      "hiragana": "しんせつ",
+      "english": "kindness",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "新聞社",
+      "hiragana": "しんぶんしゃ",
+      "english": "newspaper company",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "水泳",
+      "hiragana": "すいえい",
+      "english": "swimming",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "水道",
+      "hiragana": "すいどう",
+      "english": "water supply",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "数学",
+      "hiragana": "すうがく",
+      "english": "mathematics,arithmetic",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "過ぎる",
+      "hiragana": "すぎる",
+      "english": "to exceed",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "凄い",
+      "hiragana": "すごい",
+      "english": "terrific",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "進む",
+      "hiragana": "すすむ",
+      "english": "to make progress",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "捨てる",
+      "hiragana": "すてる",
+      "english": "to throw away",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "砂",
+      "hiragana": "すな",
+      "english": "sand",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "滑る",
+      "hiragana": "すべる",
+      "english": "to slide,to slip",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "隅",
+      "hiragana": "すみ",
+      "english": "corner,nook",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "済む",
+      "hiragana": "すむ",
+      "english": "to finish",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "生活",
+      "hiragana": "せいかつする",
+      "english": "to live",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "生産",
+      "hiragana": "せいさんする",
+      "english": "to produce",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "政治",
+      "hiragana": "せいじ",
+      "english": "politics,government",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "西洋",
+      "hiragana": "せいよう",
+      "english": "western countries",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "世界",
+      "hiragana": "せかい",
+      "english": "the world",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "席",
+      "hiragana": "せき",
+      "english": "seat",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "説明",
+      "hiragana": "せつめい",
+      "english": "explanation",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "背中",
+      "hiragana": "せなか",
+      "english": "back of the body",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "線",
+      "hiragana": "せん",
+      "english": "line",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "戦争",
+      "hiragana": "せんそう",
+      "english": "war",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "先輩",
+      "hiragana": "せんぱい",
+      "english": "senior",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "育てる",
+      "hiragana": "そだてる",
+      "english": "to rear,to bring up",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "卒業",
+      "hiragana": "そつぎょう",
+      "english": "graduation",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "祖父",
+      "hiragana": "そふ",
+      "english": "grandfather",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "祖母",
+      "hiragana": "そぼ",
+      "english": "grandmother",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "退院",
+      "hiragana": "たいいんする",
+      "english": "to leave hospital",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "大学生",
+      "hiragana": "だいがくせい",
+      "english": "university student",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "大事",
+      "hiragana": "だいじ",
+      "english": "important,valuable,serious matter",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "大体",
+      "hiragana": "だいたい",
+      "english": "generally",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "大分",
+      "hiragana": "だいぶ",
+      "english": "greatly",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "台風",
+      "hiragana": "たいふう",
+      "english": "typhoon",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "倒れる",
+      "hiragana": "たおれる",
+      "english": "to break down",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "確か",
+      "hiragana": "たしか",
+      "english": "definite",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "足す",
+      "hiragana": "たす",
+      "english": "to add a number",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "訪ねる",
+      "hiragana": "たずねる",
+      "english": "to visit",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "尋ねる",
+      "hiragana": "たずねる",
+      "english": "to ask",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "正しい",
+      "hiragana": "ただしい",
+      "english": "correct",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "畳",
+      "hiragana": "たたみ",
+      "english": "Japanese straw mat",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "立てる",
+      "hiragana": "たてる",
+      "english": "to stand something up",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "建てる",
+      "hiragana": "たてる",
+      "english": "to build",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "例えば",
+      "hiragana": "たとえば",
+      "english": "for example",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "棚",
+      "hiragana": "たな",
+      "english": "shelves",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "楽しみ",
+      "hiragana": "たのしみ",
+      "english": "joy",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "楽む",
+      "hiragana": "たのしむ",
+      "english": "to enjoy oneself",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "為",
+      "hiragana": "ため",
+      "english": "in order to",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "足りる",
+      "hiragana": "たりる",
+      "english": "to be enough",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "男性",
+      "hiragana": "だんせい",
+      "english": "male",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "暖房",
+      "hiragana": "だんぼう",
+      "english": "heating",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "血",
+      "hiragana": "ち",
+      "english": "blood",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "力",
+      "hiragana": "ちから",
+      "english": "strength,power",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "注意",
+      "hiragana": "ちゅうい",
+      "english": "caution",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "中学校",
+      "hiragana": "ちゅうがっこう",
+      "english": "junior high school,middle school",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "注射",
+      "hiragana": "ちゅうしゃ",
+      "english": "injection",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "駐車場",
+      "hiragana": "ちゅうしゃじょう",
+      "english": "parking lot",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "地理",
+      "hiragana": "ちり",
+      "english": "geography",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "捕まえる",
+      "hiragana": "つかまえる",
+      "english": "to seize",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "付く",
+      "hiragana": "つく",
+      "english": "to be attached",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "漬ける",
+      "hiragana": "つける",
+      "english": "to soak,to pickle",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "都合",
+      "hiragana": "つごう",
+      "english": "circumstances,convenience",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "伝える",
+      "hiragana": "つたえる",
+      "english": "to report",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "続く",
+      "hiragana": "つづく",
+      "english": "to be continued",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "続ける",
+      "hiragana": "つづける",
+      "english": "to continue",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "包む",
+      "hiragana": "つつむ",
+      "english": "to wrap",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "妻",
+      "hiragana": "つま",
+      "english": "my wife",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "釣る",
+      "hiragana": "つる",
+      "english": "to fish",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "丁寧",
+      "hiragana": "ていねい",
+      "english": "polite",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "適当",
+      "hiragana": "てきとう",
+      "english": "suitability",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "手伝う",
+      "hiragana": "てつだう",
+      "english": "to assist",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "手袋",
+      "hiragana": "てぶくろ",
+      "english": "glove",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "寺",
+      "hiragana": "てら",
+      "english": "temple",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "点",
+      "hiragana": "てん",
+      "english": "point,dot",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "店員",
+      "hiragana": "てんいん",
+      "english": "shop assistant",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "天気予報",
+      "hiragana": "てんきよほう",
+      "english": "weather forecast",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "電灯",
+      "hiragana": "でんとう",
+      "english": "electric light",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "電報",
+      "hiragana": "でんぽう",
+      "english": "telegram",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "展覧会",
+      "hiragana": "てんらんかい",
+      "english": "exhibition",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "都",
+      "hiragana": "と",
+      "english": "metropolitan",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "道具",
+      "hiragana": "どうぐ",
+      "english": "tool,means",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "動物園",
+      "hiragana": "どうぶつえん",
+      "english": "zoo",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "遠く",
+      "hiragana": "とおく",
+      "english": "distant",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "通る",
+      "hiragana": "とおる",
+      "english": "to go through",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "特に",
+      "hiragana": "とくに",
+      "english": "particularly,especially",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "特別",
+      "hiragana": "とくべつ",
+      "english": "special",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "途中",
+      "hiragana": "とちゅう",
+      "english": "on the way",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "特急",
+      "hiragana": "とっきゅう",
+      "english": "limited express train (faster than an express train)",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "届ける",
+      "hiragana": "とどける",
+      "english": "to send, to deliver, to report",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "泊まる",
+      "hiragana": "とまる",
+      "english": "to lodge at",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "止める",
+      "hiragana": "とめる",
+      "english": "to stop something",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "取り替える",
+      "hiragana": "とりかえる",
+      "english": "to exchange",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "泥棒",
+      "hiragana": "どろぼう",
+      "english": "thief",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "直す",
+      "hiragana": "なおす",
+      "english": "to fix,to repair",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "直る",
+      "hiragana": "なおる",
+      "english": "to be fixed,to be repaired",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "治る",
+      "hiragana": "なおる",
+      "english": "to be cured,to heal",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "泣く",
+      "hiragana": "なく",
+      "english": "to weep",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "無くなる",
+      "hiragana": "なくなる",
+      "english": "to disappear,to get lost",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "亡くなる",
+      "hiragana": "なくなる",
+      "english": "to die",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "投げる",
+      "hiragana": "なげる",
+      "english": "to throw or cast away",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "鳴る",
+      "hiragana": "なる",
+      "english": "to sound",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "慣れる",
+      "hiragana": "なれる",
+      "english": "to grow accustomed to",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "苦い",
+      "hiragana": "にがい",
+      "english": "bitter",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "二階建て",
+      "hiragana": "にかいだて",
+      "english": "two storied",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "逃げる",
+      "hiragana": "にげる",
+      "english": "to escape",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "日記",
+      "hiragana": "にっき",
+      "english": "journal",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "入院",
+      "hiragana": "にゅういんする",
+      "english": "to hospitalise, hospitalisation",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "入学",
+      "hiragana": "にゅうがくする",
+      "english": "to enter school or university",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "似る",
+      "hiragana": "にる",
+      "english": "to be similar",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "人形",
+      "hiragana": "にんぎょう",
+      "english": "doll, figure",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "盗む",
+      "hiragana": "ぬすむ",
+      "english": "to steal",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "塗る",
+      "hiragana": "ぬる",
+      "english": "to paint, to colour, to plaster",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "熱",
+      "hiragana": "ねつ",
+      "english": "fever",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "寝坊",
+      "hiragana": "ねぼう",
+      "english": "sleeping in late",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "眠い",
+      "hiragana": "ねむい",
+      "english": "sleepy",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "眠る",
+      "hiragana": "ねむる",
+      "english": "to sleep",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "残る",
+      "hiragana": "のこる",
+      "english": "to remain",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "乗り換える",
+      "hiragana": "のりかえる",
+      "english": "to change between buses or trains",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "乗り物",
+      "hiragana": "のりもの",
+      "english": "vehicle",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "葉",
+      "hiragana": "は",
+      "english": "leaf",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "場合",
+      "hiragana": "ばあい",
+      "english": "situation",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "倍",
+      "hiragana": "ばい",
+      "english": "double",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "拝見",
+      "hiragana": "はいけんする",
+      "english": "(humble) to look at",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "歯医者",
+      "hiragana": "はいしゃ",
+      "english": "dentist",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "運ぶ",
+      "hiragana": "はこぶ",
+      "english": "to transport",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "始める",
+      "hiragana": "はじめる",
+      "english": "to begin",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "場所",
+      "hiragana": "ばしょ",
+      "english": "location",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "恥ずかしい",
+      "hiragana": "はずかしい",
+      "english": "embarrassed",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "発音",
+      "hiragana": "はつおん",
+      "english": "pronunciation",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "花見",
+      "hiragana": "はなみ",
+      "english": "cherry-blossom viewing",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "林",
+      "hiragana": "はやし",
+      "english": "woods,forester",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "払う",
+      "hiragana": "はらう",
+      "english": "to pay",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "番組",
+      "hiragana": "ばんぐみ",
+      "english": "television or radio program",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "反対",
+      "hiragana": "はんたい",
+      "english": "opposition",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "日",
+      "hiragana": "ひ",
+      "english": "day, sun",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "火",
+      "hiragana": "ひ",
+      "english": "fire",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "冷える",
+      "hiragana": "ひえる",
+      "english": "to grow cold",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "光",
+      "hiragana": "ひかり",
+      "english": "light",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "光る",
+      "hiragana": "ひかる",
+      "english": "to shine,to glitter",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "引き出し",
+      "hiragana": "ひきだし",
+      "english": "drawer,drawing out",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "飛行場",
+      "hiragana": "ひこうじょう",
+      "english": "airport",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "久しぶり",
+      "hiragana": "ひさしぶり",
+      "english": "after a long time",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "美術館",
+      "hiragana": "びじゅつかん",
+      "english": "art gallery",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "非常に",
+      "hiragana": "ひじょうに",
+      "english": "extremely",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "引っ越す",
+      "hiragana": "ひっこす",
+      "english": "to move house",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "必要",
+      "hiragana": "ひつよう",
+      "english": "necessary",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "開く",
+      "hiragana": "ひらく",
+      "english": "to open an event",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "昼間",
+      "hiragana": "ひるま",
+      "english": "daytime,during the day",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "昼休み",
+      "hiragana": "ひるやすみ",
+      "english": "noon break",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "拾う",
+      "hiragana": "ひろう",
+      "english": "to pick up,to gather",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "増える",
+      "hiragana": "ふえる",
+      "english": "to increase",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "深い",
+      "hiragana": "ふかい",
+      "english": "deep",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "複雑",
+      "hiragana": "ふくざつ",
+      "english": "complexity,complication",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "復習",
+      "hiragana": "ふくしゅう",
+      "english": "revision",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "部長",
+      "hiragana": "ぶちょう",
+      "english": "head of a section",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "普通",
+      "hiragana": "ふつう",
+      "english": "usually, or a train that stops at every station",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "太る",
+      "hiragana": "ふとる",
+      "english": "to become fat",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "布団",
+      "hiragana": "ふとん",
+      "english": "Japanese bedding, futon",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "舟",
+      "hiragana": "ふね",
+      "english": "ship",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "不便",
+      "hiragana": "ふべん",
+      "english": "inconvenience",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "踏む",
+      "hiragana": "ふむ",
+      "english": "to step on",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "降り出す",
+      "hiragana": "ふりだす",
+      "english": "to start to rain",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "文化",
+      "hiragana": "ぶんか",
+      "english": "culture",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "文学",
+      "hiragana": "ぶんがく",
+      "english": "literature",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "文法",
+      "hiragana": "ぶんぽう",
+      "english": "grammar",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "別",
+      "hiragana": "べつ",
+      "english": "different",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "変",
+      "hiragana": "へん",
+      "english": "strange",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "返事",
+      "hiragana": "へんじ",
+      "english": "reply",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "貿易",
+      "hiragana": "ぼうえき",
+      "english": "trade",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "法律",
+      "hiragana": "ほうりつ",
+      "english": "law",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "僕",
+      "hiragana": "ぼく",
+      "english": "I (used by males)",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "星",
+      "hiragana": "ほし",
+      "english": "star",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "翻訳",
+      "hiragana": "ほんやく",
+      "english": "translation",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "参る",
+      "hiragana": "まいる",
+      "english": "(humble) to go,to come",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "負ける",
+      "hiragana": "まける",
+      "english": "to lose",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "間違える",
+      "hiragana": "まちがえる",
+      "english": "to make a mistake",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "間に合う",
+      "hiragana": "まにあう",
+      "english": "to be in time for",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "周り",
+      "hiragana": "まわり",
+      "english": "surroundings",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "回る",
+      "hiragana": "まわる",
+      "english": "to go around",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "漫画",
+      "hiragana": "まんが",
+      "english": "comic",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "真中",
+      "hiragana": "まんなか",
+      "english": "middle",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "見える",
+      "hiragana": "みえる",
+      "english": "to be in sight",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "湖",
+      "hiragana": "みずうみ",
+      "english": "lake",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "味噌",
+      "hiragana": "みそ",
+      "english": "miso, soybean paste",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "見つかる",
+      "hiragana": "みつかる",
+      "english": "to be discovered",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "見つける",
+      "hiragana": "みつける",
+      "english": "to discover",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "皆",
+      "hiragana": "みな",
+      "english": "everybody",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "港",
+      "hiragana": "みなと",
+      "english": "harbour",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "向かう",
+      "hiragana": "むかう",
+      "english": "to face",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "迎える",
+      "hiragana": "むかえる",
+      "english": "to go out to meet",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "昔",
+      "hiragana": "むかし",
+      "english": "old times, old days, long ago, formerly",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "虫",
+      "hiragana": "むし",
+      "english": "insect",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "息子",
+      "hiragana": "むすこ",
+      "english": "(humble) son",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "娘",
+      "hiragana": "むすめ",
+      "english": "(humble) daughter",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "無理",
+      "hiragana": "むり",
+      "english": "impossible",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "召し上がる",
+      "hiragana": "めしあがる",
+      "english": "(polite) to eat",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "珍しい",
+      "hiragana": "めずらしい",
+      "english": "rare",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "申し上げる",
+      "hiragana": "もうしあげる",
+      "english": "(humble) to say,to tell",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "申す",
+      "hiragana": "もうす",
+      "english": "(humble) to be called,to say",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "戻る",
+      "hiragana": "もどる",
+      "english": "to turn back",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "木綿",
+      "hiragana": "もめん",
+      "english": "cotton",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "森",
+      "hiragana": "もり",
+      "english": "forest",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "焼く",
+      "hiragana": "やく",
+      "english": "to bake,to grill",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "約束",
+      "hiragana": "やくそく",
+      "english": "promise",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "役に立つ",
+      "hiragana": "やくにたつ",
+      "english": "to be helpful",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "焼ける",
+      "hiragana": "やける",
+      "english": "to burn,to be roasted",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "優しい",
+      "hiragana": "やさしい",
+      "english": "kind",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "痩せる",
+      "hiragana": "やせる",
+      "english": "to become thin",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "止む",
+      "hiragana": "やむ",
+      "english": "to stop",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "止める",
+      "hiragana": "やめる",
+      "english": "to stop",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "柔らかい",
+      "hiragana": "やわらかい",
+      "english": "soft",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "湯",
+      "hiragana": "ゆ",
+      "english": "hot water",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "指",
+      "hiragana": "ゆび",
+      "english": "finger",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "指輪",
+      "hiragana": "ゆびわ",
+      "english": "a ring",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "夢",
+      "hiragana": "ゆめ",
+      "english": "dream",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "揺れる",
+      "hiragana": "ゆれる",
+      "english": "to shake,to sway",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "用",
+      "hiragana": "よう",
+      "english": "use",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "用意",
+      "hiragana": "ようい",
+      "english": "preparation",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "用事",
+      "hiragana": "ようじ",
+      "english": "things to do",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "汚れる",
+      "hiragana": "よごれる",
+      "english": "to get dirty",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "予習",
+      "hiragana": "よしゅう",
+      "english": "preparation for a lesson",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "予定",
+      "hiragana": "よてい",
+      "english": "arrangement",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "予約",
+      "hiragana": "よやく",
+      "english": "reservation",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "寄る",
+      "hiragana": "よる",
+      "english": "to visit",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "喜ぶ",
+      "hiragana": "よろこぶ",
+      "english": "to be delighted",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "理由",
+      "hiragana": "りゆう",
+      "english": "reason",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "利用",
+      "hiragana": "りよう",
+      "english": "utilization",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "両方",
+      "hiragana": "りょうほう",
+      "english": "both sides",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "旅館",
+      "hiragana": "りょかん",
+      "english": "Japanese hotel",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "留守",
+      "hiragana": "るす",
+      "english": "absence",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "冷房",
+      "hiragana": "れいぼう",
+      "english": "air conditioning",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "歴史",
+      "hiragana": "れきし",
+      "english": "history",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "連絡",
+      "hiragana": "れんらく",
+      "english": "contact",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "沸かす",
+      "hiragana": "わかす",
+      "english": "to boil,to heat",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "別れる",
+      "hiragana": "わかれる",
+      "english": "to separate",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "沸く",
+      "hiragana": "わく",
+      "english": "to boil, to grow hot,to get excited",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "訳",
+      "hiragana": "わけ",
+      "english": "meaning,reason",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "忘れ物",
+      "hiragana": "わすれもの",
+      "english": "lost article",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "笑う",
+      "hiragana": "わらう",
+      "english": "to laugh,to smile",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "割合",
+      "hiragana": "わりあい",
+      "english": "rate,ratio,percentage",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "割れる",
+      "hiragana": "われる",
+      "english": "to break",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "消しゴム",
+      "hiragana": "けしゴム",
+      "english": "eraser, rubber",
+      "jlpt": "n4"
+    },
+    {
+      "kanji": "レポート / リポート",
+      "english": "report",
+      "jlpt": "n4"
+    }
+  ],
+  "hiragana": [
+    {
+      "hiragana": "あさって",
+      "english": "day after tomorrow",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "あそこ",
+      "english": "over there",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "あちら",
+      "english": "there",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "あっち",
+      "english": "over there",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "あなた",
+      "english": "you",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "あの",
+      "english": "that over there",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "あの",
+      "english": "um...",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "あびる",
+      "english": "to bathe,to shower",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "あまり",
+      "english": "not very",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "ある",
+      "english": "to be,to have (used for inanimate objects)",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "あれ",
+      "english": "that",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "いいえ",
+      "english": "no",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "いかが",
+      "english": "how",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "いくつ",
+      "english": "how many?,how old?",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "いくら",
+      "english": "how much?",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "いす",
+      "english": "chair",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "いちばん",
+      "english": "best,first",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "いつ",
+      "english": "when",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "いつも",
+      "english": "always",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "いろいろ",
+      "english": "various",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "ええ",
+      "english": "yes",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "おいしい",
+      "english": "delicious",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "おなか",
+      "english": "stomach",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "おばあさん",
+      "english": "grandmother,female senior-citizen",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "おまわりさん",
+      "english": "friendly term for policeman",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "おもしろい",
+      "english": "interesting",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "かかる",
+      "english": "to take time or money",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "かぎ",
+      "english": "key",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "かける",
+      "english": "to call by phone",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "かばん",
+      "english": "bag,basket",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "かわいい",
+      "english": "cute",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "きれい",
+      "english": "pretty,clean",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "ください",
+      "english": "please",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "ここ",
+      "english": "here",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "こちら",
+      "english": "this person or way",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "こっち",
+      "english": "this person or way",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "この",
+      "english": "this",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "コピーする",
+      "english": "to copy",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "これ",
+      "english": "this",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "こんな",
+      "english": "such",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "さあ",
+      "english": "well…",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "しかし",
+      "english": "however",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "しょうゆ",
+      "english": "soy sauce",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "すぐに",
+      "english": "instantly",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "する",
+      "english": "to do",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "せっけん",
+      "english": "soap",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "そこ",
+      "english": "that place",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "そちら",
+      "english": "over there",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "そっち",
+      "english": "over there",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "その",
+      "english": "that",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "そば",
+      "english": "near,beside",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "それ",
+      "english": "that",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "それから",
+      "english": "after that",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "それでは",
+      "english": "in that situation",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "たいへん",
+      "english": "very",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "たいへん",
+      "english": "difficult situation",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "たくさん",
+      "english": "many",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "たて",
+      "english": "length,height",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "たばこ",
+      "english": "tobacco,cigarettes",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "たぶん",
+      "english": "probably",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "だんだん",
+      "english": "gradually",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "ちゃわん",
+      "english": "rice bowl",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "ちょうど",
+      "english": "exactly",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "ちょっと",
+      "english": "somewhat",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "つける",
+      "english": "to turn on",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "つまらない",
+      "english": "boring",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "できる",
+      "english": "to be able to",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "では",
+      "english": "with that...",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "でも",
+      "english": "but",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "どう",
+      "english": "how,in what way",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "どうして",
+      "english": "for what reason",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "どうぞ",
+      "english": "please",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "どうも",
+      "english": "thanks",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "どこ",
+      "english": "where",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "どちら",
+      "english": "which of two",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "どっち",
+      "english": "which",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "とても",
+      "english": "very",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "どなた",
+      "english": "who",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "どの",
+      "english": "which",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "どれ",
+      "english": "which (of three or more)",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "なぜ",
+      "english": "why",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "など",
+      "english": "et cetera",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "なる",
+      "english": "to become",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "はい",
+      "english": "yes",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "はく",
+      "english": "to wear,to put on trousers",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "はし",
+      "english": "chopsticks",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "ふろ",
+      "english": "bath",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "ほか",
+      "english": "other",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "ほんとう",
+      "english": "truth",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "まずい",
+      "english": "unpleasant",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "また",
+      "english": "again,and",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "まだ",
+      "english": "yet,still",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "まっすぐ",
+      "english": "straight ahead,direct",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "みんな",
+      "english": "everyone",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "もう",
+      "english": "already",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "もっと",
+      "english": "more",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "やる",
+      "english": "to do",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "ゆっくりと",
+      "english": "slowly",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "よく",
+      "english": "often",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "りっぱ",
+      "english": "splendid",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "より",
+      "english": "Used for comparison",
+      "jlpt": "n5"
+    },
+    {
+      "hiragana": "あ",
+      "english": "Ah",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ああ",
+      "english": "like that",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "あかちゃん",
+      "english": "baby",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "あげる",
+      "english": "to give",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "あんな",
+      "english": "such",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "いじめる",
+      "english": "to tease",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "いっぱい",
+      "english": "full",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "いらっしゃる",
+      "english": "(respectful) to be, to come or to go",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "うち",
+      "english": "within",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "うん",
+      "english": "(informal) yes",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "おいでになる",
+      "english": "(respectful) to be",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "おかげ",
+      "english": "owing to, thanks to",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "おかしい",
+      "english": "strange or funny",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "おっしゃる",
+      "english": "(respectful) to say",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "おつり",
+      "english": "change from purchase, balance",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "おもちゃ",
+      "english": "toy",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "きっと",
+      "english": "surely",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "くれる",
+      "english": "to give",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "けんかする",
+      "english": "to quarrel",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "こう",
+      "english": "this way",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ごちそう",
+      "english": "a feast",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "このあいだ",
+      "english": "the other day,recently",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "このごろ",
+      "english": "these days,nowadays",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ごらんになる",
+      "english": "(respectful) to see",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "これから",
+      "english": "after this",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "さっき",
+      "english": "some time ago",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "しっかり",
+      "english": "firmly,steadily",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "しばらく",
+      "english": "little while",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "すっかり",
+      "english": "completely",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "すっと",
+      "english": "straight,all of a sudden",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "すり",
+      "english": "pickpocket",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "すると",
+      "english": "then",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "そう",
+      "english": "really",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "それで",
+      "english": "because of that",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "それに",
+      "english": "moreover",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "それほど",
+      "english": "to that extent",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "そろそろ",
+      "english": "gradually,soon",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "そんな",
+      "english": "that sort of",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "そんなに",
+      "english": "so much,like that",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "たいてい",
+      "english": "usually",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "だから",
+      "english": "so,therefore",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "たまに",
+      "english": "occasionally",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "チェックする",
+      "english": "to check",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ちっとも",
+      "english": "not at all (used with a negative verb)",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ちゃん",
+      "english": "suffix for familiar person",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "つもり",
+      "english": "intention",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "とうとう",
+      "english": "finally, after all",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "とこや",
+      "english": "barber",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "どんどん",
+      "english": "more and more",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "なさる",
+      "english": "(respectful) to do",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "なるべく",
+      "english": "as much as possible",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "なるほど",
+      "english": "now I understand",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ぬれる",
+      "english": "to get wet",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ねだん",
+      "english": "price",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "はず",
+      "english": "it should be so",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "はっきり",
+      "english": "clearly",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ひきだす",
+      "english": "to withdraw",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ひげ",
+      "english": "beard",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ひどい",
+      "english": "awful",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ぶどう",
+      "english": "grapes",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ほとんど",
+      "english": "mostly",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "ほめる",
+      "english": "to praise",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "または",
+      "english": "or,otherwise",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "もうすぐ",
+      "english": "soon",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "もし",
+      "english": "if",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "やっと",
+      "english": "at last",
+      "jlpt": "n4"
+    },
+    {
+      "hiragana": "チェックする",
+      "english": "to check",
+      "jlpt": "n4"
+    }
+  ]
+}

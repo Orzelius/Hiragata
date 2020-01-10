@@ -1,0 +1,23 @@
+/* purgecss start ignore */
+@tailwind  base;
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-4xl text-gray-700;
+}
+.jap-text{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.shadow-outline-green {
+  box-shadow: 0 0 3px 2px rgb(56, 161, 105);
+}
+
+@tailwind  components;
+/* purgecss end ignore */
+
+@tailwind  utilities;
