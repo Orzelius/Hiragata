@@ -6,7 +6,7 @@ const path = require('path'),
 
 module.exports = {
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join(__dirname, 'disr'),
         historyApiFallback: true,
         compress: true,
         port: 8080
@@ -55,7 +55,7 @@ module.exports = {
         vendor: ['react', 'react-dom']
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'public'),
         publicPath: '/',
         filename: 'js/[name].bundle.js'
     },
