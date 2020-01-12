@@ -11,7 +11,7 @@ const App: React.FC = () => {
         {/* the Switch makes sure only the first element gets loaded */}
         <Switch>
           {/* <Route exact path="/" component={Dasboard}/> */}
-          <Route path='/home' component={Home}/>
+          <Route exact path='/' component={Home}/>
         </Switch>
       </div>
     </BrowserRouter>

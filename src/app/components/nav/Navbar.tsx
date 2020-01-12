@@ -8,7 +8,7 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center -mx-6 border-b border-gray-200">
           <div className="p-2 sm:pl-8">
             <div className="flex items-center">
-              <Link to="/home" className="block lg:mr-4 mt-1">
+              <Link to="/" className="block lg:mr-4 mt-1">
                 <h2 className="whitespace-no-wrap h-10 w-auto hidden sm:block text-2xl antialiased tracking-wide bg-blue-200 pl-2 pr-2 pt-1 rounded rounded-sm" style={{ fontFamily: "din-round,sans-serif" }}>
                   ひらカタ | HiraKata
                 </h2>

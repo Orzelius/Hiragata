@@ -4,7 +4,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   content: [
     './src/**/*.html',
     './src/**/*.js',
-    './src/**/*.tsx',
+    './src/**/*.tsx'
     // etc.
   ],
 
@@ -12,10 +12,12 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 });
 
-module.exports = {
-  plugins: [
-    require('tailwindcss'),
-    require('autoprefixer'),
-    ...process.env.NODE_ENV !== 'development' ? [purgecss] : []
-  ]
+module.exports = (ctx) => {
+  return {
+    plugins: [
+      require('tailwindcss'),
+      require('autoprefixer'),
+      ...(ctx.webpack.mode === 'production') ? [purgecss] : []
+    ]
+  }
 }

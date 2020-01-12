@@ -164,8 +164,8 @@ const Home: React.FC = () => {
             type="text" placeholder="Input" readOnly value={wanakana.toRomaji(state.input)} />
         </div>
       </div>
-      <div className="flex justify-center mt-20">
-        <Button onClick={() => { }} className="max-w-sm h-16 w-full border border-gray-500 rounded-sm shadow hover:bg-gray-500 text-xl text-gray-800 font-semibold hover:text-white" color="">
+      <div className="flex justify-center mt-16">
+        <Button onClick={() => { }} className="max-w-sm h-16 w-full border border-gray-500 rounded-sm shadow hover:bg-gray-500 text-xl text-gray-800 hover:font-bold font-semibold hover:text-white" color="">
           Start Now
         </Button>
       </div>
