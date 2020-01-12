@@ -2,7 +2,6 @@ import * as React from 'react';
 import { useState } from 'react';
 import * as wanakana from 'wanakana';
 import { getWord, Word } from '../Api';
-import '../style/check.css';
 import { Button } from './BasicComponents';
 import JapWord from './JapWord/JapWord';
 

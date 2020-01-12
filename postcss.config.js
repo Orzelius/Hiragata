@@ -17,7 +17,7 @@ module.exports = (ctx) => {
     plugins: [
       require('tailwindcss'),
       require('autoprefixer'),
-      ...(ctx.webpack.mode === 'production') ? [purgecss] : []
+      ...(ctx.webpack.mode === 'production') ? [purgecss] : [purgecss]
     ]
   }
 }
