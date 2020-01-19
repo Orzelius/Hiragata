@@ -20,3 +20,29 @@ export const Button: React.FC<buttonProps> = ({children ,onClick, color = "bg-wh
     </button>
   )
 }
+
+
+interface TitleProps {
+  children: React.ReactNode,
+}
+export const Title: React.FC<TitleProps> = ({children}) => {
+  return (
+    <div className="w-full">
+      <h1 className="text-4xl mt-10 text-center px-4 sm:px-32 font-semibold leading-none md:leading-normal">
+        {children}
+      </h1>
+    </div>
+  )
+}
+
+interface ContaierProps{
+  children: React.ReactNode,
+  className?: string
+}
+export const Container: React.FC<ContaierProps> = ({children, className}) => {
+  return (
+    <div className={"container p-2 mt-20 md:mt-10 lg:px-32 pb-8 " + className}>
+      {children}
+    </div>
+  )
+}

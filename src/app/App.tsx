@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Navbar } from './components/nav/Navbar';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
+import QueryDashboard from './components/Start/QueryDashboard';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
         <Switch>
           {/* <Route exact path="/" component={Dasboard}/> */}
           <Route exact path='/' component={Home}/>
+          <Route exact path='/Start' component={QueryDashboard}/>
         </Switch>
       </div>
     </BrowserRouter>
