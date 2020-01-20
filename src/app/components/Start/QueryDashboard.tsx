@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, colors, Container, Title } from '../BasicComponents';
+import { Button, colors, Container, Title, Question } from '../BasicComponents';
 import AnswerBox from './AnswerBox';
 
 const QueryDashboard: React.FC = () => {

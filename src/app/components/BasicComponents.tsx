@@ -24,13 +24,31 @@ export const Button: React.FC<buttonProps> = ({children ,onClick, color = "bg-wh
 
 interface TitleProps {
   children: React.ReactNode,
+  question?: React.ReactNode
 }
-export const Title: React.FC<TitleProps> = ({children}) => {
+export const Title: React.FC<TitleProps> = ({children, question}) => {
   return (
-    <div className="w-full">
-      <h1 className="text-4xl mt-10 text-center px-4 sm:px-32 font-semibold leading-none md:leading-normal">
+    <div className="w-full px-4 sm:px-32">
+      <h1 className="text-4xl mt-10 text-center font-semibold leading-none md:leading-normal">
         {children}
+        {question}
       </h1>
+    </div>
+  )
+}
+
+interface QuestionProps {
+  Title: string,
+  text: React.ReactNode
+}
+export const Question: React.FC<QuestionProps> = ({Title, text}) => {
+  let modalVisible = false;
+  onclick = () => {
+    modalVisible = !modalVisible;
+  }
+  return (
+    <div className="bg-gray-400 mx-2 px-3 rounded-lg inline-block hover:bg-gray-600 cursor-default">
+      <h1 className="text-2xl font-semibold text-white">?</h1>
     </div>
   )
 }
