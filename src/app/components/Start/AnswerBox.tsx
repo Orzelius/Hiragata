@@ -8,7 +8,7 @@ interface answerProps {
 
 const AnswerBox: React.FC<answerProps> = ({ title, text, onClick }) => {
   return (
-    <div
+    <div onClick={onClick}
       className="border-gray-600 border-4 rounded-lg p-1 mt-4 hover:bg-gray-200 cursor-pointer sm:w-48 sm:h-48 sm:mx-2">
       <div className="inline-block w-32 sm:block sm:w-auto">
         <h1 className="text-center text-gray-900 text-4xl px-4 sm:text-center sm:p-1 sm:m-1 sm:font-bold sm:text-6xl sm:text-gray-700">{title}</h1>
