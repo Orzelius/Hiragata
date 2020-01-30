@@ -166,7 +166,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div className="flex justify-center mt-16">
-        <Button onClick={() => {return(history.push('/start'))}} className="trans-0 border max-w-sm h-16 w-full border-gray-500 rounded-sm shadow hover:bg-gray-500 text-xl text-gray-800 hover:font-bold font-semibold hover:text-white" color="">
+        <Button onClick={() => {return(history.push('/Start'))}} className="trans-0 border max-w-sm h-16 w-full border-gray-500 rounded-sm shadow hover:bg-gray-500 text-xl text-gray-800 hover:font-bold font-semibold hover:text-white" color="">
           Get Started
         </Button>
       </div>
