@@ -67,7 +67,7 @@ const Start: React.FC = () => {
     setSettings(newSettings);
     console.log(newSettings);
     if (setupState.questionNo === Questions.length - 1) {
-      history.push("/Learn")
+      history.push("/Learn", {settings: newSettings})
     }
     SetSetupState(newSetup);
   }
