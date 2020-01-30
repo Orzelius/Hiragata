@@ -1,23 +1,59 @@
 /* purgecss start ignore */
-@tailwind  base;
+@tailwind base;
 
 h1 {
   @apply text-2xl;
 }
+
 h2 {
   @apply text-xl;
 }
+
 h3 {
   @apply text-4xl text-gray-700;
 }
-.jap-text{
+
+.jap-text {
   font-family: 'Noto Sans JP', sans-serif;
 }
+
 .shadow-outline-green {
   box-shadow: 0 0 3px 2px rgb(56, 161, 105);
 }
 
-@tailwind  components;
+@tailwind components;
 /* purgecss end ignore */
 
-@tailwind  utilities;
+@tailwind utilities;
+
+.trans-0 {
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  -ms-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+.trans-1 {
+  -webkit-transition: color 0.4s ease-out;
+  -moz-transition: color 0.4s ease-out;
+  -o-transition: color 0.4s ease-out;
+  -ms-transition: color 0.4s ease-out;
+  transition: color 0.4s ease-out;
+}
+
+.trans-2 {
+  -webkit-transition: color 1s ease-out;
+  -moz-transition: color 1s ease-out;
+  -o-transition: color 1s ease-out;
+  -ms-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+}
+
+.border-8{
+  border-width: 0.4rem;
+}
+
+.rounded-xl{
+  border-radius: 1.5rem;
+}

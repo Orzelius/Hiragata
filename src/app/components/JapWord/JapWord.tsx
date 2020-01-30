@@ -36,8 +36,8 @@ const JapWord: React.FC<Props> = ({ word, input, hiragana }) => {
     );
   }
   return (
-    <div>
-      <div className="inline-block bg-gray-300 hover:bg-gray-400 rounded-lg px-4 cursor-default">
+    <div className="inline-block">
+      <div className="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 cursor-default">
         {...wordJsx}
       </div>
       {/* <h2 className={"jap-text font-light text-sm subpixel-antialiased inline-block bg-green-200 rounded-lg px-2 mx-2"}>

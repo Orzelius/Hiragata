@@ -2,9 +2,9 @@ import * as React from 'react';
 import { useState } from 'react';
 import * as wanakana from 'wanakana';
 import { getWord, Word } from '../Api';
-import '../style/check.css';
-import { Button } from './BasicComponents';
+import { Button, Title, Container } from './BasicComponents';
 import JapWord from './JapWord/JapWord';
+import { Router, Redirect, useHistory } from 'react-router';
 
 interface State {
   word: Word
@@ -24,6 +24,7 @@ const notVowels = ["r", "t", "p", "s", "d", "f", "g", "h", "j", "k", "b", "n", "
 const Home: React.FC = () => {
 
   const [state, setState] = useState(initState);
+  const history = useHistory();
 
   let kanjiJsx: JSX.Element;
 
@@ -115,11 +116,11 @@ const Home: React.FC = () => {
   }
 
   return (
-    <div className="container p-2 mt-20 md:mt-10 lg:px-32 pb-8">
+    <Container className="container p-2 mt-20 md:mt-10 lg:px-32 pb-8">
       <div className="flex content-center">
-        <h3 className="text-4xl mt-10 text-center px-4 sm:px-32 font-semibold leading-none md:leading-normal">
+        <Title>
           A tool for learning hiragana and katakana, with real life words
-        </h3>
+        </Title>
       </div>
       <div className="px-8 sm:px-2 p-4 sm:mx-20 mb-6">
         <div className="w-full border-b border-gray-400"></div>
@@ -129,7 +130,7 @@ const Home: React.FC = () => {
         <div className="mt-4 mb-2">
           {/* <h2 className="text-black text-2xl jap-text font-semibold subpixel-antialiased inline-block border-b border-gray-400">ベッド</h2> */}
           <JapWord input={state.input} word={state.word} hiragana={state.word.kanji ? true : false}></JapWord>
-          <div className="ml-1 mt-1 sm:inline-block sm:ml-3">
+          <div className="ml-1 mt-1 block sm:inline-block sm:ml-3">
             {kanjiJsx}
             <h2 className="text-gray-700 text-2xl inline-block">{state.word.english}</h2>
           </div>
@@ -165,11 +166,11 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div className="flex justify-center mt-16">
-        <Button onClick={() => { }} className="max-w-sm h-16 w-full border border-gray-500 rounded-sm shadow hover:bg-gray-500 text-xl text-gray-800 hover:font-bold font-semibold hover:text-white" color="">
-          Start Now
+        <Button onClick={() => {return(history.push('/Start'))}} className="trans-0 border max-w-sm h-16 w-full border-gray-500 rounded-sm shadow hover:bg-gray-500 text-xl text-gray-800 hover:font-bold font-semibold hover:text-white" color="">
+          Get Started
         </Button>
       </div>
-    </div>
+    </Container>
   );
 }
 

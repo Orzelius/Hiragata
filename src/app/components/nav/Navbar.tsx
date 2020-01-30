@@ -5,7 +5,7 @@ export const Navbar: React.FC = () => {
   return (
     <div className="flex bg-white fixed top-0 inset-x-0 z-100 h-16 items-center">
       <div className="w-full max-w-screen-xl relative mx-auto px-6 container">
-        <div className="flex items-center -mx-6 border-b border-gray-200">
+        <div className="flex items-center -mx-6 border-b border-b-2 border-gray-200">
           <div className="p-2 sm:pl-8">
             <div className="flex items-center">
               <Link to="/" className="block lg:mr-4 mt-1">
