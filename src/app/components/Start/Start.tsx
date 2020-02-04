@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { Button, colors, Container, Title } from '../BasicComponents';
 import AnswerBox from './AnswerBox';
-import { appSettings } from '../../models';
+import { appSettings, defaultSettings } from '../../models';
 import CheckBox from './CheckBox';
 import { Question } from './questions/Question';
 import { question, Questions } from './questions/Questions';
 import { useHistory } from 'react-router';
+import { render } from 'react-dom';
+import Learn from '../Learn/Learn';
 
 interface SetupState {
   questionNo: number,
@@ -13,30 +15,12 @@ interface SetupState {
 }
 
 const Start: React.FC = () => {
-  const initSettings: appSettings = {
-    input: {
-      hiragana: true,
-      katakana: true,
-      romanji: true
-    },
-    mixAndMatch: true,
-    practice: {
-      hiragana: true,
-      katakana: true
-    },
-    transform: false,
-    vocabulary: {
-      hiragana: true,
-      kanji: true,
-      katakana: true
-    }
-  }
   const initSetupState: SetupState = {
     questionNo: 0,
     question: Questions[0]
   }
 
-  const [settings, setSettings] = React.useState(initSettings);
+  const [settings, setSettings] = React.useState(defaultSettings);
   const [setupState, SetSetupState] = React.useState(initSetupState);
   const history = useHistory();
 
@@ -67,7 +51,7 @@ const Start: React.FC = () => {
     setSettings(newSettings);
     console.log(newSettings);
     if (setupState.questionNo === Questions.length - 1) {
-      history.push("/Learn", {settings: newSettings})
+      history.push("/Learn", {...newSettings})
     }
     SetSetupState(newSetup);
   }

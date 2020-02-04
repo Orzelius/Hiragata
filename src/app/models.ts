@@ -20,3 +20,22 @@ export interface appSettings{
   }
   transform: boolean
 }
+
+export const defaultSettings: appSettings = {
+  input: {
+    hiragana: true,
+    katakana: true,
+    romanji: true
+  },
+  mixAndMatch: true,
+  practice: {
+    hiragana: true,
+    katakana: true
+  },
+  transform: false,
+  vocabulary: {
+    hiragana: true,
+    kanji: true,
+    katakana: true
+  }
+}
