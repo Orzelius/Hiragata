@@ -1,5 +1,4 @@
-
-# HiraKata - A tool for learning hiragana and katakana
+![Image of home page](https://github.com/Orzelius/HiraKata/blob/develop/src/Images/home_page.png)
 
 ## Stuff I used
 I built it on my [React-Typescript-with-other-nice-things-boilerplate](https://github.com/Orzelius/React-Typescript-with-other-nice-things-boilerplate). It mostly has the same stuff.  Also big thanks to [WanaKana](https://github.com/WaniKani/WanaKana) as I used a ton of it for simple conversions.
