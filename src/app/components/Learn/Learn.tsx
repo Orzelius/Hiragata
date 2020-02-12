@@ -15,7 +15,7 @@ const Learn: React.FC<Props> = (props) => {
 
 
   return (
-    <Container className="mt-40">
+    <Container className="mt-56">
       <sub>{JSON.stringify(settings)}</sub>
     </Container>
   )

@@ -43,5 +43,5 @@ export const Questions: question[] =
     ],
     columns: 1,
     multipleAnswer: true,
-  },
+  }
 ]

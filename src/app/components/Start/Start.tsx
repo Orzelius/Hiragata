@@ -45,17 +45,20 @@ const Start: React.FC = () => {
         break;
 
     }
-
+    
     newSetup.questionNo = setupState.questionNo + 1;
     newSetup.question = Questions[newSetup.questionNo];
     setSettings(newSettings);
     console.log(newSettings);
     if (setupState.questionNo === Questions.length - 1) {
-      history.push("/Learn", {...newSettings})
+      history.push("/Learn", {...newSettings});
     }
     SetSetupState(newSetup);
   }
-
+  
+  const skipSetup = () => {
+    history.push("/Learn", {...defaultSettings});
+  }
 
   return (
     <Container>
@@ -70,7 +73,8 @@ const Start: React.FC = () => {
       </Question>
       <h2 className="text-gray-500 text-sm mt-20 text-center">You can change the settings later as well</h2>
       <div className="justify-center mt-3 flex">
-        <button className="border-gray-500 border-2 rounded text-gray-600 hover:text-gray-700 hover:border-gray-700 px-8 py-1">Skip Setup</button>
+        <button className="border-gray-500 border-2 rounded text-gray-600 hover:text-gray-700 hover:border-gray-700 px-8 py-1"
+                onClick={skipSetup}>Skip Setup</button>
       </div>
     </Container>
   );
