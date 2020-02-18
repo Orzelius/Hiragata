@@ -5,6 +5,7 @@ import { getWord, Word } from '../Api';
 import { Button, Title, Container } from './BasicComponents';
 import JapWord from './JapWord/JapWord';
 import { Router, Redirect, useHistory } from 'react-router';
+import { defaultSettings } from '../models';
 
 interface State {
   word: Word
@@ -129,7 +130,7 @@ const Home: React.FC = () => {
         <h2 className="text-2xl text-gray-800 mb-6 sm:text-3xl">Learn by doing, not looking</h2>
         <div className="mt-4 mb-2">
           {/* <h2 className="text-black text-2xl jap-text font-semibold subpixel-antialiased inline-block border-b border-gray-400">ベッド</h2> */}
-          <JapWord input={state.input} word={state.word} hiragana={state.word.kanji ? true : false}></JapWord>
+          <JapWord settings={defaultSettings} input={state.input} word={state.word} hiragana={state.word.kanji ? true : false}></JapWord>
           <div className="ml-1 mt-1 block sm:inline-block sm:ml-3">
             {kanjiJsx}
             <h2 className="text-gray-700 text-2xl inline-block">{state.word.english}</h2>
