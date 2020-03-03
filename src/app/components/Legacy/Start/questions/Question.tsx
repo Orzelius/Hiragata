@@ -1,7 +1,7 @@
 import * as React from 'react';
-import CheckBox from '../CheckBox';
-import AnswerBox from '../AnswerBox';
-import { Title } from '../../BasicComponents';
+import AnswerBox from '../../../../Helpers/AnswerBox';
+import CheckBox from '../../../../Helpers/CheckBox';
+import { Title } from '../../../../Helpers/BasicComponents';
 
 interface questionProps {
   submit(answer: boolean[]): void,

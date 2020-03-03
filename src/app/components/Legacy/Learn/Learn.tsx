@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { appSettings, defaultSettings } from '../../models';
+import { appSettings, defaultSettings } from '../../../models';
 import { RouteComponentProps } from 'react-router';
 import { useState } from 'react';
-import { Container } from '../BasicComponents';
+import { Container } from '../../../Helpers/BasicComponents';
 import InputArea from './InputArea';
 
 

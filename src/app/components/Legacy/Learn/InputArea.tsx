@@ -2,9 +2,9 @@ import * as React from 'react';
 import JapWord from '../JapWord/JapWord';
 import { useState } from 'react';
 import { useHistory } from 'react-router';
-import { getWord, Word } from '../../Api';
-import { evaluateInput } from './Helpers';
-import { appSettings } from '../../models';
+import { getWord, Word } from '../../../Api';
+import { evaluateInput } from '../../../Helpers/Helpers';
+import { appSettings } from '../../../models';
 
 const initState = {
   word: getWord(),
@@ -70,7 +70,7 @@ const InputArea: React.FC<props> = ({settings}) => {
     <div>
       <div className="p-2 pr-8">
         <div className="mt-4 mb-2">
-          <JapWord settings={settings} input={state.input} word={state.word} hiragana={state.word.kanji ? true : false}></JapWord>
+          <JapWord settings={settings} input={state.input} word={state.word}></JapWord>
           <div className="ml-1 mt-1 block sm:inline-block sm:ml-3">
             {kanjiJsx}
             <h2 className="text-gray-700 text-2xl inline-block">{state.word.english}</h2>

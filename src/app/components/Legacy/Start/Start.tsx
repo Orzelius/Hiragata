@@ -1,13 +1,11 @@
 import * as React from 'react';
-import { Button, colors, Container, Title } from '../BasicComponents';
-import AnswerBox from './AnswerBox';
-import { appSettings, defaultSettings } from '../../models';
-import CheckBox from './CheckBox';
 import { Question } from './questions/Question';
 import { question, Questions } from './questions/Questions';
 import { useHistory } from 'react-router';
 import { render } from 'react-dom';
 import Learn from '../Learn/Learn';
+import { defaultSettings } from '../../../models';
+import { Container } from '../../../Helpers/BasicComponents';
 
 interface SetupState {
   questionNo: number,

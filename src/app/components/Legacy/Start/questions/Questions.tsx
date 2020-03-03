@@ -1,6 +1,4 @@
 import React from 'react';
-import AnswerBox from "../AnswerBox"
-import CheckBox from '../CheckBox';
 
 export interface question {
   choices: {
