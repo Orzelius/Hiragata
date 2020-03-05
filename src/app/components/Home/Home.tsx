@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import * as wanakana from 'wanakana';
 import { Title, Container } from '../../Helpers/BasicComponents';
-import KanaTable from './KanaTables/HiraganaTable';
+import KanaTable from './KanaTable/KanaTable';
 
 const Home: React.FC = () => {
 
@@ -13,7 +13,9 @@ const Home: React.FC = () => {
           A tool for learning hiragana and katakana, with real life words
         </Title>
       </div>
-      <KanaTable></KanaTable>
+      <div className="mt-12">
+        <KanaTable></KanaTable>
+      </div>
     </Container>
   );
 }
