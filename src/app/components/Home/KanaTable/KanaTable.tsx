@@ -7,11 +7,10 @@ interface element {
   latin: string
   hiragana: string
   katakana: string
-  selected: boolean
+  isSelected: boolean
   isBorder: boolean
   x: number
   y: number
-  jsx: JSX.Element | null
 }
 
 let basicElement: element = {
@@ -19,10 +18,9 @@ let basicElement: element = {
   isBorder: false,
   katakana: "",
   latin: "",
-  selected: false,
+  isSelected: false,
   x: 0,
   y: 0,
-  jsx: null
 }
 
 let kanaTable: element[][] = [[]];
@@ -30,19 +28,19 @@ vowels.forEach((vowel, index) => {
   if (index === 0) {
     kanaTable[0].push({ ...basicElement, latin: "-" })
   }
-  else {
-    kanaTable[0].push({
-      ...basicElement,
-      hiragana: wanakana.toHiragana(vowel),
-      katakana: wanakana.toKatakana(vowel),
-      latin: vowel,
-      isBorder: true,
-      x: index
-    })
-  }
+  kanaTable[0].push({
+    ...basicElement,
+    hiragana: wanakana.toHiragana(vowel),
+    katakana: wanakana.toKatakana(vowel),
+    latin: vowel,
+    isBorder: true,
+    x: index
+  })
 })
 
+
 consonants.forEach((consonant, y) => {
+  kanaTable.push([]);
   let syllables: string[] = [];
   syllables.push(consonant);
   vowels.forEach(vowel => {
@@ -50,7 +48,7 @@ consonants.forEach((consonant, y) => {
   });
   syllables.forEach((syllable, x) => {
     if (x === 0) {
-      kanaTable[0].push({
+      kanaTable[1 + y].push({
         ...basicElement,
         latin: syllable,
         isBorder: true,
@@ -58,7 +56,7 @@ consonants.forEach((consonant, y) => {
       })
     }
     else {
-      kanaTable[0].push({
+      kanaTable[1 + y].push({
         ...basicElement,
         hiragana: wanakana.toHiragana(syllable),
         katakana: wanakana.toKatakana(syllable),
@@ -71,46 +69,62 @@ consonants.forEach((consonant, y) => {
   });
 });
 
+kanaTable.forEach((row, y) => {
+  row.forEach((element, x) => {
+    kanaTable[y][x] = {
+      ...kanaTable[y][x],
+      isBorder: x === 0 || y === 0,
+      x: x,
+      y: y,
+    }
+  })
+});
+
 const KanaTable: React.FC = () => {
 
-  let block: JSX.Element[][] = [[]];
 
-  const onElementHover = (enter: boolean, x: number, y: number, isBorder: boolean) => {
+  const [state, setState] = React.useState({ kanaTable: kanaTable });
 
-  }
 
-  const onElementClick = (enter: boolean, x: number, y: number, isBorder: boolean) => {
+  const onElementHover = (x: number, y: number) => {
 
   }
 
-  console.log(kanaTable);
+  const onElementClick = (x: number, y: number) => {
+    let newState = { ...state }
+    newState.kanaTable[x][y].isSelected = !newState.kanaTable[x][y].isSelected;
+    console.log(newState.kanaTable[x][y]);
+    setState(newState);
+    console.log(state.kanaTable[x][y])
+  }
 
-  kanaTable.forEach((row, y) => {
-    row.forEach((element, x) => {
-      kanaTable[y][x].jsx = (
-        <KanaElement
-          latin={element.latin}
-          x={x}
-          y={y}
-          isBorder={x == 0 || y == 0}
-          selected={false}
-          hiragana={element.hiragana}
-          katakana={element.katakana}
-          click={onElementClick}
-          hover={onElementHover}
-          key={x + ";" + y}>
-        </KanaElement>
-      );
-    })
-  });
+
 
   return (
     <div className="">
-      {kanaTable.map(kanaRow => {
-        return kanaRow.map(kana => {
-          return kana.jsx;
-        }) 
-      }) }
+      {state.kanaTable.map((kanaRow, y) => {
+        let rowElements = kanaRow.map((kana, x) => {
+          return (
+            <KanaElement
+              hover={() => { }}
+              key={x + ";" + y}
+              click={() => { onElementClick(kana.x, kana.y) }}
+              hiragana={kana.hiragana}
+              katakana={kana.katakana}
+              latin={kana.latin}
+              isSelected={kana.isSelected}
+              isBorder={kana.isBorder}
+              x={kana.x}
+              y={kana.y}
+            ></KanaElement>
+          )
+        })
+        return (
+          <div key={y + "r"}>
+            {...rowElements}
+          </div>
+        )
+      })}
     </div>
   );
 }
