@@ -28,7 +28,7 @@ export const evaluateInput = (input: string, word: Word, settings: appSettings):
 }
 
 export const vowels = ["a", "e", "i", "o", "u"];
-export const consonants = ["k","s","t","n","h","m","y","r","w"];
+export const consonants = ["k", "s","t","n","h","m","y","r","w"];
 
 export const stringToWord = (string: string): Word => {
   return {
