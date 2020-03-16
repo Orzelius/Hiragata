@@ -1,57 +1,58 @@
 import * as React from 'react';
-import { useState } from 'react';
 
-interface props {
-  latin: string
-  kana: string
-  isSelected: boolean
-  isBorder: boolean
-  isHovered: boolean
-  x: number
-  y: number
+interface Props {
+  latin: string;
+  kana: string;
+  isSelected: boolean;
+  isBorder: boolean;
+  isHovered: boolean;
+  x: number;
+  y: number;
   hoverIn: () => void;
   hoverOut: () => void;
   click: () => void;
 }
 
-const KanaElement: React.FC<props> = (props) => {
-
-  let customStyle = "";
+const KanaElement: React.FC<Props> = (props: Props) => {
+  let customStyle = '';
   let text = props.latin;
 
-  if(props.isHovered && props.x !== 0){
-      text = props.kana;
+  if (props.isHovered && props.x !== 0) {
+    text = props.kana;
   }
 
 
   if (props.x === 0) {
-    customStyle += "mr-3 ";
+    customStyle += 'mr-3 ';
   }
   if (props.y === 0) {
-    customStyle += "mb-4 ";
+    customStyle += 'mb-4 ';
   }
 
   if (props.isSelected && !props.isHovered) {
-    customStyle += props.isBorder ? "bg-green-400 border-green-600 " : "bg-green-300 border-green-500 ";
+    customStyle += props.isBorder ? ' bg-green-400 border-green-600 ' : 'bg-green-300 border-green-500 ';
   }
 
-  let hoverStyle = props.isBorder ? "bg-blue-200 border-blue-400" : "bg-blue-100 border-blue-300";
+  let hoverStyle = props.isBorder ? ' bg-blue-200 border-blue-400 ' : 'bg-blue-100 border-blue-300 ';
 
   if (props.isSelected) {
-    hoverStyle = props.isBorder ? "bg-green-300 border-green-500" : "bg-green-200 border-green-500";
+    hoverStyle = props.isBorder ? ' bg-green-300 border-green-500 ' : 'bg-green-200 border-green-500 ';
   }
 
   return (
-    <div className={"cursor-pointer border-gray-500 border-2 w-16 h-12 m-1 inline-block " + customStyle + (props.isHovered ? hoverStyle : " ")}
-      onMouseOver={() => { props.hoverIn() }}
-      onMouseLeave={() => { props.hoverOut() }}
-      onClick={() => { props.click() }}
+    <div
+      className={'cursor-pointer border-gray-500 border-2 w-16 h-12 m-1 inline-block ' + customStyle + (props.isHovered ? hoverStyle : ' ')}
+      onMouseOver={() => { props.hoverIn(); }}
+      onFocus={() => { props.hoverIn(); }}
+      onKeyPress={() => { props.click(); }}
+      onMouseLeave={() => { props.hoverOut(); }}
+      onClick={() => { props.click(); }}
     >
-      <h5 className={"text-center mt-1 text-xl text-blue-900 " + (props.isBorder ? "font-semibold" : "font-medium")}>
+      <h5 className={`text-center mt-1 text-xl text-blue-900 ${props.isBorder ? 'font-semibold' : 'font-medium'}`}>
         {text}
       </h5>
     </div>
-  )
-}
+  );
+};
 
 export default KanaElement;

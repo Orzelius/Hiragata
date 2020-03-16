@@ -1,48 +1,49 @@
+/* eslint-disable no-shadow */
 import * as React from 'react';
-import { stringToWord, consonants, vowels } from '../../../Helpers/Helpers';
-import KanaElement from './KanaElement';
 import * as wanakana from 'wanakana';
+import { consonants, vowels } from '../../../Helpers/Helpers';
+import KanaElement from './KanaElement';
 
-interface element {
-  latin: string
-  kana: string
-  isSelected: boolean
-  isHovered: boolean
-  isBorder: boolean
-  x: number
-  y: number
+interface Element {
+  latin: string;
+  kana: string;
+  isSelected: boolean;
+  isHovered: boolean;
+  isBorder: boolean;
+  x: number;
+  y: number;
 }
 
-let basicElement: element = {
-  kana: "",
+const basicElement: Element = {
+  kana: '',
   isBorder: false,
-  latin: "",
+  latin: '',
   isSelected: false,
   isHovered: false,
   x: 0,
   y: 0,
-}
+};
 
-let initialKanaTable: element[][] = [[]];
+const initialKanaTable: Element[][] = [[]];
 vowels.forEach((vowel, index) => {
   if (index === 0) {
-    initialKanaTable[0].push({ ...basicElement, latin: "-" })
+    initialKanaTable[0].push({ ...basicElement, latin: '-' });
   }
   initialKanaTable[0].push({
     ...basicElement,
-    kana: (wanakana.toHiragana(vowel) + "" + wanakana.toKatakana(vowel)),
+    kana: (wanakana.toHiragana(vowel) + '' + wanakana.toKatakana(vowel)),
     latin: vowel,
     isBorder: true,
-    x: index
-  })
-})
+    x: index,
+  });
+});
 
 
 consonants.forEach((consonant, y) => {
   initialKanaTable.push([]);
-  let syllables: string[] = [];
+  const syllables: string[] = [];
   syllables.push(consonant);
-  vowels.forEach(vowel => {
+  vowels.forEach((vowel) => {
     syllables.push(consonant + vowel);
   });
   syllables.forEach((syllable, x) => {
@@ -52,17 +53,20 @@ consonants.forEach((consonant, y) => {
         latin: syllable,
         isBorder: true,
         x: 0,
-      })
-    }
-    else {
+      });
+    } else {
+      let kana = wanakana.toHiragana(syllable) + ' ' + wanakana.toKatakana(syllable);
+      if (syllable === 'we' || syllable === 'wi' || syllable === 'yi' || syllable === 'ye' || syllable === 'wu') {
+        kana = '-';
+      }
       initialKanaTable[1 + y].push({
         ...basicElement,
-        kana: wanakana.toHiragana(syllable) + " " + wanakana.toKatakana(syllable),
+        kana,
         latin: syllable,
         isBorder: true,
-        x: x,
-        y: y + 1
-      })
+        x,
+        y: y + 1,
+      });
     }
   });
 });
@@ -72,101 +76,94 @@ initialKanaTable.forEach((row, y) => {
     initialKanaTable[y][x] = {
       ...initialKanaTable[y][x],
       isBorder: x === 0 || y === 0,
-      x: x,
-      y: y,
-    }
-  })
+      x,
+      y,
+    };
+  });
 });
 
 const KanaTable: React.FC = () => {
-
-
   const [state, setState] = React.useState({ kanaTable: initialKanaTable });
 
 
   const onElementHover = (x: number, y: number, hoverIn = true) => {
-    let newState = { ...state };
+    const newState = { ...state };
     newState.kanaTable[y][x].isHovered = hoverIn;
     if (newState.kanaTable[y][x].isBorder) {
-      if (x == 0) {
-        newState.kanaTable[y] = newState.kanaTable[y].map(e => {
+      if (x === 0) {
+        newState.kanaTable[y] = newState.kanaTable[y].map((e) => {
           e.isHovered = hoverIn;
           return e;
-        })
+        });
       }
-      if (y == 0) {
+      if (y === 0) {
         newState.kanaTable.forEach((row, rowIndex) => {
           newState.kanaTable[rowIndex][x].isHovered = hoverIn;
-        })
+        });
       }
-      if (y == 0 && x == 0) {
-        newState.kanaTable = newState.kanaTable.map(row => {
-          return (
-            row.map(element => { return ({ ...element, isHovered: hoverIn }) })
-          )
-        })
+      if (y === 0 && x === 0) {
+        newState.kanaTable = newState.kanaTable.map((row) => (
+          row.map((element) => ({ ...element, isHovered: hoverIn }))
+        ));
       }
     }
     setState(newState);
-  }
+  };
 
   const onElementClick = (x: number, y: number) => {
-    //Elements that have changed, array
-    let changes = [[x, y]];
+    // Elements that have changed, array
+    const changes = [[x, y]];
+    changes.push([0, 0]);
 
-    let newState = { ...state };
-    let isSelected = newState.kanaTable[y][x].isSelected;
+    const newState = { ...state };
+    const { isSelected } = newState.kanaTable[y][x];
 
-    //Select individual
+    // Select individual
     newState.kanaTable[y][x].isSelected = !isSelected;
 
-    //Select rows
+    // Select rows
     if (newState.kanaTable[y][x].isBorder) {
-      if (x == 0) {
+      if (x === 0) {
         newState.kanaTable[y] = newState.kanaTable[y].map((e) => {
           e.isSelected = !isSelected;
           changes.push([e.x, y]);
           return e;
-        })
+        });
       }
-      if (y == 0) {
+      if (y === 0) {
         newState.kanaTable.forEach((row, rowIndex) => {
           newState.kanaTable[rowIndex][x].isSelected = !isSelected;
           changes.push([x, rowIndex]);
-        })
+        });
       }
-      if (y == 0 && x == 0) {
-        newState.kanaTable = newState.kanaTable.map(row => {
-          return (
-            row.map(element => { return ({ ...element, isSelected: !isSelected }) })
-          )
-        })
+      if (y === 0 && x === 0) {
+        newState.kanaTable = newState.kanaTable.map((row) => (
+          row.map((element) => ({ ...element, isSelected: !isSelected }))
+        ));
       }
     }
 
-    //Deselect border elements
+    // Deselect border elements
     if (isSelected) {
       newState.kanaTable[0][x].isSelected = false;
       newState.kanaTable[y][0].isSelected = false;
     }
 
-    console.log(changes);
-    //Select/deselect borders, if every element in row/column in selected
-    changes.forEach(change => {
-      //Check Y row (up/down) 
+    // Select/deselect borders, if every element in row/column in selected
+    changes.forEach((change) => {
+      // Check Y row (up/down)
       let allSelected = true;
       for (let y = 1; y < newState.kanaTable.length && allSelected; y++) {
-        if(!newState.kanaTable[y][change[0]].isSelected){
+        if (!newState.kanaTable[y][change[0]].isSelected) {
           allSelected = false;
         }
       }
       newState.kanaTable[0][change[0]].isSelected = allSelected;
 
-      //Check X column (right/left)
+      // Check X column (right/left)
       allSelected = true;
       for (let x = 1; x < newState.kanaTable[change[1]].length; x++) {
-        if(!newState.kanaTable[change[1]][x].isSelected){
-          console.log(change[1], x)
+        if (!newState.kanaTable[change[1]][x].isSelected) {
           allSelected = false;
         }
       }
@@ -175,36 +172,34 @@ const KanaTable: React.FC = () => {
 
 
     setState(newState);
-  }
+  };
 
   return (
     <div className="">
       {state.kanaTable.map((kanaRow, y) => {
-        let rowElements = kanaRow.map((kana, x) => {
-          return (
-            <KanaElement
-              hoverIn={() => { onElementHover(kana.x, kana.y, true) }}
-              hoverOut={() => { onElementHover(kana.x, kana.y, false) }}
-              key={x + ";" + y}
-              click={() => { onElementClick(kana.x, kana.y) }}
-              kana={kana.kana}
-              latin={kana.latin}
-              isSelected={kana.isSelected}
-              isBorder={kana.isBorder}
-              isHovered={kana.isHovered}
-              x={kana.x}
-              y={kana.y}
-            ></KanaElement>
-          )
-        })
+        const rowElements = kanaRow.map((kana, x) => (
+          <KanaElement
+            hoverIn={() => { onElementHover(kana.x, kana.y, true); }}
+            hoverOut={() => { onElementHover(kana.x, kana.y, false); }}
+            key={Math.random()}
+            click={() => { onElementClick(kana.x, kana.y); }}
+            kana={kana.kana}
+            latin={kana.latin}
+            isSelected={kana.isSelected}
+            isBorder={kana.isBorder}
+            isHovered={kana.isHovered}
+            x={kana.x}
+            y={kana.y}
+          />
+        ));
         return (
-          <div key={y + "r"}>
+          <div key={Math.random()}>
             {...rowElements}
           </div>
-        )
+        );
       })}
     </div>
   );
-}
+};
 
 export default KanaTable;

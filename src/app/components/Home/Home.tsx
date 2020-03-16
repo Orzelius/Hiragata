@@ -1,23 +1,18 @@
 import * as React from 'react';
-import { useState } from 'react';
-import * as wanakana from 'wanakana';
-import { Title, Container } from '../../Helpers/BasicComponents';
-import KanaTable from './KanaTable/KanaTable';
+import { Container, Title } from '../../Helpers/BasicComponents';
+import KanaSelector from './KanaTable/KanaSelector';
 
-const Home: React.FC = () => {
-
-  return (
-    <Container className="container p-2 mt-20 md:mt-10 lg:px-32 pb-8">
-      <div className="flex content-center">
-        <Title>
-          A tool for learning hiragana and katakana, with real life words
-        </Title>
-      </div>
-      <div className="mt-12">
-        <KanaTable></KanaTable>
-      </div>
-    </Container>
-  );
-}
+const Home: React.FC = () => (
+  <Container className="container p-2 mt-20 md:mt-10 lg:px-32 pb-8">
+    <div className="flex content-center">
+      <Title>
+          Choose, which kana to learn!
+      </Title>
+    </div>
+    <div className="mt-6 sm:flex justify-center">
+      <KanaSelector />
+    </div>
+  </Container>
+);
 
 export default Home;
