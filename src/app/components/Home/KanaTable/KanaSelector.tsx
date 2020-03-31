@@ -8,7 +8,7 @@ const kana = [
 ];
 
 const KanaSelector: React.FC = () => {
-  const [state, setState] = React.useState(1);
+  const [state, setState] = React.useState(0);
 
   const curKana = kana[state];
 
@@ -28,7 +28,7 @@ const KanaSelector: React.FC = () => {
         </button>
       </div>
       <div className="mt-3">
-        <KanaTable />
+        <KanaTable kana={curKana} />
       </div>
     </div>
   );

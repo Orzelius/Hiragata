@@ -38,7 +38,8 @@
     "jsx-a11y/no-static-element-interactions": "off",
     "prefer-template": "off",
     "no-plusplus": "off",
-    "eol-last": "off"
+    "eol-last": "off",
+    "react/prop-types": "off"
   },
   "settings": {
   }

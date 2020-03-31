@@ -17,7 +17,7 @@ const KanaElement: React.FC<Props> = (props: Props) => {
   let customStyle = '';
   let text = props.latin;
 
-  if (props.isHovered && props.x !== 0) {
+  if (props.isHovered && props.x !== 0 && props.y !== 0) {
     text = props.kana;
   }
 
@@ -40,15 +40,15 @@ const KanaElement: React.FC<Props> = (props: Props) => {
   }
 
   return (
+    // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
     <div
-      className={'cursor-pointer border-gray-500 border-2 w-16 h-12 m-1 inline-block ' + customStyle + (props.isHovered ? hoverStyle : ' ')}
-      onMouseOver={() => { props.hoverIn(); }}
-      onFocus={() => { props.hoverIn(); }}
+      className={'w-10 sm:w-16 cursor-pointer border-gray-500 border-2 h-12 m-1 inline-block ' + customStyle + (props.isHovered ? hoverStyle : ' ')}
+      onMouseEnter={() => { props.hoverIn(); }}
       onKeyPress={() => { props.click(); }}
       onMouseLeave={() => { props.hoverOut(); }}
       onClick={() => { props.click(); }}
     >
-      <h5 className={`text-center mt-1 text-xl text-blue-900 ${props.isBorder ? 'font-semibold' : 'font-medium'}`}>
+      <h5 className={'subpixel-antialiased mt-1 text-center text-xl text-blue-900 ' + (props.isBorder ? 'font-semibold ' : 'font-medium')}>
         {text}
       </h5>
     </div>

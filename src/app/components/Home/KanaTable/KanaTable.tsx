@@ -6,7 +6,8 @@ import KanaElement from './KanaElement';
 
 interface Element {
   latin: string;
-  kana: string;
+  katakana: string;
+  hiragana: string;
   isSelected: boolean;
   isHovered: boolean;
   isBorder: boolean;
@@ -14,76 +15,93 @@ interface Element {
   y: number;
 }
 
-const basicElement: Element = {
-  kana: '',
-  isBorder: false,
-  latin: '',
-  isSelected: false,
-  isHovered: false,
-  x: 0,
-  y: 0,
-};
-
-const initialKanaTable: Element[][] = [[]];
-vowels.forEach((vowel, index) => {
-  if (index === 0) {
-    initialKanaTable[0].push({ ...basicElement, latin: '-' });
-  }
-  initialKanaTable[0].push({
-    ...basicElement,
-    kana: (wanakana.toHiragana(vowel) + '' + wanakana.toKatakana(vowel)),
-    latin: vowel,
-    isBorder: true,
-    x: index,
-  });
-});
-
-
-consonants.forEach((consonant, y) => {
-  initialKanaTable.push([]);
-  const syllables: string[] = [];
-  syllables.push(consonant);
-  vowels.forEach((vowel) => {
-    syllables.push(consonant + vowel);
-  });
-  syllables.forEach((syllable, x) => {
-    if (x === 0) {
-      initialKanaTable[1 + y].push({
-        ...basicElement,
-        latin: syllable,
-        isBorder: true,
-        x: 0,
-      });
-    } else {
-      let kana = wanakana.toHiragana(syllable) + ' ' + wanakana.toKatakana(syllable);
-      if (syllable === 'we' || syllable === 'wi' || syllable === 'yi' || syllable === 'ye' || syllable === 'wu') {
-        kana = '-';
-      }
-      initialKanaTable[1 + y].push({
-        ...basicElement,
-        kana,
-        latin: syllable,
-        isBorder: true,
-        x,
-        y: y + 1,
-      });
+function generateTable() {
+  const basicElement: Element = {
+    katakana: '',
+    hiragana: '',
+    isBorder: false,
+    latin: '',
+    isSelected: false,
+    isHovered: false,
+    x: 0,
+    y: 0,
+  };
+  const initialKanaTable: Element[][] = [[], []];
+  vowels.forEach((vowel, index) => {
+    if (index === 0) {
+      initialKanaTable[0].push({ ...basicElement, latin: '-' });
+      initialKanaTable[1].push({ ...basicElement, latin: 'a' });
     }
+    initialKanaTable[0].push({
+      ...basicElement,
+      hiragana: wanakana.toHiragana(vowel),
+      katakana: wanakana.toKatakana(vowel),
+      latin: vowel,
+      isBorder: true,
+      x: index,
+    });
+    initialKanaTable[1].push({
+      ...basicElement,
+      hiragana: wanakana.toHiragana(vowel),
+      katakana: wanakana.toKatakana(vowel),
+      latin: vowel,
+      isBorder: false,
+      x: index,
+      y: 1,
+    });
   });
-});
-
-initialKanaTable.forEach((row, y) => {
-  row.forEach((element, x) => {
-    initialKanaTable[y][x] = {
-      ...initialKanaTable[y][x],
-      isBorder: x === 0 || y === 0,
-      x,
-      y,
-    };
+  consonants.forEach((consonant, y) => {
+    initialKanaTable.push([]);
+    const syllables: string[] = [];
+    syllables.push(consonant);
+    vowels.forEach((vowel) => {
+      syllables.push(consonant + vowel);
+    });
+    syllables.forEach((syllable, x) => {
+      if (x === 0) {
+        initialKanaTable[2 + y].push({
+          ...basicElement,
+          latin: syllable,
+          isBorder: true,
+          x: 0,
+        });
+      } else {
+        let romaji = syllable;
+        if (syllable === 'we' || syllable === 'wi' || syllable === 'yi' || syllable === 'ye' || syllable === 'wu') {
+          romaji = '-';
+        }
+        initialKanaTable[2 + y].push({
+          ...basicElement,
+          hiragana: wanakana.toHiragana(romaji),
+          katakana: wanakana.toKatakana(romaji),
+          latin: syllable,
+          isBorder: true,
+          x,
+          y: y + 1,
+        });
+      }
+    });
   });
-});
+  initialKanaTable.forEach((row, y) => {
+    row.forEach((element, x) => {
+      initialKanaTable[y][x] = {
+        ...initialKanaTable[y][x],
+        isBorder: x === 0 || y === 0,
+        x,
+        y,
+      };
+    });
+  });
 
-const KanaTable: React.FC = () => {
-  const [state, setState] = React.useState({ kanaTable: initialKanaTable });
+  return initialKanaTable;
+}
+
+
+interface Props {
+  kana: string;
+}
+const KanaTable: React.FC<Props> = (props) => {
+  const [state, setState] = React.useState({ kanaTable: generateTable() });
 
 
   const onElementHover = (x: number, y: number, hoverIn = true) => {
@@ -176,22 +194,32 @@ const KanaTable: React.FC = () => {
 
   return (
     <div className="">
-      {state.kanaTable.map((kanaRow, y) => {
-        const rowElements = kanaRow.map((kana, x) => (
-          <KanaElement
-            hoverIn={() => { onElementHover(kana.x, kana.y, true); }}
-            hoverOut={() => { onElementHover(kana.x, kana.y, false); }}
-            key={Math.random()}
-            click={() => { onElementClick(kana.x, kana.y); }}
-            kana={kana.kana}
-            latin={kana.latin}
-            isSelected={kana.isSelected}
-            isBorder={kana.isBorder}
-            isHovered={kana.isHovered}
-            x={kana.x}
-            y={kana.y}
-          />
-        ));
+      {state.kanaTable.map((kanaRow) => {
+        const rowElements = kanaRow.map((element) => {
+          let kana = '';
+          if (props.kana === 'Hiragana') {
+            kana = element.hiragana;
+          } else if (props.kana === 'Katakana') {
+            kana = element.katakana;
+          } else if (props.kana === 'Both') {
+            kana = element.hiragana + element.katakana;
+          }
+          return (
+            <KanaElement
+              hoverIn={() => { onElementHover(element.x, element.y, true); }}
+              hoverOut={() => { onElementHover(element.x, element.y, false); }}
+              key={Math.random()}
+              click={() => { onElementClick(element.x, element.y); }}
+              kana={kana}
+              latin={element.latin}
+              isSelected={element.isSelected}
+              isBorder={element.isBorder}
+              isHovered={element.isHovered}
+              x={element.x}
+              y={element.y}
+            />
+          )
+        });
         return (
           <div key={Math.random()}>
             {...rowElements}
