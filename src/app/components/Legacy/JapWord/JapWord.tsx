@@ -1,46 +1,46 @@
 import * as React from 'react';
+import * as wanakana from 'wanakana';
 import { Word } from '../../../Api';
 import { evaluateInput, stringToWord } from '../../../Helpers/Helpers';
-import * as wanakana from 'wanakana';
-import { appSettings } from '../../../models';
+import { AppSettings } from '../../../models';
 
 interface Props {
-  word: Word
-  input: string
-  settings: appSettings
+  word: Word;
+  input: string;
+  settings: AppSettings;
 }
 
 const JapWord: React.FC<Props> = ({ word, input, settings }) => {
-  let wordJsx: JSX.Element[] = [];
-  let markup: string = "";
-  let correct = true;
-  let lenght = settings.practice.hiragana ? word.hiragana.length : word.katakana.length;
+  const wordJsx: JSX.Element[] = [];
+  let markup = '';
+  const correct = true;
+  const lenght = settings.practice.hiragana ? word.hiragana.length : word.katakana.length;
   const isKana = wanakana.isKana(input);
-    for (var i = 0; i < lenght; i++){
-      //THIS CODE MADE STUFF GREEN AND BLACK
-      // if (correct) {
-      //   if (!input) {
-      //     markup = "text-black";
-      //   }
-      //   else if (evaluateInput(input.slice(i), stringToWord(word.hiragana.slice(i)), settings)) {
-      //     markup = "text-green-700";
-      //   }
-      //   else {
-      //     correct = false;
-      //     markup = "text-red-800";
-      //   }
-      // }
-      // else {
-      //   markup = "text-black"
-      // }
-      markup = "text-black"
-      // console.log("Correct: ", correct,　"i: ", i, "\nInput: ", input, "\nWord: ", word, "\nChar: ", word.charAt(i), "\nMarkup: ", markup);
-      wordJsx.push(
-        <h2 key={i} className={"text-2xl jap-text font-semibold subpixel-antialiased inline-block " + markup}>
-          {settings.practice.hiragana ? word.hiragana.charAt(i) : word.katakana.charAt(i)}
-        </h2>
-      );
-    }
+  for (let i = 0; i < lenght; i++) {
+    // THIS CODE MADE STUFF GREEN AND BLACK
+    // if (correct) {
+    //   if (!input) {
+    //     markup = "text-black";
+    //   }
+    //   else if (evaluateInput(input.slice(i), stringToWord(word.hiragana.slice(i)), settings)) {
+    //     markup = "text-green-700";
+    //   }
+    //   else {
+    //     correct = false;
+    //     markup = "text-red-800";
+    //   }
+    // }
+    // else {
+    //   markup = "text-black"
+    // }
+    markup = 'text-black';
+    // console.log("Correct: ", correct,　"i: ", i, "\nInput: ", input, "\nWord: ", word, "\nChar: ", word.charAt(i), "\nMarkup: ", markup);
+    wordJsx.push(
+      <h2 key={i} className={'text-2xl jap-text font-semibold subpixel-antialiased inline-block ' + markup}>
+        {settings.practice.hiragana ? word.hiragana.charAt(i) : word.katakana.charAt(i)}
+      </h2>,
+    );
+  }
   return (
     <div className="inline-block">
       <div className="bg-gray-300 hover:bg-gray-400 rounded-lg px-4 cursor-default">
@@ -51,6 +51,6 @@ const JapWord: React.FC<Props> = ({ word, input, settings }) => {
       </h2> */}
     </div>
   );
-}
+};
 
 export default JapWord;

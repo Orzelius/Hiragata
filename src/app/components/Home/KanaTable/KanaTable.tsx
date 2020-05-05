@@ -3,6 +3,7 @@ import * as React from 'react';
 import * as wanakana from 'wanakana';
 import { consonants, vowels } from '../../../Helpers/Helpers';
 import KanaElement from './KanaElement';
+import * as Parent from './KanaSelector';
 
 interface Element {
   latin: string;
@@ -13,6 +14,7 @@ interface Element {
   isBorder: boolean;
   x: number;
   y: number;
+  selectable: boolean;
 }
 
 function generateTable() {
@@ -23,6 +25,7 @@ function generateTable() {
     latin: '',
     isSelected: false,
     isHovered: false,
+    selectable: true,
     x: 0,
     y: 0,
   };
@@ -67,15 +70,20 @@ function generateTable() {
         });
       } else {
         let romaji = syllable;
+        let latinSyllable = syllable;
+        let isSeletable = true;
         if (syllable === 'we' || syllable === 'wi' || syllable === 'yi' || syllable === 'ye' || syllable === 'wu') {
           romaji = '-';
+          latinSyllable = '-';
+          isSeletable = false;
         }
         initialKanaTable[2 + y].push({
           ...basicElement,
           hiragana: wanakana.toHiragana(romaji),
           katakana: wanakana.toKatakana(romaji),
-          latin: syllable,
+          latin: latinSyllable,
           isBorder: true,
+          selectable: isSeletable,
           x,
           y: y + 1,
         });
@@ -99,6 +107,7 @@ function generateTable() {
 
 interface Props {
   kana: string;
+  setSelect: (selection: Parent.Element[]) => void;
 }
 const KanaTable: React.FC<Props> = (props) => {
   const [state, setState] = React.useState({ kanaTable: generateTable() });
@@ -167,7 +176,7 @@ const KanaTable: React.FC<Props> = (props) => {
       newState.kanaTable[y][0].isSelected = false;
     }
 
-    // Select/deselect borders, if every element in row/column in selected
+    // Select/deselect borders, if every element in row/column has been changed
     changes.forEach((change) => {
       // Check Y row (up/down)
       let allSelected = true;
@@ -188,13 +197,23 @@ const KanaTable: React.FC<Props> = (props) => {
       newState.kanaTable[change[1]][0].isSelected = allSelected;
     });
 
-
+    console.log(newState);
     setState(newState);
+
+    const allKana: Element[] = [].concat(...newState.kanaTable);
+    const validKana = allKana.filter((element) => !element.isBorder && element.isSelected);
+    const selectedKana: Parent.Element[] = validKana.map((element) => ({
+      hiragana: element.hiragana,
+      katakana: element.katakana,
+      latin: element.latin,
+    }));
+    props.setSelect(selectedKana);
   };
 
   return (
     <div className="">
       {state.kanaTable.map((kanaRow) => {
+        console.log(kanaRow);
         const rowElements = kanaRow.map((element) => {
           let kana = '';
           if (props.kana === 'Hiragana') {
@@ -217,8 +236,9 @@ const KanaTable: React.FC<Props> = (props) => {
               isHovered={element.isHovered}
               x={element.x}
               y={element.y}
+              isFake={element.selectable}
             />
-          )
+          );
         });
         return (
           <div key={Math.random()}>

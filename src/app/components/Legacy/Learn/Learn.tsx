@@ -1,16 +1,15 @@
 import * as React from 'react';
-import { appSettings, defaultSettings } from '../../../models';
 import { RouteComponentProps } from 'react-router';
-import { useState } from 'react';
 import { Container } from '../../../Helpers/BasicComponents';
+import { defaultSettings } from '../../../models';
 import InputArea from './InputArea';
 
 
-interface Props extends RouteComponentProps { }
+type Props = RouteComponentProps
 
 const Learn: React.FC<Props> = (props) => {
   console.log(props.location.state);
-  const [settings, setSettings] = useState(defaultSettings);
+  const [settings, setSettings] = React.useState(defaultSettings);
   if (!props.location.state) {
     setSettings(props.location.state);
   }
@@ -21,10 +20,10 @@ const Learn: React.FC<Props> = (props) => {
 
       {/* Input Area */}
       <div className="flex justify-center">
-        <InputArea settings={settings}></InputArea>
+        <InputArea settings={settings} />
       </div>
     </Container>
-  )
-}
+  );
+};
 
 export default Learn;

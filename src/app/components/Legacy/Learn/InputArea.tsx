@@ -1,22 +1,21 @@
 import * as React from 'react';
-import JapWord from '../JapWord/JapWord';
-import { useState } from 'react';
 import { useHistory } from 'react-router';
 import { getWord, Word } from '../../../Api';
 import { evaluateInput } from '../../../Helpers/Helpers';
-import { appSettings } from '../../../models';
+import { AppSettings } from '../../../models';
+import JapWord from '../JapWord/JapWord';
 
 const initState = {
   word: getWord(),
-  input: "",
+  input: '',
   complete: false,
-  inputColor: "shadow-outline"
+  inputColor: 'shadow-outline',
+};
+interface Props {
+  settings: AppSettings;
 }
-interface props {
-  settings: appSettings;
-}
-const InputArea: React.FC<props> = ({settings}) => {
-  const [state, setState] = useState(initState);
+const InputArea: React.FC<Props> = ({ settings }) => {
+  const [state, setState] = React.useState(initState);
   const history = useHistory();
 
   let kanjiJsx: JSX.Element;
@@ -25,8 +24,7 @@ const InputArea: React.FC<props> = ({settings}) => {
     kanjiJsx = (
       <h2 className="text-black text-2xl tracking-wide inline-block mr-4">{state.word.kanji}</h2>
     );
-  }
-  else {
+  } else {
     kanjiJsx = null;
   }
 
@@ -35,42 +33,41 @@ const InputArea: React.FC<props> = ({settings}) => {
       let word: Word;
       if (state.word.kanji) {
         word = getWord(false);
-      }
-      else {
+      } else {
         word = getWord();
       }
-      let newState = {
+      const newState = {
         ...state,
-        input: "",
+        input: '',
         complete: false,
         word,
-        inputColor: "shadow-outline"
-      }
+        inputColor: 'shadow-outline',
+      };
       setState(newState);
     }
-  }
+  };
 
   const handleInputChange = (value: string) => {
     let complete = false;
-    let inputColor = "shadow-outline";
+    let inputColor = 'shadow-outline';
     if (evaluateInput(value, state.word, settings)) {
       complete = true;
       inputColor = 'shadow-outline-green';
     }
-    let newState = {
+    const newState = {
       ...state,
       inputColor,
       complete,
-      input: value
-    }
+      input: value,
+    };
     setState(newState);
-  }
+  };
 
   return (
     <div>
       <div className="p-2 pr-8">
         <div className="mt-4 mb-2">
-          <JapWord settings={settings} input={state.input} word={state.word}></JapWord>
+          <JapWord settings={settings} input={state.input} word={state.word} />
           <div className="ml-1 mt-1 block sm:inline-block sm:ml-3">
             {kanjiJsx}
             <h2 className="text-gray-700 text-2xl inline-block">{state.word.english}</h2>
@@ -79,16 +76,21 @@ const InputArea: React.FC<props> = ({settings}) => {
         <form onSubmit={(e) => {
           e.preventDefault();
           reset();
-        }}>
-          <input className={"h-10 jap-text text-xl max-w-md bg-white border border-gray-300 py-2 px-4 block w-full inline-block " +
-            state.inputColor}
-            type="text" placeholder="Input" id="input" 
+        }}
+        >
+          <input
+            className={'h-10 jap-text text-xl max-w-md bg-white border border-gray-300 py-2 px-4 block w-full inline-block '
+            + state.inputColor}
+            type="text"
+            placeholder="Input"
+            id="input"
             onChange={(e) => handleInputChange(e.target.value)}
-            value={state.input}/>
+            value={state.input}
+          />
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default InputArea;

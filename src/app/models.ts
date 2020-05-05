@@ -1,41 +1,41 @@
-export interface settings{
-  appSettings: appSettings
+export interface Settings{
+  appSettings: AppSettings;
 }
 
-export interface appSettings{
+export interface AppSettings{
   input: {
-    hiragana: boolean
-    katakana: boolean
-    romanji: boolean
-  }
+    hiragana: boolean;
+    katakana: boolean;
+    romanji: boolean;
+  };
   practice: {
-    katakana: boolean
-    hiragana: boolean
-  }
-  mixAndMatch: boolean
+    katakana: boolean;
+    hiragana: boolean;
+  };
+  mixAndMatch: boolean;
   vocabulary: {
-    kanji: boolean
-    hiragana: boolean
-    katakana: boolean
-  }
-  transform: boolean
+    kanji: boolean;
+    hiragana: boolean;
+    katakana: boolean;
+  };
+  transform: boolean;
 }
 
-export const defaultSettings: appSettings = {
+export const defaultSettings: AppSettings = {
   input: {
     hiragana: true,
     katakana: true,
-    romanji: true
+    romanji: true,
   },
   mixAndMatch: true,
   practice: {
     hiragana: true,
-    katakana: true
+    katakana: true,
   },
   transform: false,
   vocabulary: {
     hiragana: true,
     kanji: true,
-    katakana: true
-  }
-}
+    katakana: true,
+  },
+};
