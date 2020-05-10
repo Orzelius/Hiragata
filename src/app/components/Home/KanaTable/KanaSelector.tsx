@@ -32,7 +32,7 @@ const KanaSelector: React.FC = () => {
   };
 
   const SelectionChanged = (newSelection: Element[]) => {
-    console.log('Selection changed', newSelection);
+    // console.log('Selection changed', newSelection);
     setSelection(newSelection);
     let newStartButtonState = { ...initStartButtonState };
     if (newSelection.length > 0) {

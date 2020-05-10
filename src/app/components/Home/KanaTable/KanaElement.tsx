@@ -8,7 +8,6 @@ interface Props {
   isHovered: boolean;
   x: number;
   y: number;
-  isFake: boolean;
   hoverIn: () => void;
   hoverOut: () => void;
   click: () => void;
@@ -47,8 +46,7 @@ const KanaElement: React.FC<Props> = (props: Props) => {
       onMouseEnter={() => { props.hoverIn(); }}
       onKeyPress={() => { props.click(); }}
       onMouseLeave={() => { props.hoverOut(); }}
-      onClick={() => { props.click(); console.log(props); }}
-      hidden={props.isFake}
+      onClick={() => { props.click(); }}
     >
       <h5 className={'subpixel-antialiased mt-1 text-center text-xl text-blue-900 ' + (props.isBorder ? 'font-semibold ' : 'font-medium')}>
         {text}

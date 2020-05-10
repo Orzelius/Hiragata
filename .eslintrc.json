@@ -39,7 +39,8 @@
     "prefer-template": "off",
     "no-plusplus": "off",
     "eol-last": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "arrow-parens": ["as-needed"]
   },
   "settings": {
   }

@@ -14,7 +14,6 @@ interface Element {
   isBorder: boolean;
   x: number;
   y: number;
-  selectable: boolean;
 }
 
 function generateTable() {
@@ -25,23 +24,20 @@ function generateTable() {
     latin: '',
     isSelected: false,
     isHovered: false,
-    selectable: true,
     x: 0,
     y: 0,
   };
   const initialKanaTable: Element[][] = [[], []];
+  initialKanaTable[0].push({ ...basicElement, latin: '-' });
+  initialKanaTable[1].push({ ...basicElement, latin: 'a', y: 1 });
   vowels.forEach((vowel, index) => {
-    if (index === 0) {
-      initialKanaTable[0].push({ ...basicElement, latin: '-' });
-      initialKanaTable[1].push({ ...basicElement, latin: 'a' });
-    }
     initialKanaTable[0].push({
       ...basicElement,
       hiragana: wanakana.toHiragana(vowel),
       katakana: wanakana.toKatakana(vowel),
       latin: vowel,
       isBorder: true,
-      x: index,
+      x: index + 1,
     });
     initialKanaTable[1].push({
       ...basicElement,
@@ -49,7 +45,7 @@ function generateTable() {
       katakana: wanakana.toKatakana(vowel),
       latin: vowel,
       isBorder: false,
-      x: index,
+      x: index + 1,
       y: 1,
     });
   });
@@ -60,32 +56,24 @@ function generateTable() {
     vowels.forEach((vowel) => {
       syllables.push(consonant + vowel);
     });
-    syllables.forEach((syllable, x) => {
+    syllables.forEach((romanji, x) => {
       if (x === 0) {
         initialKanaTable[2 + y].push({
           ...basicElement,
-          latin: syllable,
+          latin: romanji,
           isBorder: true,
           x: 0,
+          y: y + 2
         });
-      } else {
-        let romaji = syllable;
-        let latinSyllable = syllable;
-        let isSeletable = true;
-        if (syllable === 'we' || syllable === 'wi' || syllable === 'yi' || syllable === 'ye' || syllable === 'wu') {
-          romaji = '-';
-          latinSyllable = '-';
-          isSeletable = false;
-        }
+      } else if (romanji !== 'we' && romanji !== 'wi' && romanji !== 'yi' && romanji !== 'ye' && romanji !== 'wu') {
         initialKanaTable[2 + y].push({
           ...basicElement,
-          hiragana: wanakana.toHiragana(romaji),
-          katakana: wanakana.toKatakana(romaji),
-          latin: latinSyllable,
+          hiragana: wanakana.toHiragana(romanji),
+          katakana: wanakana.toKatakana(romanji),
+          latin: romanji,
           isBorder: true,
-          selectable: isSeletable,
           x,
-          y: y + 1,
+          y: y + 2,
         });
       }
     });
@@ -95,12 +83,9 @@ function generateTable() {
       initialKanaTable[y][x] = {
         ...initialKanaTable[y][x],
         isBorder: x === 0 || y === 0,
-        x,
-        y,
       };
     });
   });
-
   return initialKanaTable;
 }
 
@@ -115,17 +100,24 @@ const KanaTable: React.FC<Props> = (props) => {
 
   const onElementHover = (x: number, y: number, hoverIn = true) => {
     const newState = { ...state };
-    newState.kanaTable[y][x].isHovered = hoverIn;
-    if (newState.kanaTable[y][x].isBorder) {
+    const hoverElement = newState.kanaTable[y].find(e => e.x === x);
+    const hoverElementI = newState.kanaTable[y].findIndex(e => e.x === x);
+    if (hoverElementI !== -1) {
+      newState.kanaTable[y][hoverElementI].isHovered = hoverIn;
+    }
+    if (hoverElement.isBorder) {
       if (x === 0) {
-        newState.kanaTable[y] = newState.kanaTable[y].map((e) => {
+        newState.kanaTable[y] = newState.kanaTable[y].map(e => {
           e.isHovered = hoverIn;
           return e;
         });
       }
       if (y === 0) {
         newState.kanaTable.forEach((row, rowIndex) => {
-          newState.kanaTable[rowIndex][x].isHovered = hoverIn;
+          const elementIndex = newState.kanaTable[rowIndex].findIndex(e => e.x === x);
+          if (elementIndex !== -1) {
+            newState.kanaTable[rowIndex][elementIndex].isHovered = hoverIn;
+          }
         });
       }
       if (y === 0 && x === 0) {
@@ -139,28 +131,33 @@ const KanaTable: React.FC<Props> = (props) => {
 
   const onElementClick = (x: number, y: number) => {
     // Elements that have changed, array
-    const changes = [[x, y]];
-    changes.push([0, 0]);
+    const changes = [{ x: x, y: y }];
+    changes.push({ x: 0, y: 0 });
 
     const newState = { ...state };
-    const { isSelected } = newState.kanaTable[y][x];
+    const isSelected = newState.kanaTable[y].find(e => e.x === x).isSelected;
 
     // Select individual
-    newState.kanaTable[y][x].isSelected = !isSelected;
+    const selectedElement = newState.kanaTable[y].find(e => e.x === x);
+    const selectedElementI = newState.kanaTable[y].findIndex(e => e.x === x);
+    newState.kanaTable[y][selectedElementI].isSelected = !isSelected;
 
     // Select rows
-    if (newState.kanaTable[y][x].isBorder) {
+    if (selectedElement.isBorder) {
       if (x === 0) {
         newState.kanaTable[y] = newState.kanaTable[y].map((e) => {
           e.isSelected = !isSelected;
-          changes.push([e.x, y]);
+          changes.push({ x: e.x, y: y });
           return e;
         });
       }
       if (y === 0) {
         newState.kanaTable.forEach((row, rowIndex) => {
-          newState.kanaTable[rowIndex][x].isSelected = !isSelected;
-          changes.push([x, rowIndex]);
+          const elementIndex = newState.kanaTable[rowIndex].findIndex(e => e.x === selectedElementI);
+          if (elementIndex !== -1) {
+            newState.kanaTable[rowIndex][elementIndex].isSelected = !isSelected;
+            changes.push({ x: elementIndex, y: rowIndex });
+          }
         });
       }
       if (y === 0 && x === 0) {
@@ -176,28 +173,28 @@ const KanaTable: React.FC<Props> = (props) => {
       newState.kanaTable[y][0].isSelected = false;
     }
 
+    console.log(changes);
     // Select/deselect borders, if every element in row/column has been changed
     changes.forEach((change) => {
       // Check Y row (up/down)
       let allSelected = true;
       for (let y = 1; y < newState.kanaTable.length && allSelected; y++) {
-        if (!newState.kanaTable[y][change[0]].isSelected) {
+        const changedELement = newState.kanaTable[y].find(e => e.x === change.x);
+        if (changedELement && !changedELement.isSelected) {
           allSelected = false;
         }
       }
-      newState.kanaTable[0][change[0]].isSelected = allSelected;
+      newState.kanaTable[0][change.x].isSelected = allSelected;
 
       // Check X column (right/left)
       allSelected = true;
-      for (let x = 1; x < newState.kanaTable[change[1]].length; x++) {
-        if (!newState.kanaTable[change[1]][x].isSelected) {
+      for (let x = 1; x < newState.kanaTable[change.y].length; x++) {
+        if (!newState.kanaTable[change.y][x].isSelected) {
           allSelected = false;
         }
       }
-      newState.kanaTable[change[1]][0].isSelected = allSelected;
+      newState.kanaTable[change.y][0].isSelected = allSelected;
     });
-
-    console.log(newState);
     setState(newState);
 
     const allKana: Element[] = [].concat(...newState.kanaTable);
@@ -210,43 +207,53 @@ const KanaTable: React.FC<Props> = (props) => {
     props.setSelect(selectedKana);
   };
 
+  let rowElements: JSX.Element[] = [];
   return (
-    <div className="">
-      {state.kanaTable.map((kanaRow) => {
-        console.log(kanaRow);
-        const rowElements = kanaRow.map((element) => {
-          let kana = '';
-          if (props.kana === 'Hiragana') {
-            kana = element.hiragana;
-          } else if (props.kana === 'Katakana') {
-            kana = element.katakana;
-          } else if (props.kana === 'Both') {
-            kana = element.hiragana + element.katakana;
+    <table className="">
+      <tbody>
+        {state.kanaTable.map((kanaRow) => {
+          rowElements = [];
+          for (let x = 0; x < state.kanaTable[0].length; x++) {
+            const element = kanaRow.find((e) => e.x === x);
+            if (!element) {
+              // eslint-disable-next-line jsx-a11y/control-has-associated-label
+              rowElements.push(<td key={Math.random()} />);
+            } else {
+              let kana = '';
+              if (props.kana === 'Hiragana') {
+                kana = element.hiragana;
+              } else if (props.kana === 'Katakana') {
+                kana = element.katakana;
+              } else if (props.kana === 'Both') {
+                kana = element.hiragana + element.katakana;
+              }
+              rowElements.push(
+                <td>
+                  <KanaElement
+                    hoverIn={() => { onElementHover(element.x, element.y, true); }}
+                    hoverOut={() => { onElementHover(element.x, element.y, false); }}
+                    key={Math.random()}
+                    click={() => { onElementClick(element.x, element.y); }}
+                    kana={kana}
+                    latin={element.latin}
+                    isSelected={element.isSelected}
+                    isBorder={element.isBorder}
+                    isHovered={element.isHovered}
+                    x={element.x}
+                    y={element.y}
+                  />
+                </td>,
+              );
+            }
           }
           return (
-            <KanaElement
-              hoverIn={() => { onElementHover(element.x, element.y, true); }}
-              hoverOut={() => { onElementHover(element.x, element.y, false); }}
-              key={Math.random()}
-              click={() => { onElementClick(element.x, element.y); }}
-              kana={kana}
-              latin={element.latin}
-              isSelected={element.isSelected}
-              isBorder={element.isBorder}
-              isHovered={element.isHovered}
-              x={element.x}
-              y={element.y}
-              isFake={element.selectable}
-            />
+            <tr key={Math.random()}>
+              {...rowElements}
+            </tr>
           );
-        });
-        return (
-          <div key={Math.random()}>
-            {...rowElements}
-          </div>
-        );
-      })}
-    </div>
+        })}
+      </tbody>
+    </table>
   );
 };
 
