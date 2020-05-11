@@ -19,7 +19,7 @@ export interface Element {
   hiragana: string;
 }
 
-const initStartButtonState = { active: false, HoverText: 'Select kana to learn!', style: 'border-gray-400 bg-gray-100 text-gray-500' };
+const initStartButtonState = { active: false, HoverText: 'Select kana to learn!', style: 'border-gray-500 bg-gray-100 text-gray-500 hover:bg-gray-200' };
 const initKanaselect: Element[] = [];
 const KanaSelector: React.FC = () => {
   // 0 is Hira, 1 is Kata, 2 is both
@@ -65,7 +65,7 @@ const KanaSelector: React.FC = () => {
         </button>
         <button
           type="button"
-          className="w-5/12 max-w-sm border-2 rounded p-1 pt-3 text-center text-lg font-bold m-1 border-green-500 bg-green-100 text-green-900 hover:bg-green-200"
+          className={'w-5/12 max-w-sm border-2 rounded p-1 pt-3 text-center text-lg font-bold m-1 ' + startButtonState.style}
           onClick={StartClick}
           disabled={startButtonState.active}
         >
