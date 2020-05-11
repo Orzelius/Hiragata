@@ -7,11 +7,11 @@ import InputArea from './InputArea';
 
 type Props = RouteComponentProps
 
-const Learn: React.FC<Props> = (props) => {
+const Learn: React.FC<Props> = props => {
   console.log(props.location.state);
   const [settings, setSettings] = React.useState(defaultSettings);
-  if (!props.location.state) {
-    setSettings(props.location.state);
+  if (props.location.state) {
+    // setSettings(props.location.state);
   }
 
 
