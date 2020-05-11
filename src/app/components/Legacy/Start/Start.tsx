@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Button, colors, Container, Title } from '../BasicComponents';
-import AnswerBox from './AnswerBox';
-import { appSettings } from '../../models';
-import CheckBox from './CheckBox';
 import { Question } from './questions/Question';
 import { question, Questions } from './questions/Questions';
 import { useHistory } from 'react-router';
+import { render } from 'react-dom';
+import Learn from '../Learn/Learn';
+import { defaultSettings } from '../../../models';
+import { Container } from '../../../Helpers/BasicComponents';
 
 interface SetupState {
   questionNo: number,
@@ -13,30 +13,12 @@ interface SetupState {
 }
 
 const Start: React.FC = () => {
-  const initSettings: appSettings = {
-    input: {
-      hiragana: true,
-      katakana: true,
-      romanji: true
-    },
-    mixAndMatch: true,
-    practice: {
-      hiragana: true,
-      katakana: true
-    },
-    transform: false,
-    vocabulary: {
-      hiragana: true,
-      kanji: true,
-      katakana: true
-    }
-  }
   const initSetupState: SetupState = {
     questionNo: 0,
     question: Questions[0]
   }
 
-  const [settings, setSettings] = React.useState(initSettings);
+  const [settings, setSettings] = React.useState(defaultSettings);
   const [setupState, SetSetupState] = React.useState(initSetupState);
   const history = useHistory();
 
@@ -61,17 +43,20 @@ const Start: React.FC = () => {
         break;
 
     }
-
+    
     newSetup.questionNo = setupState.questionNo + 1;
     newSetup.question = Questions[newSetup.questionNo];
     setSettings(newSettings);
     console.log(newSettings);
     if (setupState.questionNo === Questions.length - 1) {
-      history.push("/Learn")
+      history.push("/Learn", {...newSettings});
     }
     SetSetupState(newSetup);
   }
-
+  
+  const skipSetup = () => {
+    history.push("/Learn", {...defaultSettings});
+  }
 
   return (
     <Container>
@@ -86,7 +71,8 @@ const Start: React.FC = () => {
       </Question>
       <h2 className="text-gray-500 text-sm mt-20 text-center">You can change the settings later as well</h2>
       <div className="justify-center mt-3 flex">
-        <button className="border-gray-500 border-2 rounded text-gray-600 hover:text-gray-700 hover:border-gray-700 px-8 py-1">Skip Setup</button>
+        <button className="border-gray-500 border-2 rounded text-gray-600 hover:text-gray-700 hover:border-gray-700 px-8 py-1"
+                onClick={skipSetup}>Skip Setup</button>
       </div>
     </Container>
   );
