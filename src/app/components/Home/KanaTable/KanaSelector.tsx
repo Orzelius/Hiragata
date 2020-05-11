@@ -1,10 +1,16 @@
 import * as React from 'react';
+import * as wanakana from 'wanakana';
 import KanaTable from './KanaTable';
 
-const kana = [
+const engkana = [
   'Hiragana',
   'Katakana',
   'Both',
+];
+const japkana = [
+  'ひらがな',
+  'カタカナ',
+  'ひカ',
 ];
 
 export interface Element {
@@ -21,18 +27,19 @@ const KanaSelector: React.FC = () => {
   const [kanaSelected, setSelection] = React.useState(initKanaselect);
   const [startButtonState, setStartButtonState] = React.useState(initStartButtonState);
 
-  const curKana = kana[kanaType];
+  const curengKana = engkana[kanaType];
+  const curjapKana = japkana[kanaType];
 
   const KanaSelectClick = () => {
     setState(kanaType === 2 ? 0 : (kanaType + 1));
   };
 
   const StartClick = () => {
-    setState(kanaType === 2 ? 0 : (kanaType + 1));
+    // setState(kanaType === 2 ? 0 : (kanaType + 1));
   };
 
   const SelectionChanged = (newSelection: Element[]) => {
-    // console.log('Selection changed', newSelection);
+    console.log('Selection changed', newSelection);
     setSelection(newSelection);
     let newStartButtonState = { ...initStartButtonState };
     if (newSelection.length > 0) {
@@ -50,22 +57,24 @@ const KanaSelector: React.FC = () => {
       <div className="">
         <button
           type="button"
-          className="inline-block w-5/12 max-w-sm border-orange-600 border-2 rounded p-3 text-center text-lg font-bold text-gray-700 hover:bg-orange-100"
+          className="w-5/12 max-w-sm border-orange-600 border-2 rounded p-1 text-center text-lg font-bold text-gray-700 hover:bg-orange-100"
           onClick={KanaSelectClick}
         >
-          {curKana}
+          <p className="-mb-1">{curengKana}</p>
+          <p className="text-sm text-gray-700">{curjapKana}</p>
         </button>
         <button
           type="button"
-          className="inline-block w-5/12 max-w-sm border-2 rounded p-3 text-center text-lg font-bold m-1 border-green-500 bg-green-100 text-green-900 hover:bg-green-200"
+          className="w-5/12 max-w-sm border-2 rounded p-1 pt-3 text-center text-lg font-bold m-1 border-green-500 bg-green-100 text-green-900 hover:bg-green-200"
           onClick={StartClick}
           disabled={startButtonState.active}
         >
-          Start
+          <p className="-mb-1">Start</p>
+          <p className="text-sm text-gray-700 -mt-3 invisible">a</p>
         </button>
       </div>
       <div className="mt-3">
-        <KanaTable kana={curKana} setSelect={SelectionChanged} />
+        <KanaTable kana={curengKana} setSelect={SelectionChanged} />
       </div>
     </div>
   );

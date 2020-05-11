@@ -40,7 +40,8 @@
     "no-plusplus": "off",
     "eol-last": "off",
     "react/prop-types": "off",
-    "arrow-parens": ["as-needed"]
+    "arrow-parens": ["Error", "as-needed"],
+    "max-len": ["error", {"code": 200}]
   },
   "settings": {
   }

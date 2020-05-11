@@ -53,7 +53,7 @@ function generateTable() {
     initialKanaTable.push([]);
     const syllables: string[] = [];
     syllables.push(consonant);
-    vowels.forEach((vowel) => {
+    vowels.forEach(vowel => {
       syllables.push(consonant + vowel);
     });
     syllables.forEach((romanji, x) => {
@@ -63,7 +63,7 @@ function generateTable() {
           latin: romanji,
           isBorder: true,
           x: 0,
-          y: y + 2
+          y: y + 2,
         });
       } else if (romanji !== 'we' && romanji !== 'wi' && romanji !== 'yi' && romanji !== 'ye' && romanji !== 'wu') {
         initialKanaTable[2 + y].push({
@@ -94,7 +94,7 @@ interface Props {
   kana: string;
   setSelect: (selection: Parent.Element[]) => void;
 }
-const KanaTable: React.FC<Props> = (props) => {
+const KanaTable: React.FC<Props> = props => {
   const [state, setState] = React.useState({ kanaTable: generateTable() });
 
 
@@ -121,8 +121,8 @@ const KanaTable: React.FC<Props> = (props) => {
         });
       }
       if (y === 0 && x === 0) {
-        newState.kanaTable = newState.kanaTable.map((row) => (
-          row.map((element) => ({ ...element, isHovered: hoverIn }))
+        newState.kanaTable = newState.kanaTable.map(row => (
+          row.map(element => ({ ...element, isHovered: hoverIn }))
         ));
       }
     }
@@ -131,11 +131,11 @@ const KanaTable: React.FC<Props> = (props) => {
 
   const onElementClick = (x: number, y: number) => {
     // Elements that have changed, array
-    const changes = [{ x: x, y: y }];
+    const changes = [{ x, y }];
     changes.push({ x: 0, y: 0 });
 
     const newState = { ...state };
-    const isSelected = newState.kanaTable[y].find(e => e.x === x).isSelected;
+    const { isSelected } = newState.kanaTable[y].find(e => e.x === x);
 
     // Select individual
     const selectedElement = newState.kanaTable[y].find(e => e.x === x);
@@ -145,9 +145,9 @@ const KanaTable: React.FC<Props> = (props) => {
     // Select rows
     if (selectedElement.isBorder) {
       if (x === 0) {
-        newState.kanaTable[y] = newState.kanaTable[y].map((e) => {
+        newState.kanaTable[y] = newState.kanaTable[y].map(e => {
           e.isSelected = !isSelected;
-          changes.push({ x: e.x, y: y });
+          changes.push({ x: e.x, y });
           return e;
         });
       }
@@ -161,8 +161,8 @@ const KanaTable: React.FC<Props> = (props) => {
         });
       }
       if (y === 0 && x === 0) {
-        newState.kanaTable = newState.kanaTable.map((row) => (
-          row.map((element) => ({ ...element, isSelected: !isSelected }))
+        newState.kanaTable = newState.kanaTable.map(row => (
+          row.map(element => ({ ...element, isSelected: !isSelected }))
         ));
       }
     }
@@ -175,7 +175,7 @@ const KanaTable: React.FC<Props> = (props) => {
 
     console.log(changes);
     // Select/deselect borders, if every element in row/column has been changed
-    changes.forEach((change) => {
+    changes.forEach(change => {
       // Check Y row (up/down)
       let allSelected = true;
       for (let y = 1; y < newState.kanaTable.length && allSelected; y++) {
@@ -198,8 +198,8 @@ const KanaTable: React.FC<Props> = (props) => {
     setState(newState);
 
     const allKana: Element[] = [].concat(...newState.kanaTable);
-    const validKana = allKana.filter((element) => !element.isBorder && element.isSelected);
-    const selectedKana: Parent.Element[] = validKana.map((element) => ({
+    const validKana = allKana.filter(element => !element.isBorder && element.isSelected);
+    const selectedKana: Parent.Element[] = validKana.map(element => ({
       hiragana: element.hiragana,
       katakana: element.katakana,
       latin: element.latin,
@@ -211,10 +211,10 @@ const KanaTable: React.FC<Props> = (props) => {
   return (
     <table className="">
       <tbody>
-        {state.kanaTable.map((kanaRow) => {
+        {state.kanaTable.map(kanaRow => {
           rowElements = [];
           for (let x = 0; x < state.kanaTable[0].length; x++) {
-            const element = kanaRow.find((e) => e.x === x);
+            const element = kanaRow.find(e => e.x === x);
             if (!element) {
               // eslint-disable-next-line jsx-a11y/control-has-associated-label
               rowElements.push(<td key={Math.random()} />);
