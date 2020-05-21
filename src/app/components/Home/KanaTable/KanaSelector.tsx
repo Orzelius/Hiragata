@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as wanakana from 'wanakana';
 import KanaTable from './KanaTable';
 
 const engkana = [
@@ -24,6 +23,7 @@ const initKanaselect: Element[] = [];
 const KanaSelector: React.FC = () => {
   // 0 is Hira, 1 is Kata, 2 is both
   const [kanaType, setState] = React.useState(0);
+  const [showKana, setShowKana] = React.useState(false);
   const [kanaSelected, setSelection] = React.useState(initKanaselect);
   const [startButtonState, setStartButtonState] = React.useState(initStartButtonState);
 
@@ -39,7 +39,6 @@ const KanaSelector: React.FC = () => {
   };
 
   const SelectionChanged = (newSelection: Element[]) => {
-    console.log('Selection changed', newSelection);
     setSelection(newSelection);
     let newStartButtonState = { ...initStartButtonState };
     if (newSelection.length > 0) {
@@ -73,8 +72,12 @@ const KanaSelector: React.FC = () => {
           <p className="text-sm text-gray-700 -mt-3 invisible">a</p>
         </button>
       </div>
+      <button type="button" className="border-b border-r border-l border-gray-500 rounded-b pb-1 w-48 text-lg hover:border-gray-600" onClick={() => { setShowKana(!showKana); }}>
+        <p className="text-gray-700 text-base inline-block mr-1">Showing:</p>
+        {showKana ? 'Kana' : 'Latin'}
+      </button>
       <div className="mt-3">
-        <KanaTable kana={curengKana} setSelect={SelectionChanged} />
+        <KanaTable kana={curengKana} showKana={showKana} setSelect={SelectionChanged} />
       </div>
     </div>
   );
