@@ -72,7 +72,7 @@ const KanaSelector: React.FC = () => {
           <p className="text-sm text-gray-700 -mt-3 invisible">a</p>
         </button>
       </div>
-      <button type="button" className="border-b border-r border-l border-gray-500 rounded-b pb-1 w-48 hover:border-gray-600" onClick={() => { setShowKana(!showKana); }}>
+      <button type="button" className="border-b border-r border-l border-gray-600 rounded-b pb-1 w-48 hover:border-gray-700" onClick={() => { setShowKana(!showKana); }}>
         <div>
           <p className={(!showKana ? 'text-black underline' : 'text-gray-700') + ' text-base inline-block mr-3'}>Latin</p>
           <p className={(showKana ? 'text-black underline' : 'text-gray-700') + ' text-base inline-block mr-3'}>Kana</p>
