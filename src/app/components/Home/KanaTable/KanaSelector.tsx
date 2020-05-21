@@ -72,9 +72,11 @@ const KanaSelector: React.FC = () => {
           <p className="text-sm text-gray-700 -mt-3 invisible">a</p>
         </button>
       </div>
-      <button type="button" className="border-b border-r border-l border-gray-500 rounded-b pb-1 w-48 text-lg hover:border-gray-600" onClick={() => { setShowKana(!showKana); }}>
-        <p className="text-gray-700 text-base inline-block mr-1">Showing:</p>
-        {showKana ? 'Kana' : 'Latin'}
+      <button type="button" className="border-b border-r border-l border-gray-500 rounded-b pb-1 w-48 hover:border-gray-600" onClick={() => { setShowKana(!showKana); }}>
+        <div>
+          <p className={(!showKana ? 'text-black underline' : 'text-gray-700') + ' text-base inline-block mr-3'}>Latin</p>
+          <p className={(showKana ? 'text-black underline' : 'text-gray-700') + ' text-base inline-block mr-3'}>Kana</p>
+        </div>
       </button>
       <div className="mt-3">
         <KanaTable kana={curengKana} showKana={showKana} setSelect={SelectionChanged} />
