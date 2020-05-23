@@ -9,6 +9,7 @@
     "outDir": "./build/",
     "preserveConstEnums": true,
     "removeComments": true,
+    "experimentalDecorators": true,
     "sourceMap": true,
     "target": "es5"
   },

@@ -93,6 +93,7 @@ function generateTable() {
 interface Props {
   kana: string;
   setSelect: (selection: Parent.Element[]) => void;
+  showKana: boolean;
 }
 const KanaTable: React.FC<Props> = props => {
   const [state, setState] = React.useState({ kanaTable: generateTable() });
@@ -173,7 +174,6 @@ const KanaTable: React.FC<Props> = props => {
       newState.kanaTable[y][0].isSelected = false;
     }
 
-    console.log(changes);
     // Select/deselect borders, if every element in row/column has been changed
     changes.forEach(change => {
       // Check Y row (up/down)
@@ -228,14 +228,13 @@ const KanaTable: React.FC<Props> = props => {
                 kana = element.hiragana + element.katakana;
               }
               rowElements.push(
-                <td>
+                <td key={Math.random()}>
                   <KanaElement
                     hoverIn={() => { onElementHover(element.x, element.y, true); }}
                     hoverOut={() => { onElementHover(element.x, element.y, false); }}
-                    key={Math.random()}
                     click={() => { onElementClick(element.x, element.y); }}
-                    kana={kana}
-                    latin={element.latin}
+                    kana={props.showKana ? kana : element.latin}
+                    latin={(props.showKana && !element.isBorder) ? kana : element.latin}
                     isSelected={element.isSelected}
                     isBorder={element.isBorder}
                     isHovered={element.isHovered}

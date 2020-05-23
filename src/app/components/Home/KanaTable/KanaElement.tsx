@@ -42,7 +42,7 @@ const KanaElement: React.FC<Props> = (props: Props) => {
   return (
     // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
     <div
-      className={'w-10 sm:w-16 cursor-pointer border-gray-500 border-2 h-12 m-1 inline-block ' + customStyle + (props.isHovered ? hoverStyle : ' ')}
+      className={'w-12 sm:w-16 cursor-pointer border-gray-500 border-2 h-12 m-1 inline-block ' + customStyle + (props.isHovered ? hoverStyle : ' ')}
       onMouseEnter={() => { props.hoverIn(); }}
       onKeyPress={() => { props.click(); }}
       onMouseLeave={() => { props.hoverOut(); }}
