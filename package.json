@@ -1,7 +1,7 @@
 {
-  "name": "hirakata",
+  "name": "hiragata",
   "version": "1.0.0",
-  "description": "",
+  "description": "A tool to help learn hiragana and katakana",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/webpack --mode production",
