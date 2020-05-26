@@ -9,7 +9,7 @@ const Navbar: React.FC = () => (
           <div className="flex items-center">
             <Link to="/" className="block lg:mr-4 mt-1">
               <h2 className="whitespace-no-wrap h-10 w-auto hidden sm:block text-2xl antialiased tracking-wide bg-blue-200 pl-2 pr-2 pt-1 rounded rounded-sm" style={{ fontFamily: 'din-round,sans-serif' }}>
-                ひらガタ | HiraGata
+                ひらガタ | Hiragata
               </h2>
               <h2 className="whitespace-no-wrap h-10 w-auto sm:hidden text-2xl antialiased tracking-wide bg-blue-200 pl-2 pr-2 pt-1 rounded rounded-sm">
                 <span>
