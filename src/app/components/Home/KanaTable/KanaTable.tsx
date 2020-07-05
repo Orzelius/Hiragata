@@ -89,7 +89,6 @@ function generateTable() {
   return initialKanaTable;
 }
 
-
 interface Props {
   kana: string;
   setSelect: (selection: Parent.Element[]) => void;
@@ -97,7 +96,6 @@ interface Props {
 }
 const KanaTable: React.FC<Props> = props => {
   const [state, setState] = React.useState({ kanaTable: generateTable() });
-
 
   const onElementHover = (x: number, y: number, hoverIn = true) => {
     const newState = { ...state };
@@ -230,10 +228,11 @@ const KanaTable: React.FC<Props> = props => {
               rowElements.push(
                 <td key={Math.random()}>
                   <KanaElement
+                    showKanaOnHover={props.showKana}
                     hoverIn={() => { onElementHover(element.x, element.y, true); }}
                     hoverOut={() => { onElementHover(element.x, element.y, false); }}
                     click={() => { onElementClick(element.x, element.y); }}
-                    kana={props.showKana ? kana : element.latin}
+                    kana={kana}
                     latin={(props.showKana && !element.isBorder) ? kana : element.latin}
                     isSelected={element.isSelected}
                     isBorder={element.isBorder}

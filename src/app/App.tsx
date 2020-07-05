@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './components/Home/Home';
+import Learning from './components/Home/Learning';
 import Navbar from './components/nav/Navbar';
 
 const App: React.FC = () => (
@@ -10,7 +10,7 @@ const App: React.FC = () => (
       {/* the Switch makes sure only the first element gets loaded */}
       <Switch>
         {/* <Route exact path="/" component={Dasboard}/> */}
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Learning} />
       </Switch>
     </div>
   </BrowserRouter>

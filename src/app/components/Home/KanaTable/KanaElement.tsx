@@ -11,6 +11,7 @@ interface Props {
   hoverIn: () => void;
   hoverOut: () => void;
   click: () => void;
+  showKanaOnHover: boolean;
 }
 
 const KanaElement: React.FC<Props> = (props: Props) => {
@@ -20,7 +21,6 @@ const KanaElement: React.FC<Props> = (props: Props) => {
   if (props.isHovered && props.x !== 0 && props.y !== 0) {
     text = props.kana;
   }
-
 
   if (props.x === 0) {
     customStyle += 'mr-3 ';
