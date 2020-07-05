@@ -4,12 +4,12 @@ import KanaTable from './KanaTable';
 const engkana = [
   'Hiragana',
   'Katakana',
-  'Both',
+  // 'Both',
 ];
 const japkana = [
   'ひらがな',
   'カタカナ',
-  'ひカ',
+  // 'ひカ',
 ];
 
 export interface Element {
@@ -31,7 +31,7 @@ const KanaSelector: React.FC = () => {
   const curjapKana = japkana[kanaType];
 
   const KanaSelectClick = () => {
-    setState(kanaType === 2 ? 0 : (kanaType + 1));
+    setState(kanaType === 1 ? 0 : (kanaType + 1));
   };
 
   const StartClick = () => {
