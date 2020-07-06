@@ -14,7 +14,7 @@ interface Props {
   showKanaOnHover: boolean;
 }
 
-const KanaElement: React.FC<Props> = (props: Props) => {
+const KanaTableElement: React.FC<Props> = (props: Props) => {
   let customStyle = '';
   let text = props.latin;
 
@@ -55,4 +55,4 @@ const KanaElement: React.FC<Props> = (props: Props) => {
   );
 };
 
-export default KanaElement;
+export default KanaTableElement;

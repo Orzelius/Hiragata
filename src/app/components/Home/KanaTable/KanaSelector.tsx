@@ -1,6 +1,5 @@
 import * as React from 'react';
 import KanaTable from './KanaTable';
-import { Title } from '../../../Helpers/BasicComponents';
 
 const engkana = [
   'Hiragana',
@@ -13,25 +12,10 @@ const japkana = [
   // 'ひカ',
 ];
 
-export interface Element {
-  latin: string;
-  katakana: string;
-  hiragana: string;
-}
-
-const initStartButtonState = { active: false, HoverText: 'Select kana to learn!', style: 'border-gray-500 bg-gray-100 text-gray-500 hover:bg-gray-200' };
-const initKanaselect: Element[] = [];
-
-interface KanaSelectorProps {
-  start: (selectedLetters: Element[]) => void;
-}
-
-const KanaSelector: React.FC<KanaSelectorProps> = ({ start }) => {
+const KanaSelector: React.FC = () => {
   // 0 is Hira, 1 is Kata, 2 is both
   const [kanaType, setState] = React.useState(0);
   const [showKana, setShowKana] = React.useState(false);
-  const [kanaSelected, setSelection] = React.useState(initKanaselect);
-  const [startButtonState, setStartButtonState] = React.useState(initStartButtonState);
 
   const curengKana = engkana[kanaType];
   const curjapKana = japkana[kanaType];
@@ -40,22 +24,6 @@ const KanaSelector: React.FC<KanaSelectorProps> = ({ start }) => {
     setState(kanaType === 1 ? 0 : (kanaType + 1));
   };
 
-  const StartClick = () => {
-    start(kanaSelected);
-  };
-
-  const SelectionChanged = (newSelection: Element[]) => {
-    setSelection(newSelection);
-    let newStartButtonState = { ...initStartButtonState };
-    if (newSelection.length > 0) {
-      newStartButtonState.active = true;
-      newStartButtonState.style = 'border-green-500 bg-green-100 text-green-900 hover:bg-green-200';
-      newStartButtonState.HoverText = 'Start';
-    } else {
-      newStartButtonState = initStartButtonState;
-    }
-    setStartButtonState(newStartButtonState);
-  };
   return (
     <div className="text-center">
       <div className="mb-1">
@@ -77,26 +45,8 @@ const KanaSelector: React.FC<KanaSelectorProps> = ({ start }) => {
         </div>
       </button>
       <div className="">
-        <KanaTable kana={curengKana} showKana={showKana} setSelect={SelectionChanged} />
+        <KanaTable kana={curengKana} showKana={showKana} />
       </div>
-      <button
-        type="button"
-        className={'w-5/12 max-w-sm border-2 rounded p-1 pt-3 text-center text-lg font-bold m-1 ' + startButtonState.style}
-        onClick={StartClick}
-        disabled={!startButtonState.active}
-      >
-        <p className="-mb-1">Learn</p>
-        <p className="text-sm text-gray-700 -mt-3 invisible">a</p>
-      </button>
-      <button
-        type="button"
-        className={'w-5/12 max-w-sm border-2 rounded p-1 pt-3 text-center text-lg font-bold m-1 ' + startButtonState.style}
-        onClick={StartClick}
-        disabled={!startButtonState.active}
-      >
-        <p className="-mb-1">Practice</p>
-        <p className="text-sm text-blue-700 -mt-3 invisible">a</p>
-      </button>
     </div>
   );
 };
