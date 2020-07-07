@@ -1,4 +1,5 @@
-![Image of home page](https://github.com/Orzelius/HiraKata/blob/develop/src/Images/home_page.png)
+## Hiragata
+Hiragata is an AI powered Japanese learning app, ckeck it out at [hiragata.com](https://hiragata.com/)
 
 ## Stuff I used
 I built it on my [React-Typescript-with-other-nice-things-boilerplate](https://github.com/Orzelius/React-Typescript-with-other-nice-things-boilerplate). It mostly has the same stuff.  Also big thanks to [WanaKana](https://github.com/WaniKani/WanaKana) as I used a ton of it for simple conversions.

@@ -41,7 +41,10 @@
     "eol-last": "off",
     "react/prop-types": "off",
     "arrow-parens": ["Error", "as-needed"],
-    "max-len": ["error", {"code": 200}]
+    "max-len": ["error", {"code": 200}],
+    "no-empty-function": "warn",
+    "no-empty": "warn",
+    "@typescript-eslint/no-empty-function": "warn"
   },
   "settings": {
   }

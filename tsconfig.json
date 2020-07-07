@@ -11,9 +11,10 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
   },
   "include": [
-    "./src/**/**/*"
+    "./src/**/**/*",
+    "./types/typings.d.ts"
   ]
 }
