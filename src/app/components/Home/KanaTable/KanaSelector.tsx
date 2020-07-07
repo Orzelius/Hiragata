@@ -17,7 +17,7 @@ const KanaSelector: React.FC = () => {
   const [kanaType, setState] = React.useState(0);
   const [showKana, setShowKana] = React.useState(false);
 
-  const curengKana = engkana[kanaType];
+  const curentKana = engkana[kanaType];
   const curjapKana = japkana[kanaType];
 
   const KanaSelectClick = () => {
@@ -32,7 +32,7 @@ const KanaSelector: React.FC = () => {
           className="w-5/12 max-w-sm border-orange-600 border-2 rounded p-1 text-center text-lg font-bold text-gray-700 hover:bg-orange-100"
           onClick={KanaSelectClick}
         >
-          <p className="-mb-1">{curengKana}</p>
+          <p className="-mb-1">{curentKana}</p>
           <p className="text-sm text-gray-700">{curjapKana}</p>
         </button>
       </div>
@@ -45,7 +45,7 @@ const KanaSelector: React.FC = () => {
         </div>
       </button>
       <div className="">
-        <KanaTable kana={curengKana} showKana={showKana} />
+        <KanaTable kana={curentKana} showKana={showKana} />
       </div>
     </div>
   );
