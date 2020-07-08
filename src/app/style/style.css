@@ -17,6 +17,11 @@ h3 {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
+.kanaStyle{
+  font-family: 'Noto Sans JP', sans-serif;
+  @apply rounded bg-gray-300 px-1;
+}
+
 .shadow-outline-green {
   box-shadow: 0 0 3px 2px rgb(56, 161, 105);
 }

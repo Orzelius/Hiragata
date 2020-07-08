@@ -1,5 +1,6 @@
 import * as React from 'react';
 import KanaTable from './KanaTable';
+import { ElementContext } from '../../ElementContext';
 
 const engkana = [
   'Hiragana',
@@ -14,14 +15,16 @@ const japkana = [
 
 const KanaSelector: React.FC = () => {
   // 0 is Hira, 1 is Kata, 2 is both
-  const [kanaType, setState] = React.useState(0);
-  const [showKana, setShowKana] = React.useState(false);
+  const context = React.useContext(ElementContext);
+  const [kanaType, setState] = React.useState(context.state.learningHiragana ? 0 : 1);
+  const [showKana, setShowKana] = React.useState(true);
 
   const curentKana = engkana[kanaType];
   const curjapKana = japkana[kanaType];
 
   const KanaSelectClick = () => {
     setState(kanaType === 1 ? 0 : (kanaType + 1));
+    context.setState({ ...context.state, learningHiragana: kanaType !== 0 });
   };
 
   return (

@@ -246,7 +246,7 @@ const KanaTable: React.FC<Props> = props => {
   return (
     <div>
       <table className="">
-        <tbody>
+        <tbody onMouseEnter={() => onElementHover(0, 0, false)}>
           {state.map(kanaRow => {
             rowElements = [];
             for (let x = 0; x < state[0].length; x++) {

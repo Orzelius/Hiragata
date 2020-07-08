@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   devServer: {
@@ -33,7 +33,7 @@ module.exports = {
     vendor: ['react', 'react-dom'],
   },
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: 'js/[name].bundle.js',
   },
@@ -66,6 +66,11 @@ module.exports = {
     new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'app', 'index.html') }),
     new MiniCssExtractPlugin({
       filename: 'styles.css',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'public/images', to: 'assets' },
+      ],
     }),
   ],
 };
