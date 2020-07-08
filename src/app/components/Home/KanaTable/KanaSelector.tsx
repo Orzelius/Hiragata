@@ -17,7 +17,7 @@ const KanaSelector: React.FC = () => {
   // 0 is Hira, 1 is Kata, 2 is both
   const context = React.useContext(ElementContext);
   const [kanaType, setState] = React.useState(context.state.learningHiragana ? 0 : 1);
-  const [showKana, setShowKana] = React.useState(false);
+  const [showKana, setShowKana] = React.useState(true);
 
   const curentKana = engkana[kanaType];
   const curjapKana = japkana[kanaType];

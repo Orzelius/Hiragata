@@ -21,7 +21,6 @@ const getMnemonic = (element: KanaElement, hiragana: boolean): Mnemonic => {
     isCode: !!x.code,
     text: x.code ? x.code : x.text,
   }));
-  console.log(mnemonic);
   return mnemonic;
 };
 
