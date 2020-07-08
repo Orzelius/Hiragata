@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Mnemonic } from '../../../models';
+import { Mnemonic } from '../../models';
 
 interface Props {
   mnemonic: Mnemonic;

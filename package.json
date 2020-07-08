@@ -55,6 +55,7 @@
     "@types/axios": "^0.14.0",
     "@types/wanakana": "^4.0.0",
     "axios": "^0.19.2",
+    "canvas-free-drawing": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
