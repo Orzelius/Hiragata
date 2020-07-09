@@ -4,21 +4,21 @@ import Home from './components/Home/Home';
 import Navbar from './components/nav/Navbar';
 import { ElementContext, State } from './components/ElementContext';
 import Learn from './components/game/learn/Learn';
-import Practice from './components/game/practice/practice';
+import Practice from './components/game/practice/Practice';
 
 const initState: State = {
   // for more convenient testing
-  elements: [
-    { hiragana: 'や', katakana: 'ヤ', latin: 'ya' },
-    { hiragana: 'ゆ', katakana: 'ユ', latin: 'yu' },
-    { hiragana: 'よ', katakana: 'ヨ', latin: 'yo' },
-    { hiragana: 'ら', katakana: 'ラ', latin: 'ra' },
-    { hiragana: 'り', katakana: 'リ', latin: 'ri' },
-    { hiragana: 'る', katakana: 'ル', latin: 'ru' },
-    { hiragana: 'れ', katakana: 'レ', latin: 're' },
-    { hiragana: 'ろ', katakana: 'ロ', latin: 'ro' },
-  ],
-  // elements: null,
+  // elements: [
+  //   { hiragana: 'や', katakana: 'ヤ', latin: 'ya' },
+  //   { hiragana: 'ゆ', katakana: 'ユ', latin: 'yu' },
+  //   { hiragana: 'よ', katakana: 'ヨ', latin: 'yo' },
+  //   { hiragana: 'ら', katakana: 'ラ', latin: 'ra' },
+  //   { hiragana: 'り', katakana: 'リ', latin: 'ri' },
+  //   { hiragana: 'る', katakana: 'ル', latin: 'ru' },
+  //   { hiragana: 'れ', katakana: 'レ', latin: 're' },
+  //   { hiragana: 'ろ', katakana: 'ロ', latin: 'ro' },
+  // ],
+  elements: null,
   learningHiragana: true,
 };
 
