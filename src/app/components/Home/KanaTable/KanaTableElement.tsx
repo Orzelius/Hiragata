@@ -23,10 +23,10 @@ const KanaTableElement: React.FC<Props> = (props: Props) => {
   }
 
   if (props.x === 0) {
-    customStyle += 'mr-3 ';
+    customStyle += 'mr-4 ';
   }
   if (props.y === 0) {
-    customStyle += 'mb-4 ';
+    customStyle += 'mb-5 ';
   }
 
   if (props.isSelected && !props.isHovered) {
