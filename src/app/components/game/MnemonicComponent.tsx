@@ -24,7 +24,7 @@ const MnemonicComponent: React.FC<Props> = ({ mnemonic, showImage }) => {
   return (
     <div className="text-center max-w-lg w-auto">
       <div className="flex">
-        <img hidden={!showImage} src={mnemonic.picture.src} alt={mnemonic.picture.alt} className="h-auto max-w-lg border border-gray-400 rounded-lg" />
+        <img hidden={!showImage} src={mnemonic.picture.src} alt={mnemonic.picture.alt} className="h-auto max-w-lg border border-gray-600 rounded-lg" />
       </div>
       {jsx.map(x => ({ ...x, key: Math.random() }))}
     </div>

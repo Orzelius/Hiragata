@@ -63,4 +63,4 @@ const DrawBoard: React.FC<Props> = ({ character }) => {
   );
 };
 
-export default DrawBoard;
+export default React.memo(DrawBoard);
