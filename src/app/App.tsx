@@ -4,7 +4,7 @@ import Home from './components/Home/Home';
 import Navbar from './components/nav/Navbar';
 import { ElementContext, State } from './components/ElementContext';
 import Learn from './components/game/learn/Learn';
-import Practice from './components/game/practice/practice';
+import Practice from './components/game/practice/Practice';
 
 const initState: State = {
   // for more convenient testing
