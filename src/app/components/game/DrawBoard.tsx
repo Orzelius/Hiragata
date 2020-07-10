@@ -52,12 +52,16 @@ const DrawBoard: React.FC<Props> = ({ character }) => {
     drawBorder();
   };
 
+  const showKana = () => {
+
+  };
+
   return (
     <div className="">
       <canvas className="border-gray-600 border rounded" id="cfd" />
       <div className="mt-1">
-        {/* <button onClick={clear} type="button" className="border-gray-500 border hover:bg-red-200 rounded py-1 px-4 mr-2">Clear</button> */}
-        <button onClick={clear} type="button" className="inline-block float-right border-gray-500 border hover:bg-gray-200 rounded py-1 px-4 mr-2">Clear</button>
+        <button onClick={clear} type="button" className="border-gray-500 border hover:bg-red-200 rounded py-1 px-4 mr-2">Clear</button>
+        {/* <button onClick={clear} type="button" className="inline-block float-right border-gray-500 border hover:bg-gray-200 rounded py-1 px-4 mr-2">Clear</button> */}
       </div>
     </div>
   );

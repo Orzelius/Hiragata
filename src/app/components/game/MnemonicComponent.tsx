@@ -27,6 +27,7 @@ const MnemonicComponent: React.FC<Props> = ({ mnemonic, showImage }) => {
         <img hidden={!showImage} src={mnemonic.picture.src} alt={mnemonic.picture.alt} className="h-auto max-w-lg border border-gray-600 rounded-lg" />
       </div>
       {jsx.map(x => ({ ...x, key: Math.random() }))}
+      <h4 className="StrokeOrderFont" style={{ fontSize: '6rem' }}>{mnemonic.kana}</h4>
     </div>
   );
 };
