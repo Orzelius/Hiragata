@@ -26,6 +26,11 @@ h3 {
   box-shadow: 0 0 3px 2px rgb(56, 161, 105);
 }
 
+button:focus {
+  outline: 0;
+  /* box-shadow: none; */
+}
+
 @tailwind components;
 /* purgecss end ignore */
 

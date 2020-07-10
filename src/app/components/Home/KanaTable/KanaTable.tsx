@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable no-shadow */
 import * as React from 'react';
 import * as wanakana from 'wanakana';
@@ -107,7 +109,7 @@ const KanaTable: React.FC<Props> = props => {
   const [selectedElements, setSelectedElements] = React.useState(initSelectedElements);
 
   const onElementHover = (x: number, y: number, hoverIn = true) => {
-    let newState = [...state];
+    let newState = [...state].map(row => row.map(el => ({ ...el, isHovered: false })));
     const hoverElement = newState[y].find(e => e.x === x);
     const hoverElementI = newState[y].findIndex(e => e.x === x);
     if (hoverElementI !== -1) {
@@ -247,6 +249,7 @@ const KanaTable: React.FC<Props> = props => {
     <div>
       <table className="">
         <tbody onMouseEnter={() => onElementHover(0, 0, false)}>
+          {/* <tbody> */}
           {state.map(kanaRow => {
             rowElements = [];
             for (let x = 0; x < state[0].length; x++) {
@@ -263,21 +266,31 @@ const KanaTable: React.FC<Props> = props => {
                 } else if (props.kana === 'Both') {
                   kana = element.hiragana + element.katakana;
                 }
+                let style = 'p-1 ';
+                if (element.x === 0) {
+                  style += 'pr-4 ';
+                }
+                if (element.y === 0) {
+                  style += 'pb-5 ';
+                }
                 rowElements.push(
-                  <td key={Math.random()}>
-                    <KanaTableElement
-                      showKanaOnHover={props.showKana}
-                      hoverIn={() => { onElementHover(element.x, element.y, true); }}
-                      hoverOut={() => { onElementHover(element.x, element.y, false); }}
-                      click={() => { onElementClick(element.x, element.y); }}
-                      kana={kana}
-                      latin={(props.showKana && !element.isBorder) ? kana : element.latin}
-                      isSelected={element.isSelected}
-                      isBorder={element.isBorder}
-                      isHovered={element.isHovered}
-                      x={element.x}
-                      y={element.y}
-                    />
+                  <td className={style} key={Math.random()}>
+                    <div
+                      key={Math.random()}
+                      onMouseOver={element.isHovered ? null : () => { onElementHover(element.x, element.y, true); }}
+                      onMouseLeave={() => { onElementHover(element.x, element.y, false); }}
+                      onClick={() => { onElementClick(element.x, element.y); }}
+                    >
+                      <KanaTableElement
+                        kana={kana}
+                        latin={(props.showKana && !element.isBorder) ? kana : element.latin}
+                        isSelected={element.isSelected}
+                        isBorder={element.isBorder}
+                        isHovered={element.isHovered}
+                        x={element.x}
+                        y={element.y}
+                      />
+                    </div>
                   </td>,
                 );
               }

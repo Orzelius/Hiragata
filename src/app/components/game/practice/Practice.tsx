@@ -105,9 +105,9 @@ const Practice: React.FC = () => {
         </h4>
         <div className="lg:flex mt-4 sm:mt-12 max-w-md lg:max-w-6xl">
           <div className="w-full lg:w-1/2">
-            <button onClick={mnemonicClicked} type="button" className="text-left border-b w-full border-gray-600 hover:bg-gray-100 cursor-pointer">
+            <button onClick={mnemonicClicked} type="button" className="text-left border-b w-full border-gray-600 cursor-pointer">
               <h3 className="inline-block">Mnemonic:</h3>
-              <span className="float-right pt-4 mr-2 text-xl">{roundState.showMnemonic ? '⋀' : '⋁'}</span>
+              <span className="float-right pt-4 mr-2 text-xl border px-3 border-gray-600 rounded hover:bg-gray-200">{roundState.showMnemonic ? '⋀' : '⋁'}</span>
             </button>
             <div className="mt-4 text-center items-center" hidden={!roundState.showMnemonic}>
               <MnemonicComponent mnemonic={roundState.mnemonic} showImage />
