@@ -27,7 +27,13 @@ const Learn: React.FC = () => {
       </span>
     );
   };
-  const [state, setState] = React.useState({ number: 0, question: makeQuestion(0), mnemonic: getMnemonic(globalState.state.elements[0], globalState.state.learningHiragana) });
+
+  const [state, setState] = React.useState({
+    number: 0,
+    question: makeQuestion(0),
+    mnemonic: getMnemonic(globalState.state.elements[0], globalState.state.learningHiragana),
+    showKana: true,
+  });
   const nextKana = (next: boolean) => {
     const number = state.number + (next ? 1 : -1);
     if (number === -1) return;
@@ -35,8 +41,15 @@ const Learn: React.FC = () => {
       history.push('/Practice');
       return;
     }
-    setState({ number, question: makeQuestion(number), mnemonic: getMnemonic(globalState.state.elements[number], globalState.state.learningHiragana) });
+    setState({
+      number, question: makeQuestion(number), mnemonic: getMnemonic(globalState.state.elements[number], globalState.state.learningHiragana), showKana: true,
+    });
   };
+
+  const charShowClicked = () => {
+    setState({ ...state, showKana: !state.showKana });
+  };
+
   return (
     <div>
       <div className="container pt-16 px-2 sm:pt-24 sm:px-4 mb-8 flex-shrink-0">
@@ -70,7 +83,7 @@ const Learn: React.FC = () => {
           </div>
           <div className="w-full lg:w-1/2 lg:px-8">
             <h3 className="font-thin">Try to draw it: </h3>
-            <DrawBoard character={state.mnemonic.kana} />
+            <DrawBoard key={state.mnemonic.kana} character={state.mnemonic.kana} onCharacterShow={charShowClicked} showCharacter={state.showKana} />
           </div>
         </div>
         {/* <img src={`assets/${globalState.state.learningHiragana ? 'hiragana' : 'katakana'}/${wanakana.toRomaji(state.mnemonic.letter)}.jpg`} alt="" /> */}
