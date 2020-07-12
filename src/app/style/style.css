@@ -17,13 +17,30 @@ h3 {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-.kanaStyle{
+.kanaStyle {
   font-family: 'Noto Sans JP', sans-serif;
   @apply rounded bg-gray-300 px-1;
 }
 
 .shadow-outline-green {
   box-shadow: 0 0 3px 2px rgb(56, 161, 105);
+}
+
+button:focus {
+  outline: 0;
+  /* box-shadow: none; */
+}
+
+@font-face {
+  font-family: 'KanjiStrokeOrders';
+  src: url('/assets/KanjiStrokeOrders_v4.003.woff2');
+  src: url('/assets/KanjiStrokeOrders_v4.003.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/assets/KanjiStrokeOrders_v4.003.woff') format('woff');
+  /* Pretty Modern Browsers */
+}
+
+.StrokeOrderFont {
+  font-family: 'KanjiStrokeOrders';
 }
 
 @tailwind components;

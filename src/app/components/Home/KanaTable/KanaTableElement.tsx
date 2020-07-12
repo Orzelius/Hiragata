@@ -8,10 +8,10 @@ interface Props {
   isHovered: boolean;
   x: number;
   y: number;
-  hoverIn: () => void;
-  hoverOut: () => void;
-  click: () => void;
-  showKanaOnHover: boolean;
+  // hoverIn: () => void;
+  // hoverOut: () => void;
+  // click: () => void;
+  // showKanaOnHover: boolean;
 }
 
 const KanaTableElement: React.FC<Props> = (props: Props) => {
@@ -22,12 +22,12 @@ const KanaTableElement: React.FC<Props> = (props: Props) => {
     text = props.kana;
   }
 
-  if (props.x === 0) {
-    customStyle += 'mr-4 ';
-  }
-  if (props.y === 0) {
-    customStyle += 'mb-5 ';
-  }
+  // if (props.x === 0) {
+  //   customStyle += 'mr-4 ';
+  // }
+  // if (props.y === 0) {
+  //   customStyle += 'mb-5 ';
+  // }
 
   if (props.isSelected && !props.isHovered) {
     customStyle += props.isBorder ? ' bg-green-400 border-green-600 ' : 'bg-green-300 border-green-500 ';
@@ -42,11 +42,11 @@ const KanaTableElement: React.FC<Props> = (props: Props) => {
   return (
     // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
     <div
-      className={'w-12 sm:w-16 cursor-pointer border-gray-500 border-2 h-12 m-1 inline-block ' + customStyle + (props.isHovered ? hoverStyle : ' ')}
-      onMouseEnter={() => { props.hoverIn(); }}
-      onKeyPress={() => { props.click(); }}
-      onMouseLeave={() => { props.hoverOut(); }}
-      onClick={() => { props.click(); }}
+      className={'w-12 sm:w-16 cursor-pointer border-gray-500 border-2 h-12 inline-block ' + customStyle + (props.isHovered ? hoverStyle : ' ')}
+      // onMouseEnter={() => { props.hoverIn(); }}
+      // onKeyPress={() => { props.click(); }}
+      // onMouseLeave={() => { props.hoverOut(); }}
+      // onClick={() => { props.click(); }}
     >
       <h5 className={'subpixel-antialiased mt-1 text-center text-xl text-blue-900 ' + (props.isBorder ? 'font-semibold ' : 'font-medium')}>
         {text}
@@ -55,4 +55,5 @@ const KanaTableElement: React.FC<Props> = (props: Props) => {
   );
 };
 
+// export default React.memo(KanaTableElement);
 export default KanaTableElement;

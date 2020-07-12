@@ -12,6 +12,7 @@ const Practice: React.FC = () => {
     history.push('/');
     return null;
   }
+
   const makeQuestion = (element: number) => {
     const kana = `${globalState.state.learningHiragana ? 'Hiragana' : 'Katakana'}`;
     const kanaElement = globalState.state.elements[element];
@@ -24,19 +25,23 @@ const Practice: React.FC = () => {
       </span>
     );
   };
+
   // State for the entire pracice session
   const [totalState, setTotalState] = React.useState({
     history: [0],
     number: 0,
   });
+
   // State for current kana
   const [roundState, setRoundState] = React.useState({
-    // 0 - drawing, 1 - correct, 2 - incorrect
+    // 0 - drawing, 1 - correct, 2 - incorrect, 3 - self-evaluation
     question: makeQuestion(0),
     mnemonic: getMnemonic(globalState.state.elements[0], globalState.state.learningHiragana),
     status: 0,
     showMnemonic: false,
+    showCharacter: false,
   });
+
   const nextKana = () => {
     let number = totalState.number;
     if (globalState.state.elements.length === 1) number = 0;
@@ -55,32 +60,73 @@ const Practice: React.FC = () => {
       mnemonic: getMnemonic(globalState.state.elements[number], globalState.state.learningHiragana),
       status: 0,
       showMnemonic: false,
+      showCharacter: false,
     });
   };
+
   const checkAnswer = () => {
     // Fancy AI here in the future
     setRoundState({
       ...roundState,
       showMnemonic: true,
-      status: Math.round(Math.random() + 1),
+      status: 3,
     });
   };
+
   const mnemonicClicked = () => {
     const newRoundState = { ...roundState };
-    // newRoundState.status = roundState.status === 1 ? 1 : 2;
-    newRoundState.status = 0;
+    newRoundState.status = roundState.status === 1 ? 1 : 2;
+    // newRoundState.status = 0;
     newRoundState.showMnemonic = !newRoundState.showMnemonic;
     setRoundState(newRoundState);
   };
-  let buttonStyle = 'hover:bg-gray-200';
-  let buttonText = 'Check';
+
+  const onCharacterShow = () => {
+    const newRoundState = { ...roundState };
+    newRoundState.status = roundState.status === 1 ? 1 : 2;
+    newRoundState.showCharacter = !newRoundState.showCharacter;
+    // newRoundState.status = 0;
+    setRoundState(newRoundState);
+  };
+
+  const btn = {
+    buttonStyle: 'hover:bg-gray-200',
+    buttonText: 'Check',
+  };
+
   if (roundState.status === 1) {
-    buttonText = 'Next';
-    buttonStyle = 'bg-green-300 hover:bg-green-400';
+    btn.buttonText = 'Next';
+    btn.buttonStyle = 'bg-green-200 hover:bg-green-300';
   } else if (roundState.status === 2) {
-    buttonText = 'Check';
-    buttonStyle = 'bg-red-300 hover:bg-red-400';
+    btn.buttonText = 'Next';
+    btn.buttonStyle = 'bg-red-200 hover:bg-red-300';
+  } else if (roundState.status === 3) {
+    btn.buttonText = 'I Got it right';
+    btn.buttonStyle = 'bg-green-200 hover:bg-green-300';
   }
+
+  const evalButtonClicked = () => {
+    // eslint-disable-next-line default-case
+    switch (roundState.status) {
+      case 0:
+        checkAnswer();
+        break;
+      case 1:
+        nextKana();
+        break;
+      case 2:
+        nextKana();
+        break;
+      case 3:
+        nextKana();
+        break;
+    }
+  };
+
+  const drawBoard = React.useMemo(() => (
+    <DrawBoard character={roundState.mnemonic.kana} onCharacterShow={onCharacterShow} showCharacter={roundState.showCharacter} />
+  ), [roundState.showCharacter, roundState.mnemonic.kana, onCharacterShow]);
+
   return (
     <div>
       <div className="container pt-16 px-2 sm:pt-24 sm:px-4 mb-8 flex-shrink-0">
@@ -93,21 +139,30 @@ const Practice: React.FC = () => {
             <div>
               <button
                 // onClick={roundState.status === 1 ? nextKana : checkAnswer}
+                onClick={evalButtonClicked}
+                type="submit"
+                className={`float-right py-1 px-4 text-xl border border-gray-500 rounded w-40 ${btn.buttonStyle}`}
+              >
+                {btn.buttonText}
+              </button>
+              <button
+                // onClick={roundState.status === 1 ? nextKana : checkAnswer}
+                hidden={roundState.status !== 3}
                 onClick={nextKana}
                 type="submit"
-                className={` float-right py-1 px-4 text-xl border border-gray-500 rounded inline-block w-40 ${buttonStyle}`}
+                className="float-right py-1 px-4 text-xl border border-gray-500 rounded w-40 bg-red-200 hover:bg-red-300 mr-2"
               >
-                Next
+                I got it wrong
               </button>
             </div>
-            <span className="text text-sm text-red-700 hover:underline cursor-pointer" hidden={roundState.status !== 2}>Report incorrect recognition</span>
+            {/* <span className="text text-sm text-red-700 hover:underline cursor-pointer" hidden={roundState.status !== 2}>Report incorrect recognition</span> */}
           </div>
         </h4>
         <div className="lg:flex mt-4 sm:mt-12 max-w-md lg:max-w-6xl">
           <div className="w-full lg:w-1/2">
-            <button onClick={mnemonicClicked} type="button" className="text-left border-b w-full border-gray-600 hover:bg-gray-100 cursor-pointer">
+            <button onClick={mnemonicClicked} type="button" className="text-left border-b w-full border-gray-600 cursor-pointer">
               <h3 className="inline-block">Mnemonic:</h3>
-              <span className="float-right pt-4 mr-2 text-xl">{roundState.showMnemonic ? '⋀' : '⋁'}</span>
+              <span className="float-right mt-4 mr-2 text-xl border px-3 border-gray-600 rounded hover:bg-gray-200">{roundState.showMnemonic ? '⋀' : '⋁'}</span>
             </button>
             <div className="mt-4 text-center items-center" hidden={!roundState.showMnemonic}>
               <MnemonicComponent mnemonic={roundState.mnemonic} showImage />
@@ -115,7 +170,8 @@ const Practice: React.FC = () => {
           </div>
           <div className="w-full lg:w-1/2 lg:px-8">
             <h3 className="font-thin">Try to draw it: </h3>
-            <DrawBoard character={roundState.mnemonic.kana} />
+            <DrawBoard key={roundState.mnemonic.kana} character={roundState.mnemonic.kana} onCharacterShow={onCharacterShow} showCharacter={roundState.showCharacter} />
+            {/* {drawBoard} */}
           </div>
         </div>
         {/* <img src={`assets/${globalState.state.learningHiragana ? 'hiragana' : 'katakana'}/${wanakana.toRomaji(state.mnemonic.letter)}.jpg`} alt="" /> */}

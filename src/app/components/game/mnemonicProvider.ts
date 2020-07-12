@@ -16,7 +16,7 @@ const getMnemonic = (element: KanaElement, hiragana: boolean): Mnemonic => {
     },
     mnemonic: null,
   };
-  mnemonic.picture.src = `/assets/${hiragana ? 'hiragana' : 'katakana'}/${mnemonic.latin}.jpg`;
+  mnemonic.picture.src = `/assets/images/${hiragana ? 'hiragana' : 'katakana'}/${mnemonic.latin}.jpg`;
   mnemonic.mnemonic = mnemonicJson.mnemonic.map(x => ({
     isCode: !!x.code,
     text: x.code ? x.code : x.text,
