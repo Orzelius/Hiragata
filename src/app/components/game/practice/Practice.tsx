@@ -5,6 +5,10 @@ import getMnemonic from '../mnemonicProvider';
 import MnemonicComponent from '../MnemonicComponent';
 import DrawBoard from '../DrawBoard';
 
+export interface HistoryElement {
+  number: number;
+  correct: boolean;
+}
 const Practice: React.FC = () => {
   const history = useHistory();
   const globalState = React.useContext(ElementContext);
@@ -26,9 +30,10 @@ const Practice: React.FC = () => {
     );
   };
 
+  const initHistory: HistoryElement[] = [];
   // State for the entire pracice session
   const [totalState, setTotalState] = React.useState({
-    history: [0],
+    history: initHistory,
     number: 0,
   });
 
@@ -42,17 +47,17 @@ const Practice: React.FC = () => {
     showCharacter: false,
   });
 
-  const nextKana = () => {
+  const nextKana = (correct: boolean) => {
     let number = totalState.number;
     if (globalState.state.elements.length === 1) number = 0;
     else if (globalState.state.elements.length === 2) number = number === (globalState.state.elements.length - 1) ? 0 : 1;
     else {
-      while (number === totalState.number || number === totalState.history[totalState.history.length - 1]) {
+      while (number === totalState.number || (totalState.history.length && number === totalState.history[totalState.history.length - 1].number)) {
         number = Math.round(Math.random() * (globalState.state.elements.length - 1));
       }
     }
     setTotalState({
-      history: [...totalState.history, number],
+      history: [...totalState.history, { number, correct }],
       number,
     });
     setRoundState({
@@ -112,16 +117,20 @@ const Practice: React.FC = () => {
         checkAnswer();
         break;
       case 1:
-        nextKana();
+        nextKana(true);
         break;
       case 2:
-        nextKana();
+        nextKana(false);
         break;
       case 3:
-        nextKana();
+        nextKana(true);
         break;
     }
   };
+
+  const finishPractice = () => {
+    
+  }
 
   const drawBoard = React.useMemo(() => (
     <DrawBoard character={roundState.mnemonic.kana} onCharacterShow={onCharacterShow} showCharacter={roundState.showCharacter} />
@@ -148,7 +157,7 @@ const Practice: React.FC = () => {
               <button
                 // onClick={roundState.status === 1 ? nextKana : checkAnswer}
                 hidden={roundState.status !== 3}
-                onClick={nextKana}
+                onClick={() => nextKana(false)}
                 type="submit"
                 className="float-right py-1 px-4 text-xl border border-gray-500 rounded w-40 bg-red-200 hover:bg-red-300 mr-2"
               >
@@ -174,7 +183,16 @@ const Practice: React.FC = () => {
             {/* {drawBoard} */}
           </div>
         </div>
-        {/* <img src={`assets/${globalState.state.learningHiragana ? 'hiragana' : 'katakana'}/${wanakana.toRomaji(state.mnemonic.letter)}.jpg`} alt="" /> */}
+        <div className="pt-4 mt-6 text-center border-t">
+          <button
+            // onClick={roundState.status === 1 ? nextKana : checkAnswer}
+            onClick={finishPractice}
+            type="submit"
+            className="py-1 px-4 text-xl border border-gray-500 rounded w-40 hover:bg-blue-200 hover:border-blue-900"
+          >
+            Finish practice
+          </button>
+        </div>
       </div>
     </div>
   );
