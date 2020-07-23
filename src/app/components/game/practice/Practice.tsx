@@ -129,12 +129,11 @@ const Practice: React.FC = () => {
   };
 
   const finishPractice = () => {
-    
-  }
-
-  const drawBoard = React.useMemo(() => (
-    <DrawBoard character={roundState.mnemonic.kana} onCharacterShow={onCharacterShow} showCharacter={roundState.showCharacter} />
-  ), [roundState.showCharacter, roundState.mnemonic.kana, onCharacterShow]);
+    history.push({
+      pathname: '/results',
+      state: totalState.history,
+    });
+  };
 
   return (
     <div>
