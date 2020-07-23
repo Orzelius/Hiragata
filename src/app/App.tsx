@@ -5,6 +5,7 @@ import Navbar from './components/nav/Navbar';
 import { ElementContext, State } from './components/ElementContext';
 import Learn from './components/game/learn/Learn';
 import Practice from './components/game/practice/Practice';
+import Results from './components/game/results/Results';
 
 const initState: State = {
   // for more convenient testing
@@ -35,6 +36,7 @@ const App: React.FC = () => {
             <Route exact path="/" component={Home} />
             <Route exact path="/learn" component={Learn} />
             <Route exact path="/practice" component={Practice} />
+            <Route exact path="/results" component={Results} />
           </ElementContext.Provider>
         </Switch>
       </div>
