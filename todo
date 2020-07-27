@@ -11,12 +11,12 @@ To do ():
 * Feature requests page
 * AI
 * Keybaord shortcuts
-* Practice results
 * Touch support
 * Fix legacy linting issues
 * Make the random choice choose more equally
 
 Done:
+* Practice results
 * + Show char button
 * + Analytics
 * + Handwritten char. order font

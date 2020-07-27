@@ -6,6 +6,7 @@ interface Props {
   character: string;
   onCharacterShow: (isShowed: boolean) => void;
   showCharacter: boolean;
+  onDrawn: () => void;
 }
 let cfd: CanvasFreeDrawing = null;
 const canvasProps = {
@@ -14,9 +15,11 @@ const canvasProps = {
   lineWidth: 25,
   drawColor: [5, 5, 5],
 };
-const DrawBoard: React.FC<Props> = ({ character, onCharacterShow, showCharacter }) => {
-  const [state, setState] = React.useState({ drawn: false, cfd });
-  const [hasDrawn, setDrawn] = React.useState(false);
+const DrawBoard: React.FC<Props> = ({
+  character, onCharacterShow, showCharacter, onDrawn: onDraw,
+}) => {
+  const [state, setState] = React.useState({ canvasIsDrawn: false, cfd });
+  const [userHasDrawn, setUserHasDrawn] = React.useState(false);
   const drawBorder = () => {
     const c = document.getElementById('cfd') as HTMLCanvasElement;
     const ctx = c.getContext('2d');
@@ -46,7 +49,7 @@ const DrawBoard: React.FC<Props> = ({ character, onCharacterShow, showCharacter 
   };
 
   React.useEffect(() => {
-    if (!state.drawn) {
+    if (!state.canvasIsDrawn) {
       cfd = new CanvasFreeDrawing({
         elementId: 'cfd',
         width: canvasProps.w,
@@ -57,14 +60,15 @@ const DrawBoard: React.FC<Props> = ({ character, onCharacterShow, showCharacter 
       cfd.setLineWidth(20); // in px
       cfd.setStrokeColor(canvasProps.drawColor); // in RGB
       cfd.on({ event: AllowedEvents.mousedown }, () => {
-        setDrawn(true);
+        setUserHasDrawn(true);
+        onDraw();
       });
       drawBorder();
       cfd.setStrokeColor(canvasProps.drawColor); // in RGB
       if (showCharacter) showKana();
-      setState({ drawn: true, cfd });
+      setState({ canvasIsDrawn: true, cfd });
     }
-    if (state.drawn && showCharacter && !hasDrawn) {
+    if (state.canvasIsDrawn && showCharacter && !userHasDrawn) {
       // state.cfd.clear();
       state.cfd.setLineWidth(20); // in px
       state.cfd.setStrokeColor(canvasProps.drawColor); // in RGB
@@ -76,14 +80,17 @@ const DrawBoard: React.FC<Props> = ({ character, onCharacterShow, showCharacter 
 
   // else if (state.drawn && !showCharacter) state.cfd.clear();
 
-  const clear = () => {
-    setDrawn(false);
+  const clearButtonClicked = () => {
+    setUserHasDrawn(false);
     cfd.clear();
     drawBorder();
+    if (showCharacter) showKana();
   };
 
   const showKanaClick = () => {
-    clear();
+    state.cfd.clear();
+    drawBorder();
+    setUserHasDrawn(false);
     onCharacterShow(!showCharacter);
   };
 
@@ -91,7 +98,7 @@ const DrawBoard: React.FC<Props> = ({ character, onCharacterShow, showCharacter 
     <div style={{ width: canvasProps.w + 10 }}>
       <canvas className="border-gray-600 border rounded" id="cfd" style={{ width: canvasProps.w, height: canvasProps.h }} />
       <div className="mt-1">
-        <button onClick={clear} type="button" className="border-gray-500 border hover:bg-red-200 rounded py-1 px-4 mr-2">Clear</button>
+        <button onClick={clearButtonClicked} type="button" className="border-gray-500 border hover:bg-red-200 rounded py-1 px-4 mr-2">Clear</button>
         <button
           onClick={showKanaClick}
           type="button"
