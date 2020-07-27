@@ -83,7 +83,7 @@ const Learn: React.FC = () => {
           </div>
           <div className="w-full lg:w-1/2 lg:px-8">
             <h3 className="font-thin">Try to draw it: </h3>
-            <DrawBoard key={state.mnemonic.kana} character={state.mnemonic.kana} onCharacterShow={charShowClicked} showCharacter={state.showKana} />
+            <DrawBoard key={state.mnemonic.kana} character={state.mnemonic.kana} onCharacterShow={charShowClicked} showCharacter={state.showKana} onDrawn={() => {}} />
           </div>
         </div>
         {/* <img src={`assets/${globalState.state.learningHiragana ? 'hiragana' : 'katakana'}/${wanakana.toRomaji(state.mnemonic.letter)}.jpg`} alt="" /> */}

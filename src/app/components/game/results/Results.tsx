@@ -57,7 +57,7 @@ const Results: React.FC = () => {
           Here are your practice results
         </Title>
         <h4 className="text-2xl inline-block">
-          Total drawings:
+          Total practices:
           <span className="text-3xl ml-4 text-gray-600 font-light inline-block mr-2">
             {historyArray.length}
           </span>

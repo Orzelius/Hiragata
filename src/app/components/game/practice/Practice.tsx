@@ -9,6 +9,15 @@ export interface HistoryElement {
   number: number;
   correct: boolean;
 }
+
+enum RoundStatus {
+  DRAWING,
+  CORRECT,
+  INCORRECT,
+  SELF_EVAL,
+  HAS_NOT_DRAWN,
+}
+
 const Practice: React.FC = () => {
   const history = useHistory();
   const globalState = React.useContext(ElementContext);
@@ -39,10 +48,10 @@ const Practice: React.FC = () => {
 
   // State for current kana
   const [roundState, setRoundState] = React.useState({
-    // 0 - drawing, 1 - correct, 2 - incorrect, 3 - self-evaluation
+    // 0 - drawing, 1 - correct, 2 - incorrect, 3 - self-evaluation, 4 - hasNotDrawn
     question: makeQuestion(0),
     mnemonic: getMnemonic(globalState.state.elements[0], globalState.state.learningHiragana),
-    status: 0,
+    status: RoundStatus.HAS_NOT_DRAWN,
     showMnemonic: false,
     showCharacter: false,
   });
@@ -63,7 +72,7 @@ const Practice: React.FC = () => {
     setRoundState({
       question: makeQuestion(number),
       mnemonic: getMnemonic(globalState.state.elements[number], globalState.state.learningHiragana),
-      status: 0,
+      status: RoundStatus.HAS_NOT_DRAWN,
       showMnemonic: false,
       showCharacter: false,
     });
@@ -80,18 +89,24 @@ const Practice: React.FC = () => {
 
   const mnemonicClicked = () => {
     const newRoundState = { ...roundState };
-    newRoundState.status = roundState.status === 1 ? 1 : 2;
-    // newRoundState.status = 0;
+    newRoundState.status = roundState.status === RoundStatus.CORRECT ? RoundStatus.CORRECT : RoundStatus.INCORRECT;
     newRoundState.showMnemonic = !newRoundState.showMnemonic;
     setRoundState(newRoundState);
   };
 
   const onCharacterShow = () => {
     const newRoundState = { ...roundState };
-    newRoundState.status = roundState.status === 1 ? 1 : 2;
+    newRoundState.status = roundState.status === RoundStatus.CORRECT ? RoundStatus.CORRECT : RoundStatus.INCORRECT;
     newRoundState.showCharacter = !newRoundState.showCharacter;
-    // newRoundState.status = 0;
     setRoundState(newRoundState);
+  };
+
+  const onUserHasDrawn = () => {
+    setRoundState(state => {
+      const newRoundState = { ...state };
+      if (newRoundState.status === RoundStatus.HAS_NOT_DRAWN) newRoundState.status = RoundStatus.DRAWING;
+      return newRoundState;
+    });
   };
 
   const btn = {
@@ -99,13 +114,15 @@ const Practice: React.FC = () => {
     buttonText: 'Check',
   };
 
-  if (roundState.status === 1) {
+  if (roundState.status === RoundStatus.CORRECT) {
     btn.buttonText = 'Next';
     btn.buttonStyle = 'bg-green-200 hover:bg-green-300';
-  } else if (roundState.status === 2) {
+  } else if (roundState.status === RoundStatus.HAS_NOT_DRAWN) {
+    btn.buttonStyle = 'bg-gray-200 text-gray-500';
+  } else if (roundState.status === RoundStatus.INCORRECT) {
     btn.buttonText = 'Next';
     btn.buttonStyle = 'bg-red-200 hover:bg-red-300';
-  } else if (roundState.status === 3) {
+  } else if (roundState.status === RoundStatus.SELF_EVAL) {
     btn.buttonText = 'I Got it right';
     btn.buttonStyle = 'bg-green-200 hover:bg-green-300';
   }
@@ -113,16 +130,16 @@ const Practice: React.FC = () => {
   const evalButtonClicked = () => {
     // eslint-disable-next-line default-case
     switch (roundState.status) {
-      case 0:
+      case RoundStatus.DRAWING:
         checkAnswer();
         break;
-      case 1:
+      case RoundStatus.CORRECT:
         nextKana(true);
         break;
-      case 2:
+      case RoundStatus.INCORRECT:
         nextKana(false);
         break;
-      case 3:
+      case RoundStatus.SELF_EVAL:
         nextKana(true);
         break;
     }
@@ -178,7 +195,13 @@ const Practice: React.FC = () => {
           </div>
           <div className="w-full lg:w-1/2 lg:px-8">
             <h3 className="font-thin">Try to draw it: </h3>
-            <DrawBoard key={roundState.mnemonic.kana} character={roundState.mnemonic.kana} onCharacterShow={onCharacterShow} showCharacter={roundState.showCharacter} />
+            <DrawBoard
+              key={roundState.mnemonic.kana + totalState.history.length}
+              character={roundState.mnemonic.kana}
+              onCharacterShow={onCharacterShow}
+              showCharacter={roundState.showCharacter}
+              onDrawn={onUserHasDrawn}
+            />
             {/* {drawBoard} */}
           </div>
         </div>
