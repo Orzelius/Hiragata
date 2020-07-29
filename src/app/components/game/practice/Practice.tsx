@@ -4,6 +4,7 @@ import { ElementContext } from '../../ElementContext';
 import getMnemonic from '../mnemonicProvider';
 import MnemonicComponent from '../MnemonicComponent';
 import DrawBoard from '../DrawBoard';
+import useWindowDimensions from '../../useWindowDimensions';
 
 export interface HistoryElement {
   number: number;
@@ -152,9 +153,11 @@ const Practice: React.FC = () => {
     });
   };
 
+  const screenWidth = useWindowDimensions().width;
+  const drawBoardWidth = screenWidth < 520 ? screenWidth - 20 : 500;
   return (
     <div>
-      <div className="container pt-16 px-2 sm:pt-24 sm:px-4 mb-8 flex-shrink-0">
+      <div className="container pt-16 sm:pt-24 sm:px-4 mb-8 flex-shrink-0">
         <h4>
           <span className="text-4xl text-gray-600 font-light inline-block mr-2">
             {totalState.history.length}
@@ -183,7 +186,7 @@ const Practice: React.FC = () => {
             {/* <span className="text text-sm text-red-700 hover:underline cursor-pointer" hidden={roundState.status !== 2}>Report incorrect recognition</span> */}
           </div>
         </h4>
-        <div className="lg:flex mt-4 sm:mt-12 ">
+        <div className="lg:flex mt-4 sm:mt-12">
           <div className="w-full lg:w-2/5">
             <button onClick={mnemonicClicked} type="button" className="text-left border-b w-full border-gray-600 cursor-pointer">
               <h3 className="inline-block">Mnemonic:</h3>
@@ -203,7 +206,7 @@ const Practice: React.FC = () => {
                   onCharacterShow={onCharacterShow}
                   showCharacter={roundState.showCharacter}
                   onDrawn={onUserHasDrawn}
-                  size={500}
+                  size={drawBoardWidth}
                 />
               </div>
             </div>
