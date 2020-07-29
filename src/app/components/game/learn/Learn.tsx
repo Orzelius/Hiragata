@@ -63,19 +63,18 @@ const Learn: React.FC = () => {
           </span>
           {state.question}
         </h4>
-        <div className="text-center mt-2">
+        <div className="text-center sm:text-left mt-2">
           <button
             onClick={() => nextKana(false)}
             type="submit"
-            className="py-1 mb-1 px-4 text-xl border border-gray-500 rounded inline-block hover:bg-gray-200 w-40"
+            className="py-1 mb-1 px-4 text-xl border border-gray-500 rounded inline-block hover:bg-gray-200 w-1/2 sm:w-40"
           >
             &lt; Back
           </button>
-          <div className="w-1/3 inline-block" />
           <button
             onClick={() => nextKana(true)}
             type="button"
-            className="py-1 px-4 text-xl border border-gray-500 rounded inline-block hover:bg-gray-200 w-40"
+            className="py-1 px-4 text-xl border border-gray-500 rounded inline-block hover:bg-gray-200 w-1/2 sm:w-40 float-right"
           >
             {state.number === globalState.state.elements.length - 1 ? 'Practice' : 'Next >'}
           </button>
