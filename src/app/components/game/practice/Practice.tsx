@@ -183,8 +183,8 @@ const Practice: React.FC = () => {
             {/* <span className="text text-sm text-red-700 hover:underline cursor-pointer" hidden={roundState.status !== 2}>Report incorrect recognition</span> */}
           </div>
         </h4>
-        <div className="lg:flex mt-4 sm:mt-12 max-w-md lg:max-w-6xl">
-          <div className="w-full lg:w-1/2">
+        <div className="lg:flex mt-4 sm:mt-12 ">
+          <div className="w-full lg:w-2/5">
             <button onClick={mnemonicClicked} type="button" className="text-left border-b w-full border-gray-600 cursor-pointer">
               <h3 className="inline-block">Mnemonic:</h3>
               <span className="float-right mt-4 mr-2 text-xl border px-3 border-gray-600 rounded hover:bg-gray-200">{roundState.showMnemonic ? '⋀' : '⋁'}</span>
@@ -193,28 +193,33 @@ const Practice: React.FC = () => {
               <MnemonicComponent mnemonic={roundState.mnemonic} showImage />
             </div>
           </div>
-          <div className="w-full lg:w-1/2 lg:px-8">
-            <h3 className="font-thin">Try to draw it: </h3>
-            <DrawBoard
-              key={roundState.mnemonic.kana + totalState.history.length}
-              character={roundState.mnemonic.kana}
-              onCharacterShow={onCharacterShow}
-              showCharacter={roundState.showCharacter}
-              onDrawn={onUserHasDrawn}
-            />
+          <div className="w-full lg:w-3/5">
+            <div className="lg:float-right">
+              <h3 className="font-thin">Try to draw it: </h3>
+              <div className="w-auto mx-auto">
+                <DrawBoard
+                  key={roundState.mnemonic.kana + totalState.history.length}
+                  character={roundState.mnemonic.kana}
+                  onCharacterShow={onCharacterShow}
+                  showCharacter={roundState.showCharacter}
+                  onDrawn={onUserHasDrawn}
+                  size={500}
+                />
+              </div>
+            </div>
             {/* {drawBoard} */}
           </div>
         </div>
-        <div className="pt-4 mt-6 text-center border-t">
-          <button
-            // onClick={roundState.status === 1 ? nextKana : checkAnswer}
-            onClick={finishPractice}
-            type="submit"
-            className="py-1 px-4 text-xl border border-gray-500 rounded w-40 hover:bg-blue-200 hover:border-blue-900"
-          >
-            Finish practice
-          </button>
-        </div>
+      </div>
+      <div className="pt-4 mt-6 text-center border-t">
+        <button
+          // onClick={roundState.status === 1 ? nextKana : checkAnswer}
+          onClick={finishPractice}
+          type="submit"
+          className="py-1 px-4 text-xl border border-gray-500 rounded sm:w-56 w-full hover:bg-blue-200 hover:border-blue-900"
+        >
+          Finish practice
+        </button>
       </div>
     </div>
   );
