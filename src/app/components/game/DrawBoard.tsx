@@ -1,23 +1,25 @@
 /* eslint-disable react/button-has-type */
 import * as React from 'react';
 import CanvasFreeDrawing, { AllowedEvents } from 'canvas-free-drawing';
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 interface Props {
   character: string;
   onCharacterShow: (isShowed: boolean) => void;
   showCharacter: boolean;
   onDrawn: () => void;
+  size: number;
 }
 let cfd: CanvasFreeDrawing = null;
-const canvasProps = {
-  h: 500,
-  w: 500,
-  lineWidth: 25,
-  drawColor: [5, 5, 5],
-};
 const DrawBoard: React.FC<Props> = ({
-  character, onCharacterShow, showCharacter, onDrawn: onDraw,
+  character, onCharacterShow, showCharacter, onDrawn: onDraw, size,
 }) => {
+  const canvasProps = {
+    h: size,
+    w: size,
+    lineWidth: 25,
+    drawColor: [5, 5, 5],
+  };
   const [state, setState] = React.useState({ canvasIsDrawn: false, cfd });
   const [userHasDrawn, setUserHasDrawn] = React.useState(false);
   const drawBorder = () => {
@@ -44,12 +46,12 @@ const DrawBoard: React.FC<Props> = ({
     const c = document.getElementById('cfd') as HTMLCanvasElement;
     const ctx = c.getContext('2d');
     ctx.fillStyle = 'gray';
-    ctx.font = '450px KanjiStrokeOrders';
-    ctx.fillText(character, 30, 400);
+    ctx.font = size + 'px KanjiStrokeOrders';
+    ctx.fillText(character, 0, size / 1.25);
   };
 
   React.useEffect(() => {
-    if (!state.canvasIsDrawn) {
+    if (!state.canvasIsDrawn || size !== state.cfd.width) {
       cfd = new CanvasFreeDrawing({
         elementId: 'cfd',
         width: canvasProps.w,
@@ -95,8 +97,14 @@ const DrawBoard: React.FC<Props> = ({
   };
 
   return (
-    <div style={{ width: canvasProps.w + 10 }}>
-      <canvas className="border-gray-600 border rounded" id="cfd" style={{ width: canvasProps.w, height: canvasProps.h }} />
+    <div style={{ width: canvasProps.w }}>
+      <canvas
+        className="border-gray-600 border rounded"
+        id="cfd"
+        style={{ width: canvasProps.w, height: canvasProps.h, touchAction: null }}
+        onTouchStart={() => disableBodyScroll(document.getElementById('asd'))}
+        onTouchEnd={() => clearAllBodyScrollLocks()}
+      />
       <div className="mt-1">
         <button onClick={clearButtonClicked} type="button" className="border-gray-500 border hover:bg-red-200 rounded py-1 px-4 mr-2">Clear</button>
         <button

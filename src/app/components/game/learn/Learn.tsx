@@ -4,6 +4,7 @@ import { ElementContext } from '../../ElementContext';
 import getMnemonic from '../mnemonicProvider';
 import MnemonicComponent from '../MnemonicComponent';
 import DrawBoard from '../DrawBoard';
+import useWindowDimensions from '../../useWindowDimensions';
 
 const Learn: React.FC = () => {
   const history = useHistory();
@@ -50,40 +51,44 @@ const Learn: React.FC = () => {
     setState({ ...state, showKana: !state.showKana });
   };
 
+  const screenWidth = useWindowDimensions().width;
+  const drawBoardWidth = screenWidth < 520 ? screenWidth - 30 : 500;
+
   return (
     <div>
-      <div className="container pt-16 px-2 sm:pt-24 sm:px-4 mb-8 flex-shrink-0">
+      <div className="container pt-16 sm:pt-24 sm:px-4 mb-8 flex-shrink-0">
         <h4>
           <span className="text-4xl text-gray-600 font-light inline-block mr-2">
             {`${state.number + 1}/${globalState.state.elements.length}`}
           </span>
           {state.question}
         </h4>
-        <div className="text-center mt-2">
+        <div className="text-center sm:text-left mt-2">
           <button
             onClick={() => nextKana(false)}
             type="submit"
-            className="py-1 mb-1 px-4 text-xl border border-gray-500 rounded inline-block hover:bg-gray-200 w-40"
+            className="py-1 mb-1 px-4 text-xl border border-gray-500 rounded inline-block hover:bg-gray-200 w-1/2 sm:w-40"
           >
             &lt; Back
           </button>
-          <div className="w-1/3 inline-block" />
           <button
             onClick={() => nextKana(true)}
             type="button"
-            className="py-1 px-4 text-xl border border-gray-500 rounded inline-block hover:bg-gray-200 w-40"
+            className="py-1 px-4 text-xl border border-gray-500 rounded inline-block hover:bg-gray-200 w-1/2 sm:w-40 float-right"
           >
             {state.number === globalState.state.elements.length - 1 ? 'Practice' : 'Next >'}
           </button>
         </div>
-        <div className="lg:flex mt-4 sm:mt-12 max-w-md lg:max-w-6xl">
-          <div className="w-full lg:w-1/2">
+        <div className="lg:flex mt-4 sm:mt-12">
+          <div className="w-full lg:w-2/5">
             <h3 className="font-thin">Mnemonic: </h3>
             <MnemonicComponent mnemonic={state.mnemonic} showImage />
           </div>
-          <div className="w-full lg:w-1/2 lg:px-8">
-            <h3 className="font-thin">Try to draw it: </h3>
-            <DrawBoard key={state.mnemonic.kana} character={state.mnemonic.kana} onCharacterShow={charShowClicked} showCharacter={state.showKana} onDrawn={() => {}} />
+          <div className="w-full lg:w-3/5">
+            <div className="lg:float-right">
+              <h3 className="font-thin">Try to draw it: </h3>
+              <DrawBoard key={state.mnemonic.kana} character={state.mnemonic.kana} onCharacterShow={charShowClicked} showCharacter={state.showKana} onDrawn={() => { }} size={drawBoardWidth} />
+            </div>
           </div>
         </div>
         {/* <img src={`assets/${globalState.state.learningHiragana ? 'hiragana' : 'katakana'}/${wanakana.toRomaji(state.mnemonic.letter)}.jpg`} alt="" /> */}
