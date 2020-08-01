@@ -52,7 +52,7 @@ const KanaTableButtons: React.FC<Props> = ({ selectedElements }) => {
     <div>
       <button
         type="button"
-        className={'w-5/12 max-w-sm border-2 rounded p-1 pt-3 text-center text-lg font-bold m-1 ' + buttonState.learn.style}
+        className={'w-5/12 sm:w-56 border-2 rounded p-1 pt-3 text-center text-lg font-bold m-1 ' + buttonState.learn.style}
         onClick={LearnClick}
         disabled={!buttonState.learn.active}
       >
@@ -61,7 +61,7 @@ const KanaTableButtons: React.FC<Props> = ({ selectedElements }) => {
       </button>
       <button
         type="button"
-        className={'w-5/12 max-w-sm border-2 rounded p-1 pt-3 text-center text-lg font-bold m-1 ' + buttonState.practice.style}
+        className={'w-5/12 sm:w-56 border-2 rounded p-1 pt-3 text-center text-lg font-bold m-1 ' + buttonState.practice.style}
         onClick={PracticeClick}
         disabled={!buttonState.practice.active}
       >

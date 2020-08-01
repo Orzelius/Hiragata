@@ -214,7 +214,7 @@ const Practice: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="pt-4 mt-6 text-center border-t">
+      <div className="pt-4 mt-6 text-center border-t pb-2">
         <button
           // onClick={roundState.status === 1 ? nextKana : checkAnswer}
           onClick={finishPractice}
