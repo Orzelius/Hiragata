@@ -8,6 +8,7 @@ interface Props {
   isHovered: boolean;
   x: number;
   y: number;
+  horizontal: boolean;
   // hoverIn: () => void;
   // hoverOut: () => void;
   // click: () => void;
@@ -15,7 +16,7 @@ interface Props {
 }
 
 const KanaTableElement: React.FC<Props> = (props: Props) => {
-  let customStyle = '';
+  let customStyle = props.horizontal ? 'w-20 h-12 ' : 'w-12 sm:w-16 h-12 ';
   let text = props.latin;
 
   if (props.isHovered && props.x !== 0 && props.y !== 0) {
@@ -42,13 +43,13 @@ const KanaTableElement: React.FC<Props> = (props: Props) => {
   return (
     // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
     <div
-      className={'w-12 sm:w-16 cursor-pointer border-gray-500 border-2 h-12 inline-block ' + customStyle + (props.isHovered ? hoverStyle : ' ')}
+      className={'cursor-pointer border-gray-500 border-2 inline-block ' + customStyle + (props.isHovered ? hoverStyle : ' ')}
       // onMouseEnter={() => { props.hoverIn(); }}
       // onKeyPress={() => { props.click(); }}
       // onMouseLeave={() => { props.hoverOut(); }}
       // onClick={() => { props.click(); }}
     >
-      <h5 className={'subpixel-antialiased mt-1 text-center text-xl text-blue-900 ' + (props.isBorder ? 'font-semibold ' : 'font-medium')}>
+      <h5 className={'subpixel-antialiased text-center text-xl text-blue-900 mt-1 ' + (props.isBorder ? 'font-semibold ' : 'font-medium ')}>
         {text}
       </h5>
     </div>

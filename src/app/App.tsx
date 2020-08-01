@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './components/Home/Home';
+import Select from './components/Home/Select';
 import Navbar from './components/nav/Navbar';
 import { ElementContext, State } from './components/ElementContext';
 import Learn from './components/game/learn/Learn';
 import Practice from './components/game/practice/Practice';
 import Results from './components/game/results/Results';
+import Home from './components/Home/Home';
 
 const initState: State = {
   // for more convenient testing
@@ -25,6 +26,7 @@ const initState: State = {
 
 const App: React.FC = () => {
   const [state, setState] = React.useState(initState);
+  document.title = 'Hiragata';
   return (
     <BrowserRouter>
       <div className="App">
@@ -33,7 +35,8 @@ const App: React.FC = () => {
         <Switch>
           {/* <Route exact path="/" component={Dasboard}/> */}
           <ElementContext.Provider value={{ state, setState }}>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Select} />
+            <Route exact path="/home" component={Home} />
             <Route exact path="/learn" component={Learn} />
             <Route exact path="/practice" component={Practice} />
             <Route exact path="/results" component={Results} />

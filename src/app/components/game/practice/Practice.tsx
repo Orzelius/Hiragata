@@ -154,7 +154,7 @@ const Practice: React.FC = () => {
   };
 
   const screenWidth = useWindowDimensions().width;
-  const drawBoardWidth = screenWidth < 520 ? screenWidth - 20 : 500;
+  const drawBoardWidth = screenWidth < 520 ? screenWidth - 30 : 500;
   return (
     <div>
       <div className="container pt-16 sm:pt-24 sm:px-4 mb-8 flex-shrink-0">
@@ -214,7 +214,7 @@ const Practice: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="pt-4 mt-6 text-center border-t">
+      <div className="pt-4 mt-6 text-center border-t pb-2">
         <button
           // onClick={roundState.status === 1 ? nextKana : checkAnswer}
           onClick={finishPractice}

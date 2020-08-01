@@ -3,7 +3,7 @@
 /* eslint-disable no-shadow */
 import * as React from 'react';
 import * as wanakana from 'wanakana';
-import { consonants, vowels } from '../../../Helpers/Helpers';
+import { vowels, consonants } from '../../../Helpers/Helpers';
 import KanaTableElement from './KanaTableElement';
 import { ElementContext } from '../../ElementContext';
 import KanaTableButtons from './KanaTableButtons';
@@ -97,9 +97,24 @@ function generateTable() {
   return initialKanaTable;
 }
 
+const transposeArray = (array: Element[][]): Element[][] => {
+  const newArray: Element[][] = [];
+  for (let i = 0; array[0][i]; i++) {
+    newArray.push([]);
+  }
+
+  array.forEach(row => {
+    row.forEach(el => {
+      newArray[el.x].push(el);
+    });
+  });
+  return newArray;
+};
+
 interface Props {
   kana: string;
   showKana: boolean;
+  horizontal: boolean;
 }
 const KanaTable: React.FC<Props> = props => {
   const elementContext = React.useContext(ElementContext);
@@ -245,15 +260,16 @@ const KanaTable: React.FC<Props> = props => {
   }
 
   let rowElements: JSX.Element[] = [];
+  const drawArray = props.horizontal ? transposeArray(state) : state;
   return (
     <div>
-      <table className="">
+      <table className="mx-auto">
         <tbody onMouseEnter={() => onElementHover(0, 0, false)}>
           {/* <tbody> */}
-          {state.map(kanaRow => {
+          {drawArray.map((kanaRow, y) => {
             rowElements = [];
-            for (let x = 0; x < state[0].length; x++) {
-              const element = kanaRow.find(e => e.x === x);
+            for (let x = 0; x < drawArray[0].length; x++) {
+              const element = kanaRow.find(e => (props.horizontal ? e.y === x : e.x === x));
               if (!element) {
                 // eslint-disable-next-line jsx-a11y/control-has-associated-label
                 rowElements.push(<td key={Math.random()} />);
@@ -267,11 +283,11 @@ const KanaTable: React.FC<Props> = props => {
                   kana = element.hiragana + element.katakana;
                 }
                 let style = 'p-1 ';
-                if (element.x === 0) {
-                  style += 'pr-4 ';
-                }
                 if (element.y === 0) {
-                  style += 'pb-5 ';
+                  style += props.horizontal ? 'pr-6 ' : 'pb-5 ';
+                }
+                if (element.x === 0) {
+                  style += props.horizontal ? 'pb-5 ' : 'pr-4 ';
                 }
                 rowElements.push(
                   <td className={style} key={Math.random()}>
@@ -289,6 +305,7 @@ const KanaTable: React.FC<Props> = props => {
                         isHovered={element.isHovered}
                         x={element.x}
                         y={element.y}
+                        horizontal={props.horizontal}
                       />
                     </div>
                   </td>,
@@ -303,7 +320,9 @@ const KanaTable: React.FC<Props> = props => {
           })}
         </tbody>
       </table>
-      <KanaTableButtons selectedElements={selectedElements} />
+      <div className={props.horizontal ? 'mt-6' : ''}>
+        <KanaTableButtons selectedElements={selectedElements} />
+      </div>
     </div>
   );
 };
