@@ -17,7 +17,7 @@ const DrawBoard: React.FC<Props> = ({
   const canvasProps = {
     h: size,
     w: size,
-    lineWidth: 25,
+    lineWidth: size / 20,
     drawColor: [5, 5, 5],
   };
   const [state, setState] = React.useState({ canvasIsDrawn: false, cfd });
@@ -59,7 +59,7 @@ const DrawBoard: React.FC<Props> = ({
       });
 
       cfd.clear();
-      cfd.setLineWidth(20); // in px
+      cfd.setLineWidth(canvasProps.lineWidth); // in px
       cfd.setStrokeColor(canvasProps.drawColor); // in RGB
       cfd.on({ event: AllowedEvents.mousedown }, () => {
         setUserHasDrawn(true);
@@ -72,7 +72,7 @@ const DrawBoard: React.FC<Props> = ({
     }
     if (state.canvasIsDrawn && showCharacter && !userHasDrawn) {
       // state.cfd.clear();
-      state.cfd.setLineWidth(20); // in px
+      state.cfd.setLineWidth(canvasProps.lineWidth); // in px
       state.cfd.setStrokeColor(canvasProps.drawColor); // in RGB
       drawBorder();
       state.cfd.setStrokeColor(canvasProps.drawColor); // in RGB

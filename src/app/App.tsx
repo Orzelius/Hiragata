@@ -25,6 +25,7 @@ const initState: State = {
 
 const App: React.FC = () => {
   const [state, setState] = React.useState(initState);
+  document.title = 'Hiragata';
   return (
     <BrowserRouter>
       <div className="App">

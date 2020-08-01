@@ -154,7 +154,7 @@ const Practice: React.FC = () => {
   };
 
   const screenWidth = useWindowDimensions().width;
-  const drawBoardWidth = screenWidth < 520 ? screenWidth - 20 : 500;
+  const drawBoardWidth = screenWidth < 520 ? screenWidth - 30 : 500;
   return (
     <div>
       <div className="container pt-16 sm:pt-24 sm:px-4 mb-8 flex-shrink-0">
