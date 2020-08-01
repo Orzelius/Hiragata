@@ -84,10 +84,15 @@ const Results: React.FC = () => {
           // onClick={roundState.status === 1 ? nextKana : checkAnswer}
           onClick={() => { history.push('/'); }}
           type="submit"
-          className="py-1 mt-8 px-4 text-xl border border-gray-500 rounded w-40 hover:bg-blue-200 hover:border-blue-900"
+          className="py-1 mt-8 px-4 text-xl border border-gray-500 rounded w-56 hover:bg-blue-200 hover:border-blue-900 inline-block"
         >
-          Back home
+          Go back home
         </button>
+        <span className=" ml-2 text-xl">
+          Or say thanks to
+          <a href="https://www.tofugu.com/" target="_blank" rel="noreferrer" className="mx-2 underline text-blue-500 hover:text-blue-600">Tofugu</a>
+          who kindheartedly let me use their mnemonics in this app
+        </span>
       </div>
     );
   }
