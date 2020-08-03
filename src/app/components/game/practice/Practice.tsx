@@ -97,7 +97,7 @@ const Practice: React.FC = () => {
 
   const onCharacterShow = () => {
     const newRoundState = { ...roundState };
-    newRoundState.status = roundState.status === RoundStatus.CORRECT ? RoundStatus.CORRECT : RoundStatus.INCORRECT;
+    if (roundState.status === RoundStatus.DRAWING) newRoundState.status = RoundStatus.INCORRECT;
     newRoundState.showCharacter = !newRoundState.showCharacter;
     setRoundState(newRoundState);
   };
