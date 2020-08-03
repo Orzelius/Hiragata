@@ -12,6 +12,7 @@ const Select: React.FC = () => (
     <div className="mt-3 flex justify-center">
       <KanaSelector />
     </div>
+    <h4 className="StrokeOrderFont text-white" style={{ fontSize: '00.1rem' }}>ア</h4>
   </Container>
 );
 

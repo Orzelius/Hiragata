@@ -11,6 +11,7 @@ interface Props {
   size: number;
 }
 let cfd: CanvasFreeDrawing = null;
+
 const DrawBoard: React.FC<Props> = ({
   character, onCharacterShow, showCharacter, onDrawn: onDraw, size,
 }) => {
