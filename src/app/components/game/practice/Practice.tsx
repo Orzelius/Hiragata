@@ -90,14 +90,14 @@ const Practice: React.FC = () => {
 
   const mnemonicClicked = () => {
     const newRoundState = { ...roundState };
-    newRoundState.status = roundState.status === RoundStatus.CORRECT ? RoundStatus.CORRECT : RoundStatus.INCORRECT;
+    if (roundState.status === RoundStatus.DRAWING || roundState.status === RoundStatus.HAS_NOT_DRAWN) newRoundState.status = RoundStatus.INCORRECT;
     newRoundState.showMnemonic = !newRoundState.showMnemonic;
     setRoundState(newRoundState);
   };
 
   const onCharacterShow = () => {
     const newRoundState = { ...roundState };
-    if (roundState.status === RoundStatus.DRAWING) newRoundState.status = RoundStatus.INCORRECT;
+    if (roundState.status === RoundStatus.DRAWING || roundState.status === RoundStatus.HAS_NOT_DRAWN) newRoundState.status = RoundStatus.INCORRECT;
     newRoundState.showCharacter = !newRoundState.showCharacter;
     setRoundState(newRoundState);
   };
