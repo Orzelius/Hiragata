@@ -2,79 +2,79 @@
 
 @tailwind base;
 h1 {
-  @apply text-2xl;
+    @apply text-2xl;
 }
 
 h2 {
-  @apply text-xl;
+    @apply text-xl;
 }
 
 h3 {
-  @apply text-4xl text-gray-700;
+    @apply text-4xl text-gray-700;
 }
 
 .jap-text {
-  font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .kanaStyle {
-  font-family: 'Noto Sans JP', sans-serif;
-  @apply rounded bg-gray-300 px-1;
+    font-family: 'Noto Sans JP', sans-serif;
+    @apply rounded bg-gray-300 px-1;
 }
 
 .shadow-outline-green {
-  box-shadow: 0 0 3px 2px rgb(56, 161, 105);
+    box-shadow: 0 0 3px 2px rgb(56, 161, 105);
 }
 
 button:focus {
-  outline: 0;
-  /* box-shadow: none; */
+    outline: 0;
+    /* box-shadow: none; */
 }
 
 @font-face {
-  font-family: 'KanjiStrokeOrders';
-  src: url('/assets/KanjiStrokeOrders_v4.003.woff2');
-  src: url('/assets/KanjiStrokeOrders_v4.003.woff2') format('woff2'), /* Super Modern Browsers */
-  url('/assets/KanjiStrokeOrders_v4.003.woff') format('woff');
-  /* Pretty Modern Browsers */
+    font-family: 'KanjiStrokeOrders';
+    src: url('/public/KanjiStrokeOrders_v4.003.woff2');
+    src: url('/public/KanjiStrokeOrders_v4.003.woff2') format('woff2'), url('/public/KanjiStrokeOrders_v4.003.woff') format('woff');
+    /* Pretty Modern Browsers */
 }
 
 .StrokeOrderFont {
-  font-family: 'KanjiStrokeOrders';
+    font-family: 'KanjiStrokeOrders';
 }
 
 @tailwind components;
+
 /* purgecss end ignore */
 
 @tailwind utilities;
 .trans-0 {
-  -webkit-transition: color 0.2s ease-out;
-  -moz-transition: color 0.2s ease-out;
-  -o-transition: color 0.2s ease-out;
-  -ms-transition: color 0.2s ease-out;
-  transition: color 0.2s ease-out;
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    -ms-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
 }
 
 .trans-1 {
-  -webkit-transition: color 0.4s ease-out;
-  -moz-transition: color 0.4s ease-out;
-  -o-transition: color 0.4s ease-out;
-  -ms-transition: color 0.4s ease-out;
-  transition: color 0.4s ease-out;
+    -webkit-transition: color 0.4s ease-out;
+    -moz-transition: color 0.4s ease-out;
+    -o-transition: color 0.4s ease-out;
+    -ms-transition: color 0.4s ease-out;
+    transition: color 0.4s ease-out;
 }
 
 .trans-2 {
-  -webkit-transition: color 1s ease-out;
-  -moz-transition: color 1s ease-out;
-  -o-transition: color 1s ease-out;
-  -ms-transition: color 1s ease-out;
-  transition: color 1s ease-out;
+    -webkit-transition: color 1s ease-out;
+    -moz-transition: color 1s ease-out;
+    -o-transition: color 1s ease-out;
+    -ms-transition: color 1s ease-out;
+    transition: color 1s ease-out;
 }
 
 .border-8 {
-  border-width: 0.4rem;
+    border-width: 0.4rem;
 }
 
 .rounded-xl {
-  border-radius: 1.5rem;
+    border-radius: 1.5rem;
 }

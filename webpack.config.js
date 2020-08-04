@@ -51,26 +51,26 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          { loader: MiniCssExtractPlugin.loader },
           'css-loader',
           'postcss-loader',
         ],
       },
       {
-        test: /\.(png|jpg|gif|svg)$/i,
+        test: /\.(png|jpg|gif|svg|woff|woff2)$/i,
         loader: 'url-loader'
       },
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'app', 'index.html') }),
-    new MiniCssExtractPlugin({
-      filename: 'styles.css',
-    }),
     new CopyPlugin({
       patterns: [
         { from: 'public', to: 'assets' },
       ],
+    }),
+    new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'app', 'index.html') }),
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
     }),
   ],
 };
