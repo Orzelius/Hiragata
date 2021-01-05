@@ -57,7 +57,7 @@
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/wanakana": "^4.0.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "body-scroll-lock": "^3.0.3",
     "canvas-free-drawing": "^2.0.4",
     "react": "^16.13.1",
