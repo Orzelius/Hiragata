@@ -268,7 +268,7 @@ const KanaTable: React.FC<Props> = props => {
       <table className="mx-auto">
         <tbody onMouseEnter={() => onElementHover(0, 0, false)}>
           {/* <tbody> */}
-          {drawArray.map((kanaRow, y) => {
+          {drawArray.map((kanaRow) => {
             rowElements = [];
             for (let x = 0; x < drawArray[0].length; x++) {
               const element = kanaRow.find(e => (props.horizontal ? e.y === x : e.x === x));

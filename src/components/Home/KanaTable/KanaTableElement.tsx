@@ -41,7 +41,6 @@ const KanaTableElement: React.FC<Props> = (props: Props) => {
   }
 
   return (
-    // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
     <div
       className={'cursor-pointer border-gray-500 border-2 inline-block ' + customStyle + (props.isHovered ? hoverStyle : ' ')}
       // onMouseEnter={() => { props.hoverIn(); }}

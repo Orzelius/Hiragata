@@ -1,7 +1,7 @@
 /* eslint-disable react/button-has-type */
 import * as React from 'react';
 import CanvasFreeDrawing, { AllowedEvents } from 'canvas-free-drawing';
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 interface Props {
   character: string;
@@ -29,7 +29,7 @@ const DrawBoard: React.FC<Props> = ({
     if (!ctx) return;
     const { h, w } = canvasProps;
     // padding
-    const p = 70;
+    // const p = 70;
     ctx.strokeStyle = '#e8e8e8';
     ctx.lineWidth = 1;
     ctx.beginPath();

@@ -88,7 +88,7 @@ const Learn: React.FC = () => {
         <div className="lg:w-3/5">
           <div className="lg:float-right">
             <h3 className="font-thin">Try to draw it: </h3>
-            <DrawBoard key={state.mnemonic.kana} character={state.mnemonic.kana} onCharacterShow={charShowClicked} showCharacter={state.showKana} onDrawn={() => { }} size={drawBoardWidth} />
+            <DrawBoard key={state.mnemonic.kana} character={state.mnemonic.kana} onCharacterShow={charShowClicked} showCharacter={state.showKana} onDrawn={() => undefined} size={drawBoardWidth} />
           </div>
         </div>
       </div>
