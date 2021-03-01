@@ -10,7 +10,7 @@ import { Container } from './Helpers/BasicComponents';
 
 const initState: GState = {
   // for more convenient testing
-  elements: [
+  elements: process.env["NODE_ENV"] === "development"? [] : [
     { hiragana: 'や', katakana: 'ヤ', latin: 'ya' },
     { hiragana: 'ゆ', katakana: 'ユ', latin: 'yu' },
     { hiragana: 'よ', katakana: 'ヨ', latin: 'yo' },
