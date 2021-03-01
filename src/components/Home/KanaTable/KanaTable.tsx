@@ -221,7 +221,6 @@ const KanaTable: React.FC<Props> = props => {
 
     let allKana: Element[] = [];
     newTable.forEach(row => allKana = allKana.concat(row))
-    console.log("allKana: ", allKana);
     
     const validKana = allKana.filter(element => !element.isBorder && element.isSelected);
     const selectedKana: KanaElement[] = validKana.map(element => ({
@@ -236,12 +235,9 @@ const KanaTable: React.FC<Props> = props => {
     const result = ElementClick(x, y);
     setState(result.newState);
     setSelectedElements(result.selectedKana);
-    console.log(result);
   };
   
-  if (elementContext.gState.elements.length !== 0 && !tableDrawn) {
-    console.log("fishi if");
-    
+  if (elementContext.gState.elements.length !== 0 && !tableDrawn) {    
     // WARNING, this is extremely big brain code, don't think about it too much
     let result: {
       selectedKana: KanaElement[];
