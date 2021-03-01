@@ -55,7 +55,7 @@ interface ContaierProps {
   className?: string;
 }
 export const Container: React.FC<ContaierProps> = ({ children, className }) => (
-  <div className={'container bg-white mx-auto p-2 mt-10 lg:bg-yellow-200 xl:bg-white xl:px-20 pb-8 ' + className}>
+  <div className={'container p-2 mt-10 xl:px-20 pb-8 ' + className}>
     {children}
   </div>
 );
