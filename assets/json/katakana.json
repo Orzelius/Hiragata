@@ -1,0 +1,926 @@
+[
+  {
+    "letter": "ア",
+    "picture": {
+      "alt": "Katakana character ア mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ア.jpg"
+    },
+    "mnemonic": [
+      {
+        "code": "ア"
+      },
+      {
+        "text": " has a deformed capital letter \""
+      },
+      {
+        "code": "A"
+      },
+      {
+        "text": "\" in it. You have to turn your head to the side and connect some lines, but it's there."
+      }
+    ]
+  },
+  {
+    "letter": "イ",
+    "picture": {
+      "alt": "Katakana character イ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/イ.jpg"
+    },
+    "mnemonic": [
+      {
+        "code": "イ"
+      },
+      {
+        "text": " looks like an "
+      },
+      {
+        "code": "ea"
+      },
+      {
+        "text": "gle, standing on the ground, or on a branch, or wherever. You see its legs and its back, curved down like an eagle's?"
+      }
+    ]
+  },
+  {
+    "letter": "ウ",
+    "picture": {
+      "alt": "Katakana character ウ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ウ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This katakana character looks a lot like its hiragana counterpart: "
+      },
+      {
+        "code": "う"
+      },
+      {
+        "text": ". It should be similar enough to use as a mnemonic to remember what it is."
+      }
+    ]
+  },
+  {
+    "letter": "エ",
+    "picture": {
+      "alt": "Katakana character エ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/エ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "Imagine this is the girders an "
+      },
+      {
+        "code": "e"
+      },
+      {
+        "text": "ngineer would use to build buildings. This character is in the shape of the end of a girder, and its made up of them too."
+      }
+    ]
+  },
+  {
+    "letter": "オ",
+    "picture": {
+      "alt": "Katakana character オ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/オ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This kana looks like a dude flapping open his trench coat to flash you. \""
+      },
+      {
+        "code": "Oh"
+      },
+      {
+        "text": " my god,\" you say. \""
+      },
+      {
+        "code": "Oh"
+      },
+      {
+        "text": " no.\""
+      }
+    ]
+  },
+  {
+    "letter": "カ",
+    "picture": {
+      "alt": "Katakana character カ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/カ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "It looks just like the hiragana for \""
+      },
+      {
+        "code": "ka"
+      },
+      {
+        "text": "\", though it's missing that little extra line. Close enough to make it easy to remember, though."
+      }
+    ]
+  },
+  {
+    "letter": "キ",
+    "picture": {
+      "alt": "Katakana character キ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/キ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "It looks like the hiragana for \""
+      },
+      {
+        "code": "き"
+      },
+      {
+        "text": "\" (the top part at least) and also looks like part of a weird "
+      },
+      {
+        "code": "key"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "letter": "ク",
+    "picture": {
+      "alt": "Katakana character ク mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ク.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This looks like a long "
+      },
+      {
+        "code": "coo"
+      },
+      {
+        "text": "k's hat."
+      }
+    ]
+  },
+  {
+    "letter": "ケ",
+    "picture": {
+      "alt": "Katakana character ケ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ケ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "It looks like the letter \""
+      },
+      {
+        "code": "K"
+      },
+      {
+        "text": "\"!"
+      }
+    ]
+  },
+  {
+    "letter": "コ",
+    "picture": {
+      "alt": "Katakana character コ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/コ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "See the two 90 degree "
+      },
+      {
+        "code": "co"
+      },
+      {
+        "text": "rners? The two corners are what help you to remember that this is \"ko.\""
+      }
+    ]
+  },
+  {
+    "letter": "サ",
+    "picture": {
+      "alt": "Katakana character サ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/サ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This kana looks like three "
+      },
+      {
+        "code": "sa"
+      },
+      {
+        "text": "rdines, stacked on top of each other. The right side one is longer because you use your right hand to pick it up (it's heavier too). This only works if you're right handed."
+      }
+    ]
+  },
+  {
+    "letter": "シ",
+    "picture": {
+      "alt": "Katakana character シ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/シ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This kana looks like a smiley face, but something is wrong with it. Both eyes are sideways and stacked on top of each other like some deep "
+      },
+      {
+        "code": "sea"
+      },
+      {
+        "text": " fish. "
+      },
+      {
+        "code": "She"
+      },
+      {
+        "text": " has a very weird face."
+      }
+    ]
+  },
+  {
+    "letter": "ス",
+    "picture": {
+      "alt": "Katakana character ス mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ス.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This kana looks like a hanger, with which you hang up your fancy "
+      },
+      {
+        "code": "su"
+      },
+      {
+        "text": "its."
+      }
+    ]
+  },
+  {
+    "letter": "セ",
+    "picture": {
+      "alt": "Katakana character セ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/セ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "It looks really similar to the hiragana "
+      },
+      {
+        "code": "せ"
+      },
+      {
+        "text": ", so you should be able to use that to remember this kana."
+      }
+    ]
+  },
+  {
+    "letter": "ソ",
+    "picture": {
+      "alt": "Katakana character ソ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ソ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "It is one needle and a long thread, which you use to "
+      },
+      {
+        "code": "sew"
+      },
+      {
+        "text": ". Remember, needles are always vertical like this needle, because you need to stab it through something, straight down. This will help you to differentiate this one and the very similar \bン."
+      }
+    ]
+  },
+  {
+    "letter": "タ",
+    "picture": {
+      "alt": "Katakana character タ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/タ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This kana looks like a "
+      },
+      {
+        "code": "ti"
+      },
+      {
+        "text": "dal wave, racing across the sea."
+      }
+    ]
+  },
+  {
+    "letter": "チ",
+    "picture": {
+      "alt": "Katakana character チ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/チ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "Doesn't this look like a "
+      },
+      {
+        "code": "chee"
+      },
+      {
+        "text": "rleader, doing a cheer?"
+      }
+    ]
+  },
+  {
+    "letter": "ツ",
+    "picture": {
+      "alt": "Katakana character ツ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ツ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "Instead of one needle and thread (ソ), you have two needles and thread. Remember, needles are vertical because you use them to stab into cloth, straight down. This will help you to differentiate this one from シ, which has more horizontal lines. Horizontal lines means it's a face, vertical means it's needles. So this one has "
+      },
+      {
+        "code": "two"
+      },
+      {
+        "text": " needles."
+      }
+    ]
+  },
+  {
+    "letter": "テ",
+    "picture": {
+      "alt": "Katakana character テ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/テ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This kana looks like a "
+      },
+      {
+        "code": "te"
+      },
+      {
+        "text": "lephone pole."
+      }
+    ]
+  },
+  {
+    "letter": "ト",
+    "picture": {
+      "alt": "Katakana character ト mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ト.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "It looks just like a "
+      },
+      {
+        "code": "to"
+      },
+      {
+        "text": "tem pole."
+      }
+    ]
+  },
+  {
+    "letter": "ナ",
+    "picture": {
+      "alt": "Katakana character ナ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ナ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "See the majestic "
+      },
+      {
+        "code": "na"
+      },
+      {
+        "text": "rwhal, swimming up to the surface? What a beautiful creature."
+      }
+    ]
+  },
+  {
+    "letter": "ニ",
+    "picture": {
+      "alt": "Katakana character ニ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ニ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This is two "
+      },
+      {
+        "code": "nee"
+      },
+      {
+        "text": "dles, laying on their side. Now, don't get confused about how I said that needles are always vertical… that's only with the katakana that have the slope in them (ソ and ツ). When they're on their own, resting, and not being used to sew anything (no thread) they're just two needles laying on their side."
+      }
+    ]
+  },
+  {
+    "letter": "ヌ",
+    "picture": {
+      "alt": "Katakana character ヌ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ヌ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "The chopsticks are grabbing onto some "
+      },
+      {
+        "code": "noo"
+      },
+      {
+        "text": "dles and pulling them out of a bowl."
+      }
+    ]
+  },
+  {
+    "letter": "ネ",
+    "picture": {
+      "alt": "Katakana character ネ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ネ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "A "
+      },
+      {
+        "code": "ne"
+      },
+      {
+        "text": "cromancer has summoned this zombie. Only a necromancer could create a three legged undead like this, because they certainly don't occur naturally with three legs. That's how you know that necromancy is involved."
+      }
+    ]
+  },
+  {
+    "letter": "ノ",
+    "picture": {
+      "alt": "Katakana character ノ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ノ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "It looks like a really long "
+      },
+      {
+        "code": "no"
+      },
+      {
+        "text": "se."
+      }
+    ]
+  },
+  {
+    "letter": "ハ",
+    "picture": {
+      "alt": "Katakana character ハ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ハ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This is shaped like one of those rice patty "
+      },
+      {
+        "code": "ha"
+      },
+      {
+        "text": "ts. You'll have to connect the pieces, but you can see it, right?"
+      }
+    ]
+  },
+  {
+    "letter": "ヒ",
+    "picture": {
+      "alt": "Katakana character ヒ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ヒ.jpg"
+    },
+    "mnemonic": [
+      {
+        "code": "He"
+      },
+      {
+        "text": " has no head, and "
+      },
+      {
+        "code": "he"
+      },
+      {
+        "text": " is reaching out for you."
+      }
+    ]
+  },
+  {
+    "letter": "フ",
+    "picture": {
+      "alt": "Katakana character フ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/フ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This looks like a big owl beak. Way too big for any normal owl, but perfect for this "
+      },
+      {
+        "code": "fu"
+      },
+      {
+        "text": "nny looking owl. Because of the deformation of its beak, it doesn't say \"hu hu hu\" like you'd expect, it says "
+      },
+      {
+        "code": "fu"
+      },
+      {
+        "text": " "
+      },
+      {
+        "code": "fu"
+      },
+      {
+        "text": " "
+      },
+      {
+        "code": "fu"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "letter": "ヘ",
+    "picture": {
+      "alt": "Katakana character ヘ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ヘ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This katakana looks just like the hiragana "
+      },
+      {
+        "code": "へ"
+      },
+      {
+        "text": ". If you know one you know them both!"
+      }
+    ]
+  },
+  {
+    "letter": "ホ",
+    "picture": {
+      "alt": "Katakana character ホ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ホ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This is a "
+      },
+      {
+        "code": "ho"
+      },
+      {
+        "text": "ly cross. You can even see the holy light coming off of it. So holy."
+      }
+    ]
+  },
+  {
+    "letter": "マ",
+    "picture": {
+      "alt": "Katakana character マ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/マ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "Look at all those angles! Those lengths! Those measurements! All that "
+      },
+      {
+        "code": "ma"
+      },
+      {
+        "text": "th!"
+      }
+    ]
+  },
+  {
+    "letter": "ミ",
+    "picture": {
+      "alt": "Katakana character ミ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ミ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "Three "
+      },
+      {
+        "code": "mi"
+      },
+      {
+        "text": "ssiles, flying towards you. Be careful!"
+      }
+    ]
+  },
+  {
+    "letter": "ム",
+    "picture": {
+      "alt": "Katakana character ム mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ム.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "It is shaped like a pile of poop. Cow poop. "
+      },
+      {
+        "code": "Moo"
+      },
+      {
+        "text": "."
+      }
+    ]
+  },
+  {
+    "letter": "メ",
+    "picture": {
+      "alt": "Katakana character メ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/メ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This looks like an \"X\" which is over someone's "
+      },
+      {
+        "code": "目"
+      },
+      {
+        "text": " (め/eye). "
+      },
+      {
+        "code": "Meh"
+      },
+      {
+        "text": ", I guess they're dead now."
+      }
+    ]
+  },
+  {
+    "letter": "モ",
+    "picture": {
+      "alt": "Katakana character モ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/モ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This looks very similar to the hiragana "
+      },
+      {
+        "code": "も"
+      },
+      {
+        "text": ", so you should be able to make that connection and remember both of these."
+      }
+    ]
+  },
+  {
+    "letter": "ヤ",
+    "picture": {
+      "alt": "Katakana character ヤ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ヤ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This looks just like the hiragana "
+      },
+      {
+        "code": "や"
+      },
+      {
+        "text": ", minus a little line."
+      }
+    ]
+  },
+  {
+    "letter": "ユ",
+    "picture": {
+      "alt": "Katakana character ユ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ユ.jpg"
+    },
+    "mnemonic": [
+      {
+        "code": "You"
+      },
+      {
+        "text": " have a hook for a hand."
+      }
+    ]
+  },
+  {
+    "letter": "ヨ",
+    "picture": {
+      "alt": "Katakana character ヨ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ヨ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This is a "
+      },
+      {
+        "code": "yo"
+      },
+      {
+        "text": "gurt container. See the sides and imagine the yogurt-container shape."
+      }
+    ]
+  },
+  {
+    "letter": "ラ",
+    "picture": {
+      "alt": "Katakana character ラ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ラ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "It is a "
+      },
+      {
+        "code": "ra"
+      },
+      {
+        "text": "ptor wearing some sweet "
+      },
+      {
+        "code": "Ra"
+      },
+      {
+        "text": "y-Bans."
+      }
+    ]
+  },
+  {
+    "letter": "リ",
+    "picture": {
+      "alt": "Katakana character リ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/リ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "It looks just like the hiragana "
+      },
+      {
+        "code": "り"
+      },
+      {
+        "text": ", or at least very, very similar."
+      }
+    ]
+  },
+  {
+    "letter": "ル",
+    "picture": {
+      "alt": "Katakana character ル mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ル.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "There are two "
+      },
+      {
+        "code": "rou"
+      },
+      {
+        "text": "tes you can take. "
+      },
+      {
+        "code": "Rou"
+      },
+      {
+        "text": "te one and "
+      },
+      {
+        "code": "Rou"
+      },
+      {
+        "text": "te two."
+      }
+    ]
+  },
+  {
+    "letter": "レ",
+    "picture": {
+      "alt": "Katakana character レ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/レ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "Look at that beautiful "
+      },
+      {
+        "code": "re"
+      },
+      {
+        "text": "d hair that "
+      },
+      {
+        "code": "Re"
+      },
+      {
+        "text": "i has! It's so flowing!"
+      }
+    ]
+  },
+  {
+    "letter": "ロ",
+    "picture": {
+      "alt": "Katakana character ロ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ロ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "This "
+      },
+      {
+        "code": "ro"
+      },
+      {
+        "text": "ad goes around in a square, never ending. What a terrible "
+      },
+      {
+        "code": "ro"
+      },
+      {
+        "text": "ad this is. What are you, a 12 year old playing Sim City?"
+      }
+    ]
+  },
+  {
+    "letter": "ワ",
+    "picture": {
+      "alt": "Katakana character ワ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ワ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "When you ask a question (that's why this is a question mark) you often begin your question with the word "
+      },
+      {
+        "code": "wha"
+      },
+      {
+        "text": "t. "
+      },
+      {
+        "code": "Wha"
+      },
+      {
+        "text": "t are you doing? "
+      },
+      {
+        "code": "Wha"
+      },
+      {
+        "text": "t are you wearing? "
+      },
+      {
+        "code": "Wha"
+      },
+      {
+        "text": "t are you not wearing?"
+      }
+    ]
+  },
+  {
+    "letter": "ヲ",
+    "picture": {
+      "alt": "Katakana character ヲ mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ヲ.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "It's pronounced like を is (which is pronounced like お), but to remember this is \"wo\" think of a dog "
+      },
+      {
+        "code": "wo"
+      },
+      {
+        "text": "ofing so hard its tongue is flying out."
+      }
+    ]
+  },
+  {
+    "letter": "ン",
+    "picture": {
+      "alt": "Katakana character ン mnemonic",
+      "src": "https://files.tofugu.com/articles/japanese/2014-09-03-learn-katakana/ン.jpg"
+    },
+    "mnemonic": [
+      {
+        "text": "Do you remember how シ is a lady with a weird face? The two little dashes are more horizontal than vertical, which helps us to know it's a face. Who's face? This is "
+      },
+      {
+        "code": "M/n"
+      },
+      {
+        "text": " Night Shyamalan, and the twist is that he only has one eye. NNNNNNNNNnnnnnoooooo!"
+      }
+    ]
+  }
+]
