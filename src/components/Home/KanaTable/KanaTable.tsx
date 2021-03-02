@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable no-shadow */
 import * as React from 'react';
 import * as wanakana from 'wanakana';
@@ -116,7 +117,7 @@ interface Props {
 }
 const KanaTable: React.FC<Props> = props => {
   const elementContext = React.useContext(ElementContext);
-  const [state, setState] = React.useState(generateTable());  
+  const [state, setState] = React.useState(generateTable());
   const [tableDrawn, setTableDrawn] = React.useState(false);
   const initSelectedElements: KanaElement[] = [];
   const [selectedElements, setSelectedElements] = React.useState(initSelectedElements);
@@ -158,7 +159,7 @@ const KanaTable: React.FC<Props> = props => {
     changes.push({ x: 0, y: 0 });
 
     let newTable = table || [...state];
-    
+
     const { isSelected } = findUnsafe(newTable[y], e => e.x === x);
 
     // Select individual
@@ -220,8 +221,8 @@ const KanaTable: React.FC<Props> = props => {
     });
 
     let allKana: Element[] = [];
-    newTable.forEach(row => allKana = allKana.concat(row))
-    
+    newTable.forEach(row => { allKana = allKana.concat(row); });
+
     const validKana = allKana.filter(element => !element.isBorder && element.isSelected);
     const selectedKana: KanaElement[] = validKana.map(element => ({
       hiragana: element.hiragana,
@@ -236,14 +237,14 @@ const KanaTable: React.FC<Props> = props => {
     setState(result.newState);
     setSelectedElements(result.selectedKana);
   };
-  
-  if (elementContext.gState.elements.length !== 0 && !tableDrawn) {    
+
+  if (elementContext.gState.selectedElements.length !== 0 && !tableDrawn) {
     // WARNING, this is extremely big brain code, don't think about it too much
     let result: {
       selectedKana: KanaElement[];
       newState: Element[][];
     } = { newState: [], selectedKana: [] };
-    elementContext.gState.elements.forEach(el => {
+    elementContext.gState.selectedElements.forEach(el => {
       state.forEach(row => {
         row.forEach(stateEl => {
           if (!stateEl.isBorder && stateEl.latin === el.latin) {
@@ -256,7 +257,7 @@ const KanaTable: React.FC<Props> = props => {
     setState(result.newState);
     setSelectedElements(result.selectedKana);
   }
-  
+
   let rowElements: JSX.Element[] = [];
   const drawArray = props.horizontal ? transposeArray(state) : state;
   return (
@@ -264,7 +265,7 @@ const KanaTable: React.FC<Props> = props => {
       <table className="mx-auto">
         <tbody onMouseEnter={() => onElementHover(0, 0, false)}>
           {/* <tbody> */}
-          {drawArray.map((kanaRow) => {
+          {drawArray.map(kanaRow => {
             rowElements = [];
             for (let x = 0; x < drawArray[0].length; x++) {
               const element = kanaRow.find(e => (props.horizontal ? e.y === x : e.x === x));

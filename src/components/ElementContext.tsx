@@ -9,7 +9,7 @@ export interface GState {
     guesses: {
       correct: boolean,
       time: Date,
-    },
+    }[],
     urgency: number,
   }[],
 }

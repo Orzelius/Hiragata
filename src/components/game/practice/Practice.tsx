@@ -22,14 +22,14 @@ enum RoundStatus {
 const Practice: React.FC = () => {
   const history = useHistory();
   const globalState = React.useContext(ElementContext);
-  if (!globalState.gState || !globalState.gState.elements) {
+  if (!globalState.gState || !globalState.gState.selectedElements) {
     history.push('/');
     return null;
   }
 
   const makeQuestion = (element: number) => {
     const kana = `${globalState.gState.learningHiragana ? 'Hiragana' : 'Katakana'}`;
-    const kanaElement = globalState.gState.elements[element];
+    const kanaElement = globalState.gState.selectedElements[element];
     return (
       <span className="text-3xl text-gray-900">
         <span className="mr-2">{`Draw the ${kana} for `}</span>
@@ -51,7 +51,7 @@ const Practice: React.FC = () => {
   const [roundState, setRoundState] = React.useState({
     // 0 - drawing, 1 - correct, 2 - incorrect, 3 - self-evaluation, 4 - hasNotDrawn
     question: makeQuestion(0),
-    mnemonic: getMnemonic(globalState.gState.elements[0], globalState.gState.learningHiragana),
+    mnemonic: getMnemonic(globalState.gState.selectedElements[0], globalState.gState.learningHiragana),
     status: RoundStatus.HAS_NOT_DRAWN,
     showMnemonic: false,
     showCharacter: false,
@@ -59,11 +59,11 @@ const Practice: React.FC = () => {
 
   const nextKana = (correct: boolean) => {
     let number = totalState.number;
-    if (globalState.gState.elements.length === 1) number = 0;
-    else if (globalState.gState.elements.length === 2) number = number === (globalState.gState.elements.length - 1) ? 0 : 1;
+    if (globalState.gState.selectedElements.length === 1) number = 0;
+    else if (globalState.gState.selectedElements.length === 2) number = number === (globalState.gState.selectedElements.length - 1) ? 0 : 1;
     else {
       while (number === totalState.number || (totalState.history.length && number === totalState.history[totalState.history.length - 1].number)) {
-        number = Math.round(Math.random() * (globalState.gState.elements.length - 1));
+        number = Math.round(Math.random() * (globalState.gState.selectedElements.length - 1));
       }
     }
     setTotalState({
@@ -72,7 +72,7 @@ const Practice: React.FC = () => {
     });
     setRoundState({
       question: makeQuestion(number),
-      mnemonic: getMnemonic(globalState.gState.elements[number], globalState.gState.learningHiragana),
+      mnemonic: getMnemonic(globalState.gState.selectedElements[number], globalState.gState.learningHiragana),
       status: RoundStatus.HAS_NOT_DRAWN,
       showMnemonic: false,
       showCharacter: false,

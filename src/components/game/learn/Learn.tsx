@@ -9,14 +9,14 @@ import useWindowDimensions from '../../useWindowDimensions';
 const Learn: React.FC = () => {
   const history = useHistory();
   const globalState = React.useContext(ElementContext);
-  if (!globalState.gState || !globalState.gState.elements) {
+  if (!globalState.gState || !globalState.gState.selectedElements) {
     history.push('/');
     return null;
   }
 
   const makeQuestion = (element: number) => {
     const kana = `${globalState.gState.learningHiragana ? 'Hiragana' : 'Katakana'}`;
-    const kanaElement = globalState.gState.elements[element];
+    const kanaElement = globalState.gState.selectedElements[element];
     return (
       <span className="text-3xl text-gray-900">
         <span className="mr-2">{kana}</span>
@@ -33,19 +33,19 @@ const Learn: React.FC = () => {
   const [state, setState] = React.useState({
     number: 0,
     question: makeQuestion(0),
-    mnemonic: getMnemonic(globalState.gState.elements[0], globalState.gState.learningHiragana),
+    mnemonic: getMnemonic(globalState.gState.selectedElements[0], globalState.gState.learningHiragana),
     showKana: true,
   });
 
   const nextKana = (next: boolean) => {
     const number = state.number + (next ? 1 : -1);
     if (number === -1) return;
-    if (number >= globalState.gState.elements.length) {
+    if (number >= globalState.gState.selectedElements.length) {
       history.push('/Practice');
       return;
     }
     setState({
-      number, question: makeQuestion(number), mnemonic: getMnemonic(globalState.gState.elements[number], globalState.gState.learningHiragana), showKana: true,
+      number, question: makeQuestion(number), mnemonic: getMnemonic(globalState.gState.selectedElements[number], globalState.gState.learningHiragana), showKana: true,
     });
   };
 
@@ -60,7 +60,7 @@ const Learn: React.FC = () => {
     <div>
       <h4>
         <span className="text-4xl text-gray-600 font-light inline-block mr-2">
-          {`${state.number + 1}/${globalState.gState.elements.length}`}
+          {`${state.number + 1}/${globalState.gState.selectedElements.length}`}
         </span>
         {state.question}
       </h4>
@@ -77,7 +77,7 @@ const Learn: React.FC = () => {
           type="button"
           className="py-1 px-4 text-xl border border-gray-500 rounded inline-block hover:bg-gray-200 w-1/2 sm:w-40 float-right"
         >
-          {state.number === globalState.gState.elements.length - 1 ? 'Practice' : 'Next >'}
+          {state.number === globalState.gState.selectedElements.length - 1 ? 'Practice' : 'Next >'}
         </button>
       </div>
       <div className="container lg:flex mt-4 sm:mt-12 w-min lg:w-full md:mx-auto">

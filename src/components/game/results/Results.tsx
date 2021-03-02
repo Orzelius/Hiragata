@@ -13,7 +13,7 @@ const Results: React.FC = () => {
   // const [state, setState] = React.useState({ showFailures: true });
   const globalState = React.useContext(ElementContext).gState;
 
-  if (!location.state || !globalState.elements) {
+  if (!location.state || !globalState.selectedElements) {
     history.push('/');
   } else {
     const historyArray = location.state as HistoryElement[];
@@ -35,7 +35,7 @@ const Results: React.FC = () => {
       );
     }
 
-    const data: { character: string; total: number; correct: number; incorrect: number }[] = globalState.elements.map(el => (
+    const data: { character: string; total: number; correct: number; incorrect: number }[] = globalState.selectedElements.map(el => (
       {
         character: (globalState.learningHiragana ? el.hiragana : el.katakana) + ' ' + el.latin,
         total: 0,
@@ -61,7 +61,7 @@ const Results: React.FC = () => {
           </span>
         </h4>
         <BarChart
-          width={globalState.elements.length * 70 < 500 ? 500 : globalState.elements.length * 70}
+          width={globalState.selectedElements.length * 70 < 500 ? 500 : globalState.selectedElements.length * 70}
           height={300}
           data={data}
           className="mt-8"
