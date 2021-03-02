@@ -4,25 +4,31 @@ import { KanaElement } from './Home/KanaTable/KanaTable';
 export interface GState {
   learningHiragana: boolean;
   selectedElements: KanaElement[];
-  elementHistory: {
-    element: KanaElement,
-    guesses: {
-      correct: boolean,
-      time: Date,
+  history: {
+    elementHistory: {
+      element: KanaElement,
+      guesses: {
+        correct: boolean,
+        time: number,
+      }[],
+      urgency: number,
     }[],
-    urgency: number,
-  }[],
+    total: number
+  }
 }
 interface InitConext {
   setGState: Dispatch<SetStateAction<GState>>;
   gState: GState;
 }
-const initConext: InitConext = {
+export const initConext: InitConext = {
   setGState: () => undefined,
   gState: {
     selectedElements: [],
     learningHiragana: true,
-    elementHistory: [],
+    history: {
+      elementHistory: [],
+      total: 0,
+    },
   },
 };
 export const ElementContext = createContext<InitConext>(initConext);

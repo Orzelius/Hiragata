@@ -1,28 +1,26 @@
 import * as React from 'react';
-import { useLocation, useHistory } from 'react-router';
+import { useHistory } from 'react-router';
 import {
   BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar,
 } from 'recharts';
-import { HistoryElement } from '../practice/Practice';
 import { Title } from '../../../Helpers/BasicComponents';
 import { ElementContext } from '../../ElementContext';
 
 const Results: React.FC = () => {
-  const location = useLocation();
   const history = useHistory();
   // const [state, setState] = React.useState({ showFailures: true });
   const globalState = React.useContext(ElementContext).gState;
 
-  if (!location.state || !globalState.selectedElements) {
+  if (!globalState.selectedElements || globalState.selectedElements.length === 0) {
     history.push('/');
   } else {
-    const historyArray = location.state as HistoryElement[];
+    const historyArray = globalState.history.elementHistory;
     if (historyArray.length === 0) {
       return (
         <div className="content-center text-center">
           <Title>
             Looks like you did not practice :D
-            </Title>
+          </Title>
           <button
             // onClick={roundState.status === 1 ? nextKana : checkAnswer}
             onClick={() => { history.push('/'); }}
@@ -30,13 +28,14 @@ const Results: React.FC = () => {
             className="py-1 mt-4 px-4 text-xl border border-gray-500 rounded w-40 hover:bg-blue-200 hover:border-blue-900"
           >
             Back home
-            </button>
+          </button>
         </div>
       );
     }
 
-    const data: { character: string; total: number; correct: number; incorrect: number }[] = globalState.selectedElements.map(el => (
+    const data = globalState.selectedElements.map(el => (
       {
+        el,
         character: (globalState.learningHiragana ? el.hiragana : el.katakana) + ' ' + el.latin,
         total: 0,
         correct: 0,
@@ -44,9 +43,12 @@ const Results: React.FC = () => {
       }
     ));
     historyArray.forEach(el => {
-      if (el.correct) data[el.number].correct++;
-      else data[el.number].incorrect++;
-      data[el.number].total++;
+      const dataI = data.findIndex(e => e.el === el.element);
+      if (dataI !== -1) {
+        data[dataI].correct = el.guesses.filter(g => g.correct).length;
+        data[dataI].incorrect = el.guesses.filter(g => !g.correct).length;
+        data[dataI].correct = el.guesses.length;
+      }
     });
 
     return (
@@ -57,7 +59,7 @@ const Results: React.FC = () => {
         <h4 className="text-2xl inline-block">
           Total practices:
           <span className="text-3xl ml-4 text-gray-600 font-light inline-block mr-2">
-            {historyArray.length}
+            {globalState.history.total}
           </span>
         </h4>
         <BarChart

@@ -6,17 +6,18 @@ export const colors = {
   Gray: 'bg-gray-100 border border-gray-700 hover:bg-gray-300 text-black',
 };
 
-interface buttonProps {
+interface ButtonProps {
   onClick: () => void;
   color?: string;
   children: React.ReactNode;
   className?: string;
+  props?: React.ButtonHTMLAttributes<HTMLButtonElement>;
 }
 
-export const Button: React.FC<buttonProps> = ({
-  children, onClick, color = 'bg-white border border-gray-700 hover:bg-gray-300 text-black', className = '',
-}: buttonProps) => (
-  <button className={'py-2 px-4 ' + color + ' ' + className} onClick={onClick}>
+export const Button: React.FC<ButtonProps> = ({
+  children, onClick, color = 'bg-white border border-gray-700 hover:bg-gray-300 text-black', className = '', props,
+}: ButtonProps) => (
+  <button {...props} type="button" className={'py-2 px-4 ' + color + ' ' + className} onClick={onClick}>
     {children}
   </button>
 );

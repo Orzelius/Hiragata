@@ -1,15 +1,10 @@
 import * as React from 'react';
 import { useHistory } from 'react-router';
-import { ElementContext } from '../../ElementContext';
+import { ElementContext, GState } from '../../ElementContext';
 import getMnemonic from '../mnemonicProvider';
 import MnemonicComponent from '../MnemonicComponent';
 import DrawBoard from '../DrawBoard';
 import useWindowDimensions from '../../useWindowDimensions';
-
-export interface HistoryElement {
-  number: number;
-  correct: boolean;
-}
 
 enum RoundStatus {
   DRAWING,
@@ -20,16 +15,17 @@ enum RoundStatus {
 }
 
 const Practice: React.FC = () => {
+  const screenWidth = useWindowDimensions().width;
   const history = useHistory();
-  const globalState = React.useContext(ElementContext);
-  if (!globalState.gState || !globalState.gState.selectedElements) {
+  const { gState, setGState } = React.useContext(ElementContext);
+  if (!gState || !gState.selectedElements || gState.selectedElements.length === 0) {
     history.push('/');
-    return null;
+    return (null);
   }
 
   const makeQuestion = (element: number) => {
-    const kana = `${globalState.gState.learningHiragana ? 'Hiragana' : 'Katakana'}`;
-    const kanaElement = globalState.gState.selectedElements[element];
+    const kana = `${gState.learningHiragana ? 'Hiragana' : 'Katakana'}`;
+    const kanaElement = gState.selectedElements[element];
     return (
       <span className="text-3xl text-gray-900">
         <span className="mr-2">{`Draw the ${kana} for `}</span>
@@ -40,39 +36,35 @@ const Practice: React.FC = () => {
     );
   };
 
-  const initHistory: HistoryElement[] = [];
-  // State for the entire pracice session
-  const [totalState, setTotalState] = React.useState({
-    history: initHistory,
-    number: 0,
-  });
-
   // State for current kana
   const [roundState, setRoundState] = React.useState({
     // 0 - drawing, 1 - correct, 2 - incorrect, 3 - self-evaluation, 4 - hasNotDrawn
+    element: gState.selectedElements[0],
     question: makeQuestion(0),
-    mnemonic: getMnemonic(globalState.gState.selectedElements[0], globalState.gState.learningHiragana),
+    mnemonic: getMnemonic(gState.selectedElements[0], gState.learningHiragana),
     status: RoundStatus.HAS_NOT_DRAWN,
     showMnemonic: false,
     showCharacter: false,
   });
 
   const nextKana = (correct: boolean) => {
-    let number = totalState.number;
-    if (globalState.gState.selectedElements.length === 1) number = 0;
-    else if (globalState.gState.selectedElements.length === 2) number = number === (globalState.gState.selectedElements.length - 1) ? 0 : 1;
-    else {
-      while (number === totalState.number || (totalState.history.length && number === totalState.history[totalState.history.length - 1].number)) {
-        number = Math.round(Math.random() * (globalState.gState.selectedElements.length - 1));
-      }
-    }
-    setTotalState({
-      history: [...totalState.history, { number, correct }],
-      number,
-    });
+    let nextKanaI = gState.history.total;
+    if (gState.selectedElements.length === 1) nextKanaI = 0;
+    else if (gState.selectedElements.length === 2) nextKanaI = nextKanaI === 1 ? 0 : 1;
+    else nextKanaI = Math.round(Math.random() * (gState.selectedElements.length - 1));
+
+    const curGState = { ...gState };
+    const curGStateHistoryElementI = curGState.history.elementHistory.findIndex(e => e.element === roundState.element);
+    const newGstate: GState = ({ ...curGState });
+    if (curGStateHistoryElementI !== -1) {
+      const curGHistoryEl = newGstate.history.elementHistory[curGStateHistoryElementI];
+      newGstate.history.elementHistory[curGStateHistoryElementI] = { ...curGHistoryEl, guesses: [...curGHistoryEl.guesses, { correct, time: Date.now() }], urgency: 5 };
+    } else newGstate.history.elementHistory.push({ element: roundState.element, guesses: [{ correct, time: Date.now() }], urgency: 5 });
+    setGState(newGstate);
     setRoundState({
-      question: makeQuestion(number),
-      mnemonic: getMnemonic(globalState.gState.selectedElements[number], globalState.gState.learningHiragana),
+      element: gState.selectedElements[nextKanaI],
+      question: makeQuestion(nextKanaI),
+      mnemonic: getMnemonic(gState.selectedElements[nextKanaI], gState.learningHiragana),
       status: RoundStatus.HAS_NOT_DRAWN,
       showMnemonic: false,
       showCharacter: false,
@@ -149,17 +141,15 @@ const Practice: React.FC = () => {
   const finishPractice = () => {
     history.push({
       pathname: '/results',
-      state: totalState.history,
     });
   };
 
-  const screenWidth = useWindowDimensions().width;
   const drawBoardWidth = screenWidth < 520 ? screenWidth - 30 : 500;
   return (
     <div>
       <h4>
         <span className="text-4xl text-gray-600 font-light inline-block mr-2">
-          {totalState.history.length}
+          {gState.history.total}
         </span>
         {roundState.question}
         <div className="mt-4 float-right">
@@ -180,7 +170,7 @@ const Practice: React.FC = () => {
               className="float-right py-1 px-4 text-xl border border-gray-500 rounded w-40 bg-red-200 hover:bg-red-300 mr-2"
             >
               I got it wrong
-              </button>
+            </button>
           </div>
           {/* <span className="text text-sm text-red-700 hover:underline cursor-pointer" hidden={roundState.status !== 2}>Report incorrect recognition</span> */}
         </div>
@@ -200,7 +190,7 @@ const Practice: React.FC = () => {
             <h3 className="font-thin">Try to draw it: </h3>
             <div className="w-auto mx-auto">
               <DrawBoard
-                key={roundState.mnemonic.kana + totalState.history.length}
+                key={roundState.mnemonic.kana + gState.history.total}
                 character={roundState.mnemonic.kana}
                 onCharacterShow={onCharacterShow}
                 showCharacter={roundState.showCharacter}

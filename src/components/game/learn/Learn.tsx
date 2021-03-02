@@ -71,7 +71,7 @@ const Learn: React.FC = () => {
           className="py-1 mb-1 px-4 text-xl border border-gray-500 rounded inline-block hover:bg-gray-200 w-1/2 sm:w-40"
         >
           &lt; Back
-          </button>
+        </button>
         <button
           onClick={() => nextKana(true)}
           type="button"

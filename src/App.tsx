@@ -2,20 +2,16 @@ import * as React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Select from './components/Home/Select';
 import Navbar from './components/nav/Navbar';
-import { ElementContext, GState } from './components/ElementContext';
+import { ElementContext, initConext } from './components/ElementContext';
 import Learn from './components/game/learn/Learn';
 import Practice from './components/game/practice/Practice';
 import Results from './components/game/results/Results';
 import { Container } from './Helpers/BasicComponents';
 import { KanaElement } from './components/Home/KanaTable/KanaTable';
 
-const initState: GState = {
-  selectedElements: [],
-  elementHistory: [],
-  learningHiragana: true,
-};
+const initState = { ...initConext.gState };
 
-if (process.env.NODE_ENV !== 'development') {
+if (process.env.NODE_ENV === 'development') {
   const preselectedEl: KanaElement[] = [
     { hiragana: 'や', katakana: 'ヤ', latin: 'ya' },
     { hiragana: 'ゆ', katakana: 'ユ', latin: 'yu' },
@@ -27,11 +23,14 @@ if (process.env.NODE_ENV !== 'development') {
     { hiragana: 'ろ', katakana: 'ロ', latin: 'ro' },
   ];
   initState.selectedElements = preselectedEl;
-  initState.elementHistory = preselectedEl.map(el => ({
-    element: el,
-    guesses: [],
-    urgency: 10,
-  }));
+  initState.history = {
+    elementHistory: preselectedEl.map(el => ({
+      element: el,
+      guesses: [],
+      urgency: 10,
+    })),
+    total: 0,
+  };
 }
 
 const App: React.FC = () => {

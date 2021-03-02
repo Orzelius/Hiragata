@@ -37,14 +37,14 @@ const KanaTableButtons: React.FC<Props> = ({ selectedElements }) => {
   const LearnClick = () => {
     context.setGState({
       ...context.gState,
-      selectedElements: selectedElements,
+      selectedElements,
     });
     history.push('/Learn');
   };
   const PracticeClick = () => {
     context.setGState({
       ...context.gState,
-      selectedElements: selectedElements,
+      selectedElements,
     });
     history.push('/Practice');
   };

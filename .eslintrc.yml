@@ -51,3 +51,5 @@ rules:
   prefer-destructuring: "off"
   jsx-a11y/click-events-have-key-events: off
   react-hooks/rules-of-hooks: off
+  react/require-default-props: off
+  react/jsx-props-no-spreading: off
