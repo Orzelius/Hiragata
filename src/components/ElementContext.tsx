@@ -1,20 +1,24 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
 import { KanaElement } from './Home/KanaTable/KanaTable';
 
+export interface Guess {
+  correct: boolean,
+  time: number,
+}
+
+export interface Progress {
+  elements: {
+    element: KanaElement,
+    guesses: Guess[],
+    urgency: number,
+  }[],
+  total: number
+}
+
 export interface GState {
   learningHiragana: boolean;
   selectedElements: KanaElement[];
-  history: {
-    elementHistory: {
-      element: KanaElement,
-      guesses: {
-        correct: boolean,
-        time: number,
-      }[],
-      urgency: number,
-    }[],
-    total: number
-  }
+  progress: Progress;
 }
 interface InitConext {
   setGState: Dispatch<SetStateAction<GState>>;
@@ -25,8 +29,8 @@ export const initConext: InitConext = {
   gState: {
     selectedElements: [],
     learningHiragana: true,
-    history: {
-      elementHistory: [],
+    progress: {
+      elements: [],
       total: 0,
     },
   },

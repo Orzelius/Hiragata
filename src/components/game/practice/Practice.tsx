@@ -5,6 +5,8 @@ import getMnemonic from '../mnemonicProvider';
 import MnemonicComponent from '../MnemonicComponent';
 import DrawBoard from '../DrawBoard';
 import useWindowDimensions from '../../useWindowDimensions';
+import Evaluator from '../logic/chooseNextKana';
+import EvaluatorDebug from '../../../Helpers/debug';
 
 enum RoundStatus {
   DRAWING,
@@ -18,6 +20,7 @@ const Practice: React.FC = () => {
   const screenWidth = useWindowDimensions().width;
   const history = useHistory();
   const { gState, setGState } = React.useContext(ElementContext);
+  const evaluator = new Evaluator(gState.selectedElements, 2, 1, 5, Math.round(gState.selectedElements.length * 1.7), 20);
   if (!gState || !gState.selectedElements || gState.selectedElements.length === 0) {
     history.push('/');
     return (null);
@@ -48,23 +51,22 @@ const Practice: React.FC = () => {
   });
 
   const nextKana = (correct: boolean) => {
-    let nextKanaI = gState.history.total;
-    if (gState.selectedElements.length === 1) nextKanaI = 0;
-    else if (gState.selectedElements.length === 2) nextKanaI = nextKanaI === 1 ? 0 : 1;
-    else nextKanaI = Math.round(Math.random() * (gState.selectedElements.length - 1));
-
     const curGState = { ...gState };
-    const curGStateHistoryElementI = curGState.history.elementHistory.findIndex(e => e.element === roundState.element);
+    const progressElI = curGState.progress.elements.findIndex(e => e.element === roundState.element);
     const newGstate: GState = ({ ...curGState });
-    if (curGStateHistoryElementI !== -1) {
-      const curGHistoryEl = newGstate.history.elementHistory[curGStateHistoryElementI];
-      newGstate.history.elementHistory[curGStateHistoryElementI] = { ...curGHistoryEl, guesses: [...curGHistoryEl.guesses, { correct, time: Date.now() }], urgency: 5 };
-    } else newGstate.history.elementHistory.push({ element: roundState.element, guesses: [{ correct, time: Date.now() }], urgency: 5 });
+    newGstate.progress.elements[progressElI].guesses.unshift({ correct, time: Date.now() });
+
+    const newGProgress = evaluator.calculateUrgency({ el: roundState.element, correct }, gState.progress);
+    newGstate.progress = newGProgress;
+
+    const nextEl = evaluator.chooseNextKana(roundState.element, newGProgress);
+    const nextKanaI = gState.selectedElements.findIndex(e => e === nextEl);
+
     setGState(newGstate);
     setRoundState({
-      element: gState.selectedElements[nextKanaI],
+      element: nextEl,
       question: makeQuestion(nextKanaI),
-      mnemonic: getMnemonic(gState.selectedElements[nextKanaI], gState.learningHiragana),
+      mnemonic: getMnemonic(nextEl, gState.learningHiragana),
       status: RoundStatus.HAS_NOT_DRAWN,
       showMnemonic: false,
       showCharacter: false,
@@ -147,9 +149,10 @@ const Practice: React.FC = () => {
   const drawBoardWidth = screenWidth < 520 ? screenWidth - 30 : 500;
   return (
     <div>
+      <EvaluatorDebug evaluator={evaluator} />
       <h4>
         <span className="text-4xl text-gray-600 font-light inline-block mr-2">
-          {gState.history.total}
+          {gState.progress.total}
         </span>
         {roundState.question}
         <div className="mt-4 float-right">
@@ -190,7 +193,7 @@ const Practice: React.FC = () => {
             <h3 className="font-thin">Try to draw it: </h3>
             <div className="w-auto mx-auto">
               <DrawBoard
-                key={roundState.mnemonic.kana + gState.history.total}
+                key={roundState.mnemonic.kana + gState.progress.total}
                 character={roundState.mnemonic.kana}
                 onCharacterShow={onCharacterShow}
                 showCharacter={roundState.showCharacter}

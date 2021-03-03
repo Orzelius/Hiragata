@@ -14,7 +14,7 @@ const Results: React.FC = () => {
   if (!globalState.selectedElements || globalState.selectedElements.length === 0) {
     history.push('/');
   } else {
-    const historyArray = globalState.history.elementHistory;
+    const historyArray = globalState.progress.elements;
     if (historyArray.length === 0) {
       return (
         <div className="content-center text-center">
@@ -59,12 +59,12 @@ const Results: React.FC = () => {
         <h4 className="text-2xl inline-block">
           Total practices:
           <span className="text-3xl ml-4 text-gray-600 font-light inline-block mr-2">
-            {globalState.history.total}
+            {globalState.progress.total}
           </span>
         </h4>
         <BarChart
           width={globalState.selectedElements.length * 70 < 500 ? 500 : globalState.selectedElements.length * 70}
-          height={300}
+          height={100}
           data={data}
           className="mt-8"
           margin={{

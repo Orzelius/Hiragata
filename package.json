@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "craco start",
+    "start:prod": "NODE_ENV=prodution craco start",
     "build": "craco build",
     "test": "craco test",
     "lint": "eslint",

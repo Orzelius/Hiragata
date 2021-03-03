@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useHistory } from 'react-router';
-import { ElementContext } from '../../ElementContext';
+import { ElementContext, Progress } from '../../ElementContext';
 import { KanaElement } from './KanaTable';
 
 interface Props {
@@ -34,10 +34,16 @@ const KanaTableButtons: React.FC<Props> = ({ selectedElements }) => {
   } else {
     buttonState = initButtonState;
   }
+  const createGstateProgress = () => {
+    const newGstateProcess: Progress = { elements: [], total: 0 };
+    selectedElements.forEach(el => newGstateProcess.elements.push({ element: el, guesses: [], urgency: 6 }));
+    return newGstateProcess;
+  };
   const LearnClick = () => {
     context.setGState({
       ...context.gState,
       selectedElements,
+      progress: createGstateProgress(),
     });
     history.push('/Learn');
   };
@@ -45,6 +51,7 @@ const KanaTableButtons: React.FC<Props> = ({ selectedElements }) => {
     context.setGState({
       ...context.gState,
       selectedElements,
+      progress: createGstateProgress(),
     });
     history.push('/Practice');
   };

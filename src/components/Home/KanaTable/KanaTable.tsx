@@ -7,6 +7,12 @@ import KanaTableElement from './KanaTableElement';
 import { ElementContext } from '../../ElementContext';
 import KanaTableButtons from './KanaTableButtons';
 
+export interface KanaElement {
+  latin: string;
+  katakana: string;
+  hiragana: string;
+}
+
 interface Element {
   latin: string;
   katakana: string;
@@ -16,12 +22,6 @@ interface Element {
   isBorder: boolean;
   x: number;
   y: number;
-}
-
-export interface KanaElement {
-  latin: string;
-  katakana: string;
-  hiragana: string;
 }
 function generateTable() {
   const basicElement: Element = {
