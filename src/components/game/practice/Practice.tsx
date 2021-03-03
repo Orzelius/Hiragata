@@ -55,6 +55,7 @@ const Practice: React.FC = () => {
     const progressElI = curGState.progress.elements.findIndex(e => e.element === roundState.element);
     const newGstate: GState = ({ ...curGState });
     newGstate.progress.elements[progressElI].guesses.unshift({ correct, time: Date.now() });
+    newGstate.progress.total++;
 
     const newGProgress = evaluator.calculateUrgency({ el: roundState.element, correct }, gState.progress);
     newGstate.progress = newGProgress;
@@ -113,7 +114,8 @@ const Practice: React.FC = () => {
     btn.buttonText = 'Next';
     btn.buttonStyle = 'bg-green-200 hover:bg-green-300';
   } else if (roundState.status === RoundStatus.HAS_NOT_DRAWN) {
-    btn.buttonStyle = 'bg-gray-200 text-gray-500';
+    btn.buttonText = 'Give up';
+    btn.buttonStyle = 'bg-red-200 hover:bg-red-300';
   } else if (roundState.status === RoundStatus.INCORRECT) {
     btn.buttonText = 'Next';
     btn.buttonStyle = 'bg-red-200 hover:bg-red-300';
@@ -136,6 +138,9 @@ const Practice: React.FC = () => {
         break;
       case RoundStatus.SELF_EVAL:
         nextKana(true);
+        break;
+      case RoundStatus.HAS_NOT_DRAWN:
+        nextKana(false);
         break;
     }
   };
