@@ -24,6 +24,8 @@ class Evaluator {
   }
 
   public chooseNextKana(currEl: KanaElement, progress: Progress): KanaElement {
+    if (this.selectedEl.length === 1) return currEl;
+
     const urgentEl = progress.elements.filter(el => el.urgency >= this.urgencyHigherLimit);
     const linearHistory: { guess: Guess, el: KanaElement }[] = [];
     progress.elements.forEach(el => {
