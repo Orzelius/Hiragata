@@ -53,6 +53,7 @@ const DrawBoard: React.FC<Props> = ({
     ctx.fillText(character, 0, size / 1.25);
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   React.useEffect(() => {
     if (!state.canvasIsDrawn || size !== state.cfd.width) {
       cfd = new CanvasFreeDrawing({
@@ -104,7 +105,7 @@ const DrawBoard: React.FC<Props> = ({
       <canvas
         className="border-gray-600 border rounded"
         id="cfd"
-        style={{ width: canvasProps.w, height: canvasProps.h, touchAction: "none" }}
+        style={{ width: canvasProps.w, height: canvasProps.h, touchAction: 'none' }}
         // onTouchStart={() => disableBodyScroll(document.getElementById('asd'))}
         onTouchEnd={() => clearAllBodyScrollLocks()}
       />

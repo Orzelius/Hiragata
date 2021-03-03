@@ -1,19 +1,38 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
 import { KanaElement } from './Home/KanaTable/KanaTable';
 
+export interface Guess {
+  correct: boolean,
+  time: number,
+}
+
+export interface Progress {
+  elements: {
+    element: KanaElement,
+    guesses: Guess[],
+    urgency: number,
+  }[],
+  total: number
+}
+
 export interface GState {
   learningHiragana: boolean;
-  elements: KanaElement[];
+  selectedElements: KanaElement[];
+  progress: Progress;
 }
 interface InitConext {
   setGState: Dispatch<SetStateAction<GState>>;
   gState: GState;
 }
-const initConext: InitConext = {
+export const initConext: InitConext = {
   setGState: () => undefined,
   gState: {
-    elements: [],
-    learningHiragana: true
-  }
-}
+    selectedElements: [],
+    learningHiragana: true,
+    progress: {
+      elements: [],
+      total: 0,
+    },
+  },
+};
 export const ElementContext = createContext<InitConext>(initConext);
