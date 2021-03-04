@@ -66,8 +66,8 @@ class Evaluator {
     return nextEl;
   }
 
-  public calculateUrgency(currEl: { el: KanaElement, correct: boolean }, history: Progress): Progress {
-    const currElProgress = history.elements.find(el => el.element === currEl.el);
+  public calculateUrgency(currEl: { el: KanaElement, correct: boolean }, progress: Progress): Progress {
+    const currElProgress = progress.elements.find(el => el.element === currEl.el);
     if (!currElProgress) throw new Error("Something went verry wrong, couldn't find element " + currEl.el.latin);
     const streak: { n: number, positive: boolean } = { n: 0, positive: currEl.correct };
 
@@ -89,10 +89,10 @@ class Evaluator {
       if (urgency > this.maxUrgency) urgency = this.maxUrgency;
     }
 
-    const newElHistory = [...history.elements];
+    const newElHistory = [...progress.elements];
     newElHistory[newElHistory.findIndex(el => el.element === currEl.el)].urgency = urgency;
 
-    return { ...history, elements: newElHistory };
+    return { ...progress, elements: newElHistory };
   }
 }
 
