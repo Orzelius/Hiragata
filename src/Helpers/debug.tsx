@@ -6,7 +6,7 @@ import {
   YAxis,
 } from 'recharts';
 import { ElementContext } from '../components/ElementContext';
-import Evaluator from '../components/game/logic/chooseNextKana';
+import Evaluator from '../components/game/logic/Evaluator';
 
 interface Props {
   evaluator: Evaluator

@@ -5,7 +5,7 @@ import getMnemonic from '../mnemonicProvider';
 import MnemonicComponent from '../MnemonicComponent';
 import DrawBoard from '../DrawBoard';
 import useWindowDimensions from '../../useWindowDimensions';
-import Evaluator from '../logic/chooseNextKana';
+import Evaluator from '../logic/Evaluator';
 import EvaluatorDebug from '../../../Helpers/debug';
 
 enum RoundStatus {
@@ -14,13 +14,21 @@ enum RoundStatus {
   INCORRECT,
   SELF_EVAL,
   HAS_NOT_DRAWN,
+  LEARNING,
 }
 
 const Practice: React.FC = () => {
   const screenWidth = useWindowDimensions().width;
   const history = useHistory();
   const { gState, setGState } = React.useContext(ElementContext);
-  const evaluator = new Evaluator(gState.selectedElements, 2, 1, 5, Math.round(gState.selectedElements.length * 1.7), 20);
+  const evaluator = new Evaluator({
+    selectedEl: gState.selectedElements,
+    penalty: 2,
+    reward: 1,
+    urgencyHigherLimit: 5,
+    memoryRefresher: Math.round(gState.selectedElements.length * 1.7),
+    maxUrgency: 20,
+  });
   if (!gState || !gState.selectedElements || gState.selectedElements.length === 0) {
     history.push('/');
     return (null);

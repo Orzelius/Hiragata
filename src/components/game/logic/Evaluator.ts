@@ -14,7 +14,10 @@ class Evaluator {
 
   public maxUrgency; // Urgency won't go above this
 
-  constructor(selectedEl: KanaElement[], penalty: number, reward: number, urgencyHigherLimit: number, memoryRefresher: number, maxUrgency: number) {
+  constructor(evaluatorSettings: { selectedEl: KanaElement[], penalty: number, reward: number, urgencyHigherLimit: number, memoryRefresher: number, maxUrgency: number }) {
+    const {
+      maxUrgency, penalty, memoryRefresher, reward, selectedEl, urgencyHigherLimit,
+    } = evaluatorSettings;
     this.selectedEl = selectedEl;
     this.reward = reward;
     this.penalty = penalty;

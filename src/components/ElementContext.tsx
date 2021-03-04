@@ -8,6 +8,7 @@ export interface Guess {
 
 export interface Progress {
   elements: {
+    fresh: boolean
     element: KanaElement,
     guesses: Guess[],
     urgency: number,
