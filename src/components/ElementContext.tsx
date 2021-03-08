@@ -6,9 +6,15 @@ export interface Guess {
   time: number,
 }
 
+export type ElementStatus =
+'notLearnt' |// Has not been learned yet
+'fresh' |// Has just been learned but not yet reviewed/practiced
+'urgent' |// Urgency is beyond max acceptable
+'green'; // Urgency is below max acceptable
+
 export interface Progress {
   elements: {
-    fresh: boolean
+    status: ElementStatus,
     element: KanaElement,
     guesses: Guess[],
     urgency: number,

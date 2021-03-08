@@ -37,7 +37,7 @@ const KanaTableButtons: React.FC<Props> = ({ selectedElements }) => {
   const createGstateProgress = () => {
     const newGstateProcess: Progress = { elements: [], total: 0 };
     selectedElements.forEach(el => newGstateProcess.elements.push({
-      element: el, guesses: [], urgency: 6, fresh: true,
+      element: el, guesses: [], urgency: 0, status: 'notLearnt',
     }));
     return newGstateProcess;
   };

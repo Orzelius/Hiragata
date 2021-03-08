@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'development') {
   initState.selectedElements = preselectedEl;
   initState.progress = {
     elements: preselectedEl.map(el => ({
-      fresh: true,
+      status: 'notLearnt',
       element: el,
       guesses: [],
       urgency: 6,

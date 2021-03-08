@@ -1,3 +1,4 @@
+import { emitKeypressEvents } from 'readline';
 import { Guess, Progress } from '../../ElementContext';
 import { KanaElement } from '../../Home/KanaTable/KanaTable';
 
@@ -14,9 +15,18 @@ class Evaluator {
 
   public maxUrgency; // Urgency won't go above this
 
-  constructor(evaluatorSettings: { selectedEl: KanaElement[], penalty: number, reward: number, urgencyHigherLimit: number, memoryRefresher: number, maxUrgency: number }) {
+  public maxStreak;
+
+  constructor(evaluatorSettings: {
+    selectedEl: KanaElement[],
+    penalty: { green: number, red: number }, // green: penalty when below urgencyHigherLimit, red when over
+    reward: number, urgencyHigherLimit: number,
+    memoryRefresher: number,
+    maxUrgency: number,
+    maxStreak: { positive: number, negative: number }
+  }) {
     const {
-      maxUrgency, penalty, memoryRefresher, reward, selectedEl, urgencyHigherLimit,
+      maxUrgency, penalty, memoryRefresher, reward, selectedEl, urgencyHigherLimit, maxStreak,
     } = evaluatorSettings;
     this.selectedEl = selectedEl;
     this.reward = reward;
@@ -24,9 +34,40 @@ class Evaluator {
     this.urgencyHigherLimit = urgencyHigherLimit;
     this.memoryRefresher = memoryRefresher;
     this.maxUrgency = maxUrgency;
+    this.maxStreak = maxStreak;
+  }
+
+  public chooseLearn(progress: Progress): { element: KanaElement, canBeLearnt: boolean, percent: number, mustBeLearnt: boolean } | 'nothing to learn' {
+    const notLearntEl = progress.elements.filter(el => el.status === 'notLearnt');
+    const learntEl = progress.elements.filter(el => el.status !== 'notLearnt');
+
+    if (notLearntEl.length === 0) return 'nothing to learn';
+
+    // Must a new element be learnt?
+    if (learntEl.length < 2 && notLearntEl.length >= 1) {
+      return ({
+        element: notLearntEl[0].element, canBeLearnt: true, percent: 100, mustBeLearnt: true,
+      });
+    }
+
+    // Should a new element be learn?
+    const urgentEl = learntEl.filter(el => el.status === 'urgent' || el.status === 'fresh');
+    if (urgentEl.length === 0) {
+      return {
+        canBeLearnt: true, element: notLearntEl[0].element, mustBeLearnt: false, percent: 100,
+      };
+    }
+    const totalUrgOverLimit = urgentEl.map(el => el.urgency - this.urgencyHigherLimit + 1).reduce((a, b) => a + b);
+    console.log(totalUrgOverLimit);
+
+    const percentage = 100 - (totalUrgOverLimit / (urgentEl.length * (this.maxUrgency - this.urgencyHigherLimit))) * 100;
+    return {
+      canBeLearnt: percentage === 100, element: notLearntEl[0].element, mustBeLearnt: false, percent: percentage,
+    };
   }
 
   public chooseNextKana(currEl: KanaElement, progress: Progress): KanaElement {
+    // If only one el is selected
     if (this.selectedEl.length === 1) return currEl;
 
     const urgentEl = progress.elements.filter(el => el.urgency >= this.urgencyHigherLimit);
@@ -84,16 +125,20 @@ class Evaluator {
 
     let urgency = currElProgress.urgency;
     if (streak.positive) {
-      const totalReward = this.reward * streak.n;
+      let totalReward = this.reward * streak.n;
+      if (totalReward > this.maxStreak.positive) totalReward = this.maxStreak.positive;
       urgency = urgency <= totalReward ? 1 : urgency - totalReward;
     } else {
-      const totalPenalty = this.penalty * streak.n;
+      let totalPenalty = currElProgress.status === 'green' ? this.penalty.green : this.penalty.red * streak.n;
+      if (totalPenalty > this.maxStreak.negative) totalPenalty = this.maxStreak.positive;
       urgency += totalPenalty;
       if (urgency > this.maxUrgency) urgency = this.maxUrgency;
     }
 
     const newElHistory = [...progress.elements];
-    newElHistory[newElHistory.findIndex(el => el.element === currEl.el)].urgency = urgency;
+    const newElI = newElHistory.findIndex(el => el.element === currEl.el);
+    newElHistory[newElI].urgency = urgency;
+    newElHistory[newElI].status = urgency >= this.urgencyHigherLimit ? 'urgent' : 'green';
 
     return { ...progress, elements: newElHistory };
   }
