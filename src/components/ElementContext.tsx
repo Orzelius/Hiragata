@@ -12,13 +12,15 @@ export type ElementStatus =
 'urgent' |// Urgency is beyond max acceptable
 'green'; // Urgency is below max acceptable
 
+export interface GElement {
+  status: ElementStatus;
+  element: KanaElement;
+  guesses: Guess[],
+  urgency: number;
+}
+
 export interface Progress {
-  elements: {
-    status: ElementStatus,
-    element: KanaElement,
-    guesses: Guess[],
-    urgency: number,
-  }[],
+  elements: GElement[],
   total: number
 }
 

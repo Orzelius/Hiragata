@@ -42,14 +42,13 @@ const Practice: React.FC = () => {
 
   const [learnState, setLearnState] = React.useState(evaluator.chooseLearn(gState.progress));
 
-  const makeQuestion = (element: number) => {
+  const makeQuestion = (element: KanaElement) => {
     const kana = `${gState.learningHiragana ? 'Hiragana' : 'Katakana'}`;
-    const kanaElement = gState.selectedElements[element];
     return (
       <span className="text-3xl text-gray-900">
         <span className="mr-2">{`Draw the ${kana} for `}</span>
         <span className="text-gray-800 text-4xl bg-blue-200 rounded-md">
-          {kanaElement.latin}
+          {element.latin}
         </span>
       </span>
     );
@@ -59,7 +58,7 @@ const Practice: React.FC = () => {
   const [roundState, setRoundState] = React.useState({
     // 0 - drawing, 1 - correct, 2 - incorrect, 3 - self-evaluation, 4 - hasNotDrawn
     element: gState.selectedElements[0],
-    question: makeQuestion(0),
+    question: makeQuestion(gState.selectedElements[0]),
     mnemonic: getMnemonic(gState.selectedElements[0], gState.learningHiragana),
     status: RoundStatus.LEARNING,
     showMnemonic: false,
@@ -69,6 +68,7 @@ const Practice: React.FC = () => {
   const nextStep = (curStep: { action: 'learnt' } | { action: 'guessed', correct: boolean }) => {
     const progressElI = gState.progress.elements.findIndex(e => e.element === roundState.element);
     const newGstate: GState = ({ ...gState });
+
     if (curStep.action === 'guessed') {
       newGstate.progress.elements[progressElI].guesses.unshift({ correct: curStep.correct, time: Date.now() });
       newGstate.progress.total++;
@@ -81,21 +81,23 @@ const Practice: React.FC = () => {
     let nextEl: KanaElement;
     let newStatus: RoundStatus;
 
-    const newLearnState = evaluator.chooseLearn(newGstate.progress);
-    if (newLearnState !== 'nothing to learn' && newLearnState.mustBeLearnt) {
-      nextEl = newLearnState.element;
+    const learn = evaluator.chooseLearn(newGstate.progress);
+    if (learn !== 'nothing to learn' && learn.mustBeLearnt) {
+      nextEl = learn.element;
       newStatus = RoundStatus.LEARNING;
+    } else if (learn !== 'nothing to learn' && learn.canBeLearnt) {
+      nextEl = learn.element;
+      newStatus = RoundStatus.TO_LEARNING;
     } else {
       nextEl = evaluator.chooseNextKana(roundState.element, newGstate.progress);
       newStatus = RoundStatus.HAS_NOT_DRAWN;
     }
-    const nextKanaI = gState.selectedElements.findIndex(e => e === nextEl);
 
-    setLearnState(newLearnState);
+    setLearnState(learn);
     setGState(newGstate);
     setRoundState({
       element: nextEl,
-      question: makeQuestion(nextKanaI),
+      question: makeQuestion(nextEl),
       mnemonic: getMnemonic(nextEl, gState.learningHiragana),
       status: newStatus,
       showMnemonic: false,
@@ -134,6 +136,34 @@ const Practice: React.FC = () => {
     });
   };
 
+  const onToLearn = () => {
+    setLearnState(evaluator.chooseLearn(gState.progress));
+    setRoundState({ ...roundState, status: RoundStatus.LEARNING });
+  };
+
+  const onCancelLearn = () => {
+    const newGstateElements = gState.progress.elements.map(el => {
+      let newEl = el;
+      if (el.status === 'green') newEl = evaluator.changeUrgency(newEl, 7);
+      else if (el.status === 'urgent') newEl = evaluator.changeUrgency(newEl, newEl.urgency * 1.5);
+      return newEl;
+    });
+    const newGState = { ...gState };
+    newGState.progress.elements = newGstateElements;
+    const nextEl = evaluator.chooseNextKana(roundState.element, newGState.progress);
+    console.log(newGState.progress);
+
+    setLearnState(evaluator.chooseLearn(newGState.progress));
+    setRoundState({
+      element: nextEl,
+      question: makeQuestion(nextEl),
+      mnemonic: getMnemonic(nextEl, gState.learningHiragana),
+      status: RoundStatus.HAS_NOT_DRAWN,
+      showMnemonic: false,
+      showCharacter: false,
+    });
+  };
+
   const btn = {
     buttonStyle: 'hover:bg-gray-200',
     buttonText: 'Check',
@@ -154,7 +184,6 @@ const Practice: React.FC = () => {
   }
 
   const evalButtonClicked = () => {
-    const learn = evaluator.chooseLearn(gState.progress);
     // eslint-disable-next-line default-case
     switch (roundState.status) {
       case RoundStatus.DRAWING:
@@ -167,11 +196,10 @@ const Practice: React.FC = () => {
         nextStep({ action: 'guessed', correct: false });
         break;
       case RoundStatus.SELF_EVAL:
-        if (learn !== 'nothing to learn' && learn.canBeLearnt) setRoundState({ ...roundState, status: RoundStatus.TO_LEARNING });
-        else nextStep({ action: 'guessed', correct: true });
+        nextStep({ action: 'guessed', correct: true });
         break;
       case RoundStatus.HAS_NOT_DRAWN:
-        nextStep({ action: 'guessed', correct: true });
+        nextStep({ action: 'guessed', correct: false });
         break;
       case RoundStatus.TO_LEARNING:
         nextStep({ action: 'guessed', correct: true });
@@ -191,75 +219,72 @@ const Practice: React.FC = () => {
       <Learn element={roundState.element} onNextBtnClick={() => nextStep({ action: 'learnt' })} />
     );
   }
-  if (roundState.status === RoundStatus.TO_LEARNING) {
-    return (
-      <div className="lg:mt-5">
-        <ProgressBar completed={learnState !== 'nothing to learn' ? learnState.percent : 0} isLabelVisible={false} height="5px" />
-      </div>
-    );
-  }
   return (
     <>
-      {/* <EvaluatorDebug evaluator={evaluator} /> */}
+      <EvaluatorDebug evaluator={evaluator} />
       <div className="lg:mt-5">
         <ProgressBar completed={learnState !== 'nothing to learn' ? learnState.percent : 0} isLabelVisible={false} height="5px" />
-        <div className="mt-2">
-          <h4 className="mr-3 inline-block">
-            <span className="text-4xl text-gray-600 font-light inline-block mr-2">
-              {gState.progress.total}
-            </span>
-            {roundState.question}
-          </h4>
-          <div className="mt-4 float-right">
-            <div>
-              <button
-                onClick={evalButtonClicked}
-                type="submit"
-                className={`float-right py-1 px-4 text-xl border border-gray-500 rounded h-11 w-40 ${btn.buttonStyle}`}
-              >
-                {btn.buttonText}
-              </button>
-              <button
-                hidden={roundState.status !== RoundStatus.SELF_EVAL}
-                onClick={() => nextStep({ action: 'guessed', correct: false })}
-                type="submit"
-                className="float-right py-1 px-4 text-xl border border-gray-500 rounded w-40 bg-red-200 hover:bg-red-300 mr-2 h-11"
-              >
-                I got it wrong
-              </button>
-            </div>
-            {/* <span className="text text-sm text-red-700 hover:underline cursor-pointer" hidden={roundState.status !== 2}>Report incorrect recognition</span> */}
-          </div>
-        </div>
-        <div className="container lg:flex mt-4 sm:mt-12 w-min lg:w-full md:mx-auto">
-          <div className="lg:w-2/5  max-w-lg w-max">
-            <button onClick={mnemonicClicked} type="button" className="text-left border-b border-gray-600 cursor-pointer w-full">
-              <h3 className="inline-block">Mnemonic:</h3>
-              <span className="float-right mt-1 mr-2 text-xl border px-3 border-gray-600 rounded hover:bg-gray-200 ">{roundState.showMnemonic ? '⋀' : '⋁'}</span>
-            </button>
-            <div className="mt-4 text-center items-center" hidden={!roundState.showMnemonic}>
-              <MnemonicComponent mnemonic={roundState.mnemonic} showImage />
-            </div>
-          </div>
-          <div className="lg:w-3/5">
-            <div className="lg:float-right">
-              <h3 className="font-thin">Try to draw it: </h3>
-              <div className="w-auto mx-auto">
-                <DrawBoard
-                  key={roundState.mnemonic.kana + gState.progress.total}
-                  character={roundState.mnemonic.kana}
-                  onCharacterShow={onCharacterShow}
-                  showCharacter={roundState.showCharacter}
-                  onDrawn={onUserHasDrawn}
-                  size={drawBoardWidth}
-                />
+        {roundState.status === RoundStatus.TO_LEARNING ? <NextKana kana={roundState.element} onCancel={onCancelLearn} onNext={onToLearn} /> : (
+          <>
+            <div className="mt-2">
+              <h4 className="mr-3 inline-block">
+                <span className="text-4xl text-gray-600 font-light inline-block mr-2">
+                  {gState.progress.total}
+                </span>
+                {roundState.question}
+              </h4>
+              <div className="mt-4 float-right">
+                <div>
+                  <button
+                    onClick={evalButtonClicked}
+                    type="submit"
+                    className={`float-right py-1 px-4 text-xl border border-gray-500 rounded h-11 w-40 ${btn.buttonStyle}`}
+                  >
+                    {btn.buttonText}
+                  </button>
+                  <button
+                    hidden={roundState.status !== RoundStatus.SELF_EVAL}
+                    onClick={() => nextStep({ action: 'guessed', correct: false })}
+                    type="submit"
+                    className="float-right py-1 px-4 text-xl border border-gray-500 rounded w-40 bg-red-200 hover:bg-red-300 mr-2 h-11"
+                  >
+                    I got it wrong
+                  </button>
+                </div>
+                {/* <span className="text text-sm text-red-700 hover:underline cursor-pointer" hidden={roundState.status !== 2}>Report incorrect recognition</span> */}
               </div>
             </div>
-          </div>
-        </div>
+            <div className="container lg:flex mt-4 sm:mt-12 w-min lg:w-full md:mx-auto">
+              <div className="lg:w-2/5  max-w-lg w-max">
+                <button onClick={mnemonicClicked} type="button" className="text-left border-b border-gray-600 cursor-pointer w-full">
+                  <h3 className="inline-block">Mnemonic:</h3>
+                  <span className="float-right mt-1 mr-2 text-xl border px-3 border-gray-600 rounded hover:bg-gray-200 ">{roundState.showMnemonic ? '⋀' : '⋁'}</span>
+                </button>
+                <div className="mt-4 text-center items-center" hidden={!roundState.showMnemonic}>
+                  <MnemonicComponent mnemonic={roundState.mnemonic} showImage />
+                </div>
+              </div>
+              <div className="lg:w-3/5">
+                <div className="lg:float-right">
+                  <h3 className="font-thin">Try to draw it: </h3>
+                  <div className="w-auto mx-auto">
+                    <DrawBoard
+                      key={roundState.mnemonic.kana + gState.progress.total}
+                      character={roundState.mnemonic.kana}
+                      onCharacterShow={onCharacterShow}
+                      showCharacter={roundState.showCharacter}
+                      onDrawn={onUserHasDrawn}
+                      size={drawBoardWidth}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
         <div className="pt-4 mt-6 text-center border-t pb-2">
           <button
-          // onClick={roundState.status === 1 ? nextKana : checkAnswer}
+            // onClick={roundState.status === 1 ? nextKana : checkAnswer}
             onClick={finishPractice}
             type="submit"
             className="py-1 px-4 text-xl border border-gray-500 rounded sm:w-56 w-full hover:bg-blue-200 hover:border-blue-900"

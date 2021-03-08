@@ -1,5 +1,5 @@
 import { emitKeypressEvents } from 'readline';
-import { Guess, Progress } from '../../ElementContext';
+import { GElement, Guess, Progress } from '../../ElementContext';
 import { KanaElement } from '../../Home/KanaTable/KanaTable';
 
 class Evaluator {
@@ -58,7 +58,6 @@ class Evaluator {
       };
     }
     const totalUrgOverLimit = urgentEl.map(el => el.urgency - this.urgencyHigherLimit + 1).reduce((a, b) => a + b);
-    console.log(totalUrgOverLimit);
 
     const percentage = 100 - (totalUrgOverLimit / (urgentEl.length * (this.maxUrgency - this.urgencyHigherLimit))) * 100;
     return {
@@ -141,6 +140,15 @@ class Evaluator {
     newElHistory[newElI].status = urgency >= this.urgencyHigherLimit ? 'urgent' : 'green';
 
     return { ...progress, elements: newElHistory };
+  }
+
+  public changeUrgency(current: GElement, change: number): GElement {
+    const newEl = { ...current };
+    newEl.urgency += change;
+    if (newEl.urgency > this.maxUrgency) newEl.urgency = this.maxUrgency;
+    else if (newEl.urgency < 1) newEl.urgency = 1;
+    newEl.status = newEl.urgency >= this.urgencyHigherLimit ? 'urgent' : 'green';
+    return newEl;
   }
 }
 
