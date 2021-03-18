@@ -114,13 +114,7 @@ class Evaluator {
     if (!currElProgress) throw new Error("Something went verry wrong, couldn't find element " + currEl.el.latin);
     const streak: { n: number, positive: boolean } = { n: 0, positive: currEl.correct };
 
-    currElProgress.guesses.every(g => {
-      if (g.correct === streak.positive) {
-        streak.n += 1;
-        return true;
-      }
-      return false;
-    });
+    currElProgress.guesses.every(g => g.correct === streak.positive && streak.n++);
 
     let urgency = currElProgress.urgency;
     if (streak.positive) {
