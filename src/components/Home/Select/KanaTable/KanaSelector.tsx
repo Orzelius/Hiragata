@@ -2,6 +2,7 @@ import * as React from 'react';
 import KanaTable from './KanaTable';
 import { ElementContext } from '../../../ElementContext';
 import useWindowDimensions from '../../../useWindowDimensions';
+import { buildElements } from '../../../../Helpers/Helpers';
 
 const engkana = [
   'Hiragana',
@@ -16,8 +17,8 @@ const japkana = [
 
 const KanaSelector: React.FC = () => {
   // 0 is Hira, 1 is Kata, 2 is both
-  const context = React.useContext(ElementContext);
-  const [kanaType, setState] = React.useState(context.gState.learningHiragana ? 0 : 1);
+  const { gState, setGState } = React.useContext(ElementContext);
+  const [kanaType, setState] = React.useState(gState.learningHiragana ? 0 : 1);
   const [showKana, setShowKana] = React.useState(true);
   const horizontal = useWindowDimensions().width > 1000;
 
@@ -26,7 +27,7 @@ const KanaSelector: React.FC = () => {
 
   const KanaSelectClick = () => {
     setState(kanaType === 1 ? 0 : (kanaType + 1));
-    context.setGState({ ...context.gState, learningHiragana: kanaType !== 0 });
+    setGState({ ...gState, learningHiragana: kanaType !== 0 });
   };
 
   return (
@@ -50,7 +51,7 @@ const KanaSelector: React.FC = () => {
         </div>
       </button>
       <div className="">
-        <KanaTable kana={curentKana} showKana={showKana} horizontal={horizontal} />
+        <KanaTable kana={curentKana} showKana={showKana} horizontal={horizontal} preSelectedEl={gState.selectedElements.length === buildElements().length ? [] : gState.selectedElements} />
       </div>
     </div>
   );

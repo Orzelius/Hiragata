@@ -4,7 +4,6 @@ import * as React from 'react';
 import * as wanakana from 'wanakana';
 import { vowels, consonants, findUnsafe } from '../../../../Helpers/Helpers';
 import KanaTableElement from './KanaTableElement';
-import { ElementContext } from '../../../ElementContext';
 import KanaTableButtons from './KanaTableButtons';
 
 export interface KanaElement {
@@ -110,17 +109,18 @@ const transposeArray = (array: Element[][]): Element[][] => {
   return newArray;
 };
 
-interface Props {
+interface Props{
   kana: string;
   showKana: boolean;
   horizontal: boolean;
+  preSelectedEl?: KanaElement[];
 }
-const KanaTable: React.FC<Props> = props => {
-  const elementContext = React.useContext(ElementContext);
+const KanaTable: React.FC<Props> = ({
+  horizontal, kana: kanaType, showKana, preSelectedEl = [],
+}) => {
   const [state, setState] = React.useState(generateTable());
   const [tableDrawn, setTableDrawn] = React.useState(false);
-  const initSelectedElements: KanaElement[] = [];
-  const [selectedElements, setSelectedElements] = React.useState(initSelectedElements);
+  const [selectedElements, setSelectedElements] = React.useState(preSelectedEl);
 
   const onElementHover = (x: number, y: number, hoverIn = true) => {
     let newState = [...state].map(row => row.map(el => ({ ...el, isHovered: false })));
@@ -238,13 +238,13 @@ const KanaTable: React.FC<Props> = props => {
     setSelectedElements(result.selectedKana);
   };
 
-  if (elementContext.gState.selectedElements.length !== 0 && !tableDrawn) {
+  if (preSelectedEl.length !== 0 && !tableDrawn) {
     // WARNING, this is extremely big brain code, don't think about it too much
     let result: {
       selectedKana: KanaElement[];
       newState: Element[][];
     } = { newState: [], selectedKana: [] };
-    elementContext.gState.selectedElements.forEach(el => {
+    preSelectedEl.forEach(el => {
       state.forEach(row => {
         row.forEach(stateEl => {
           if (!stateEl.isBorder && stateEl.latin === el.latin) {
@@ -259,7 +259,7 @@ const KanaTable: React.FC<Props> = props => {
   }
 
   let rowElements: JSX.Element[] = [];
-  const drawArray = props.horizontal ? transposeArray(state) : state;
+  const drawArray = horizontal ? transposeArray(state) : state;
   return (
     <div>
       <table className="mx-auto">
@@ -268,24 +268,24 @@ const KanaTable: React.FC<Props> = props => {
           {drawArray.map(kanaRow => {
             rowElements = [];
             for (let x = 0; x < drawArray[0].length; x++) {
-              const element = kanaRow.find(e => (props.horizontal ? e.y === x : e.x === x));
+              const element = kanaRow.find(e => (horizontal ? e.y === x : e.x === x));
               if (!element) {
                 rowElements.push(<td key={Math.random()} />);
               } else {
                 let kana = '';
-                if (props.kana === 'Hiragana') {
+                if (kanaType === 'Hiragana') {
                   kana = element.hiragana;
-                } else if (props.kana === 'Katakana') {
+                } else if (kanaType === 'Katakana') {
                   kana = element.katakana;
-                } else if (props.kana === 'Both') {
+                } else if (kanaType === 'Both') {
                   kana = element.hiragana + element.katakana;
                 }
                 let style = 'p-1 ';
                 if (element.y === 0) {
-                  style += props.horizontal ? 'pr-6 ' : 'pb-5 ';
+                  style += horizontal ? 'pr-6 ' : 'pb-5 ';
                 }
                 if (element.x === 0) {
-                  style += props.horizontal ? 'pb-5 ' : 'pr-4 ';
+                  style += horizontal ? 'pb-5 ' : 'pr-4 ';
                 }
                 rowElements.push(
                   <td className={style} key={Math.random()}>
@@ -297,13 +297,13 @@ const KanaTable: React.FC<Props> = props => {
                     >
                       <KanaTableElement
                         kana={kana}
-                        latin={(props.showKana && !element.isBorder) ? kana : element.latin}
+                        latin={(showKana && !element.isBorder) ? kana : element.latin}
                         isSelected={element.isSelected}
                         isBorder={element.isBorder}
                         isHovered={element.isHovered}
                         x={element.x}
                         y={element.y}
-                        horizontal={props.horizontal}
+                        horizontal={horizontal}
                       />
                     </div>
                   </td>,
@@ -318,7 +318,7 @@ const KanaTable: React.FC<Props> = props => {
           })}
         </tbody>
       </table>
-      <div className={props.horizontal ? 'mt-6' : ''}>
+      <div className={horizontal ? 'mt-6' : ''}>
         <KanaTableButtons selectedElements={selectedElements} />
       </div>
     </div>
