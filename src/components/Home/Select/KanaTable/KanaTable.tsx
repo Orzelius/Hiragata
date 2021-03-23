@@ -2,9 +2,9 @@
 /* eslint-disable no-shadow */
 import * as React from 'react';
 import * as wanakana from 'wanakana';
-import { vowels, consonants, findUnsafe } from '../../../Helpers/Helpers';
+import { vowels, consonants, findUnsafe } from '../../../../Helpers/Helpers';
 import KanaTableElement from './KanaTableElement';
-import { ElementContext } from '../../ElementContext';
+import { ElementContext } from '../../../ElementContext';
 import KanaTableButtons from './KanaTableButtons';
 
 export interface KanaElement {

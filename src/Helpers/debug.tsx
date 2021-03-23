@@ -6,14 +6,12 @@ import {
   YAxis,
 } from 'recharts';
 import { ElementContext } from '../components/ElementContext';
-import Evaluator from '../components/game/logic/chooseNextKana';
+import Evaluator from '../components/game/logic/Evaluator';
 
 interface Props {
   evaluator: Evaluator
 }
 const EvaluatorDebug: React.FC<Props> = ({ evaluator }) => {
-  if (process.env.NODE_ENV !== 'development') return <></>;
-
   const { gState } = React.useContext(ElementContext);
 
   const data = gState.progress.elements.map(el => ({
@@ -23,7 +21,7 @@ const EvaluatorDebug: React.FC<Props> = ({ evaluator }) => {
   }));
 
   return (
-    <div>
+    <div className="overflow-x-scroll">
       <BarChart
         width={data.length * 30}
         height={100}

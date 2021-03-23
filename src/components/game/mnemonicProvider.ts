@@ -1,9 +1,9 @@
 import * as wanakana from 'wanakana';
-import { KanaElement } from '../Home/KanaTable/KanaTable';
 import mnemonicHira from '../../assets/json/hiragana.json';
 import mnemonicKata from '../../assets/json/katakana.json';
 import { Mnemonic } from '../../models';
 import { findUnsafe } from '../../Helpers/Helpers';
+import { KanaElement } from '../Home/Select/KanaTable/KanaTable';
 
 const getMnemonic = (element: KanaElement, hiragana: boolean): Mnemonic => {
   const searchArr = hiragana ? mnemonicHira : mnemonicKata;

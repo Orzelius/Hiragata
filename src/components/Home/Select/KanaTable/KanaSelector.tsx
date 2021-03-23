@@ -1,7 +1,7 @@
 import * as React from 'react';
 import KanaTable from './KanaTable';
-import { ElementContext } from '../../ElementContext';
-import useWindowDimensions from '../../useWindowDimensions';
+import { ElementContext } from '../../../ElementContext';
+import useWindowDimensions from '../../../useWindowDimensions';
 
 const engkana = [
   'Hiragana',

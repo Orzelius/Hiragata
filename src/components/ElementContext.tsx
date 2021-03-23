@@ -1,17 +1,26 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
-import { KanaElement } from './Home/KanaTable/KanaTable';
+import { KanaElement } from './Home/Select/KanaTable/KanaTable';
 
 export interface Guess {
   correct: boolean,
   time: number,
 }
 
+export type ElementStatus =
+'notLearnt' |// Has not been learned yet
+'fresh' |// Has just been learned but not yet reviewed/practiced
+'urgent' |// Urgency is beyond max acceptable
+'green'; // Urgency is below max acceptable
+
+export interface GElement {
+  status: ElementStatus;
+  element: KanaElement;
+  guesses: Guess[],
+  urgency: number;
+}
+
 export interface Progress {
-  elements: {
-    element: KanaElement,
-    guesses: Guess[],
-    urgency: number,
-  }[],
+  elements: GElement[],
   total: number
 }
 
