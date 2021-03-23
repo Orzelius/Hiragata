@@ -34,6 +34,7 @@ const Practice: React.FC = () => {
     memoryRefresher: Math.floor(gState.progress.elements.filter(el => el.status === 'green').length * 1.5) + 5,
     maxUrgency: 20,
     maxStreak: { negative: 10, positive: 4 },
+    firstLearnBatch: 3,
   });
   if (!gState || !gState.selectedElements || gState.selectedElements.length === 0) {
     history.push('/');

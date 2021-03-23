@@ -16,22 +16,26 @@ class Evaluator {
 
   public maxStreak;
 
+  public firstLearnBatch;
+
   constructor(evaluatorSettings: {
     selectedEl: KanaElement[],
     penalty: { green: number, red: number }, // green: penalty when below urgencyHigherLimit, red when over
     reward: number, urgencyHigherLimit: number,
     memoryRefresher: number,
     maxUrgency: number,
+    firstLearnBatch: number,
     maxStreak: { positive: number, negative: number }
   }) {
     const {
-      maxUrgency, penalty, memoryRefresher, reward, selectedEl, urgencyHigherLimit, maxStreak,
+      maxUrgency, penalty, memoryRefresher, reward, selectedEl, urgencyHigherLimit, maxStreak, firstLearnBatch,
     } = evaluatorSettings;
     this.selectedEl = selectedEl;
     this.reward = reward;
     this.penalty = penalty;
     this.urgencyHigherLimit = urgencyHigherLimit;
     this.memoryRefresher = memoryRefresher;
+    this.firstLearnBatch = firstLearnBatch;
     this.maxUrgency = maxUrgency;
     this.maxStreak = maxStreak;
   }
@@ -43,7 +47,7 @@ class Evaluator {
     if (notLearntEl.length === 0) return 'nothing to learn';
 
     // Must a new element be learnt?
-    if (learntEl.length < 2 && notLearntEl.length >= 1) {
+    if (learntEl.length < this.firstLearnBatch && notLearntEl.length >= 1) {
       return ({
         element: notLearntEl[0].element, canBeLearnt: true, percent: 100, mustBeLearnt: true,
       });
@@ -113,7 +117,13 @@ class Evaluator {
     if (!currElProgress) throw new Error("Something went verry wrong, couldn't find element " + currEl.el.latin);
     const streak: { n: number, positive: boolean } = { n: 0, positive: currEl.correct };
 
-    currElProgress.guesses.every(g => g.correct === streak.positive && streak.n++);
+    currElProgress.guesses.every(g => {
+      if (g.correct === streak.positive) {
+        streak.n += 1;
+        return true;
+      }
+      return false;
+    });
 
     let urgency = currElProgress.urgency;
     if (streak.positive) {
