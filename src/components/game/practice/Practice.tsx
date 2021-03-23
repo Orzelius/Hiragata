@@ -9,8 +9,8 @@ import useWindowDimensions from '../../useWindowDimensions';
 import Evaluator from '../logic/Evaluator';
 import EvaluatorDebug from '../../../Helpers/debug';
 import Learn from '../learn/Learn';
-import { KanaElement } from '../../Home/KanaTable/KanaTable';
 import NextKana from './NextKana';
+import { KanaElement } from '../../Home/Select/KanaTable/KanaTable';
 
 enum RoundStatus {
   DRAWING,
@@ -31,7 +31,7 @@ const Practice: React.FC = () => {
     penalty: { green: 5, red: 2 },
     reward: 1,
     urgencyHigherLimit: 10,
-    memoryRefresher: gState.progress.elements.filter(el => el.status === 'green').length + 5,
+    memoryRefresher: Math.floor(gState.progress.elements.filter(el => el.status === 'green').length * 1.5) + 5,
     maxUrgency: 20,
     maxStreak: { negative: 10, positive: 4 },
   });
@@ -41,13 +41,13 @@ const Practice: React.FC = () => {
   }
 
   const [learnState, setLearnState] = React.useState(evaluator.chooseLearn(gState.progress));
-
+  const [showProgress, setShowProgress] = React.useState(false);
   const makeQuestion = (element: KanaElement) => {
     const kana = `${gState.learningHiragana ? 'Hiragana' : 'Katakana'}`;
     return (
       <span className="text-3xl text-gray-900">
         <span className="mr-2">{`Draw the ${kana} for `}</span>
-        <span className="text-gray-800 text-4xl bg-blue-200 rounded-md">
+        <span className="text-gray-800 text-4xl bg-blue-200 rounded-md px-1">
           {element.latin}
         </span>
       </span>
@@ -151,7 +151,6 @@ const Practice: React.FC = () => {
     const newGState = { ...gState };
     newGState.progress.elements = newGstateElements;
     const nextEl = evaluator.chooseNextKana(roundState.element, newGState.progress);
-    console.log(newGState.progress);
 
     setLearnState(evaluator.chooseLearn(newGState.progress));
     setRoundState({
@@ -221,7 +220,7 @@ const Practice: React.FC = () => {
   }
   return (
     <>
-      <EvaluatorDebug evaluator={evaluator} />
+      {showProgress && <EvaluatorDebug evaluator={evaluator} />}
       <div className="lg:mt-5">
         <ProgressBar completed={learnState !== 'nothing to learn' ? learnState.percent : 0} isLabelVisible={false} height="5px" />
         {roundState.status === RoundStatus.TO_LEARNING ? <NextKana kana={roundState.element} onCancel={onCancelLearn} onNext={onToLearn} /> : (
@@ -235,6 +234,10 @@ const Practice: React.FC = () => {
               </h4>
               <div className="mt-4 float-right">
                 <div>
+                  <div onClick={() => setShowProgress(!showProgress)} className="inline-block h-11 w-8 mr-1 cursor-pointer hover:bg-gray-100" title="Show progress">
+                    {/* eslint-disable-next-line max-len */}
+                    <svg fill="gray" className="w-5 h-5 mt-3 mx-auto" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M15 12c0 1.654-1.346 3-3 3s-3-1.346-3-3 1.346-3 3-3 3 1.346 3 3zm9-.449s-4.252 8.449-11.985 8.449c-7.18 0-12.015-8.449-12.015-8.449s4.446-7.551 12.015-7.551c7.694 0 11.985 7.551 11.985 7.551zm-7 .449c0-2.757-2.243-5-5-5s-5 2.243-5 5 2.243 5 5 5 5-2.243 5-5z" /></svg>
+                  </div>
                   <button
                     onClick={evalButtonClicked}
                     type="submit"

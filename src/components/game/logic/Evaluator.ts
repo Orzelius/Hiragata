@@ -1,6 +1,5 @@
-import { emitKeypressEvents } from 'readline';
 import { GElement, Guess, Progress } from '../../ElementContext';
-import { KanaElement } from '../../Home/KanaTable/KanaTable';
+import { KanaElement } from '../../Home/Select/KanaTable/KanaTable';
 
 class Evaluator {
   public selectedEl;

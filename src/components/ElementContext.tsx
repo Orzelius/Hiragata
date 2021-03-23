@@ -1,5 +1,5 @@
 import { createContext, Dispatch, SetStateAction } from 'react';
-import { KanaElement } from './Home/KanaTable/KanaTable';
+import { KanaElement } from './Home/Select/KanaTable/KanaTable';
 
 export interface Guess {
   correct: boolean,

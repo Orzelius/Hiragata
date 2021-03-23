@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ElementContext } from '../../ElementContext';
-import { KanaElement } from '../../Home/KanaTable/KanaTable';
+import { KanaElement } from '../../Home/Select/KanaTable/KanaTable';
 
 interface NextKanaProps {
   kana: KanaElement;

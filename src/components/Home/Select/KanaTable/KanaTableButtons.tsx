@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useHistory } from 'react-router';
-import { ElementContext, Progress } from '../../ElementContext';
+import { ElementContext } from '../../../ElementContext';
+import { createGstateProgress } from '../../Home';
 import { KanaElement } from './KanaTable';
 
 interface Props {
@@ -34,26 +35,12 @@ const KanaTableButtons: React.FC<Props> = ({ selectedElements }) => {
   } else {
     buttonState = initButtonState;
   }
-  const createGstateProgress = () => {
-    const newGstateProcess: Progress = { elements: [], total: 0 };
-    selectedElements.forEach(el => newGstateProcess.elements.push({
-      element: el, guesses: [], urgency: 0, status: 'notLearnt',
-    }));
-    return newGstateProcess;
-  };
-  const LearnClick = () => {
-    context.setGState({
-      ...context.gState,
-      selectedElements,
-      progress: createGstateProgress(),
-    });
-    history.push('/Learn');
-  };
+
   const PracticeClick = () => {
     context.setGState({
       ...context.gState,
       selectedElements,
-      progress: createGstateProgress(),
+      progress: createGstateProgress(selectedElements),
     });
     history.push('/Practice');
   };
@@ -61,20 +48,11 @@ const KanaTableButtons: React.FC<Props> = ({ selectedElements }) => {
     <div>
       <button
         type="button"
-        className={'w-5/12 sm:w-56 border-2 rounded p-1 pt-3 text-center text-lg font-bold m-1 ' + buttonState.learn.style}
-        onClick={LearnClick}
-        disabled={!buttonState.learn.active}
-      >
-        <p className="-mb-1">Learn</p>
-        <p className="text-sm text-gray-700 -mt-3 invisible">a</p>
-      </button>
-      <button
-        type="button"
         className={'w-5/12 sm:w-56 border-2 rounded p-1 pt-3 text-center text-lg font-bold m-1 ' + buttonState.practice.style}
         onClick={PracticeClick}
         disabled={!buttonState.practice.active}
       >
-        <p className="-mb-1">Practice</p>
+        <p className="-mb-1">Start</p>
         <p className="text-sm text-blue-700 -mt-3 invisible">a</p>
       </button>
     </div>

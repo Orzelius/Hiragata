@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { useHistory } from 'react-router';
 import { ElementContext } from '../../ElementContext';
 import getMnemonic from '../mnemonicProvider';
 import MnemonicComponent from '../MnemonicComponent';
 import DrawBoard from '../DrawBoard';
 import useWindowDimensions from '../../useWindowDimensions';
-import { KanaElement } from '../../Home/KanaTable/KanaTable';
+import { KanaElement } from '../../Home/Select/KanaTable/KanaTable';
 
 interface LearnProps {
   onNextBtnClick: () => void;
