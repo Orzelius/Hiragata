@@ -46,7 +46,7 @@ const Learn: React.FC<LearnProps> = ({ element, onNextBtnClick }) => {
       <div className="container lg:flex mt-4 sm:mt-12 w-min lg:w-full md:mx-auto">
         <div className="lg:w-2/5">
           <h3 className="font-thin">Mnemonic: </h3>
-          <MnemonicComponent mnemonic={getMnemonic(element, learningHiragana)} showImage />
+          <MnemonicComponent mnemonic={getMnemonic(element, learningHiragana)} showImage hiragana={learningHiragana} />
         </div>
         <div className="lg:w-3/5">
           <div className="lg:float-right">

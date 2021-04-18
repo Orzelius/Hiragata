@@ -3,7 +3,6 @@ export interface Mnemonic {
   kana: string;
   picture: {
     alt: string;
-    src: string;
   };
   mnemonic: {
     text: string;

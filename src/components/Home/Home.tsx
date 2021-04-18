@@ -37,7 +37,7 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="content-center text-center" style={{ marginTop: dimensions.height > 700 ? dimensions.height / 2 - 250 + 'px' : '10px' }}>
-        <div className="h-44">
+        <div className="h-44 content-center text-center">
           <h1 className="text-5xl mb-3">
             I want to learn
           </h1>

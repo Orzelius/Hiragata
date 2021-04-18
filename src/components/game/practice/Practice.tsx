@@ -265,7 +265,7 @@ const Practice: React.FC = () => {
                   <span className="float-right mt-1 mr-2 text-xl border px-3 border-gray-600 rounded hover:bg-gray-200 ">{roundState.showMnemonic ? '⋀' : '⋁'}</span>
                 </button>
                 <div className="mt-4 text-center items-center" hidden={!roundState.showMnemonic}>
-                  <MnemonicComponent mnemonic={roundState.mnemonic} showImage />
+                  <MnemonicComponent mnemonic={roundState.mnemonic} showImage hiragana={gState.learningHiragana} />
                 </div>
               </div>
               <div className="lg:w-3/5">
