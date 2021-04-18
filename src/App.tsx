@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 import Select from './components/Home/Select/Select';
 import Navbar from './components/nav/Navbar';
 import { ElementContext, initConext } from './components/ElementContext';
@@ -38,7 +38,7 @@ const App: React.FC = () => {
   const [gState, setGState] = React.useState(initState);
   document.title = 'Hiragata';
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <Navbar />
         {/* the Switch makes sure only the first element gets loaded */}
@@ -55,7 +55,7 @@ const App: React.FC = () => {
         </Switch>
       </div>
       <h4 className="StrokeOrderFont text-white" style={{ fontSize: '00.1rem' }}>ア</h4>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

@@ -2,6 +2,7 @@
   "name": "hiragata",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@craco/craco": "^6.1.1",
     "@ramonak/react-progress-bar": "^2.1.3",
@@ -22,6 +23,7 @@
     "start": "craco start",
     "start:prod": "NODE_ENV=prodution craco start",
     "build": "craco build",
+    "build:cordova": "npm run build && node cra-cordova.js && cp -a ./build/. ./cordova/www/. && cd cordova && cordova build android --release",
     "test": "craco test",
     "lint": "eslint",
     "eject": "react-scripts eject"
