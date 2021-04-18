@@ -33,7 +33,7 @@ const Results: React.FC = () => {
       );
     }
 
-    const data = globalState.selectedElements.map(el => (
+    let data = globalState.selectedElements.map(el => (
       {
         el,
         character: (globalState.learningHiragana ? el.hiragana : el.katakana) + ' ' + el.latin,
@@ -47,9 +47,11 @@ const Results: React.FC = () => {
       if (dataI !== -1) {
         data[dataI].correct = el.guesses.filter(g => g.correct).length;
         data[dataI].incorrect = el.guesses.filter(g => !g.correct).length;
-        data[dataI].correct = el.guesses.length;
+        data[dataI].total = el.guesses.length;
       }
     });
+
+    data = data.filter(el => el.total !== 0);
 
     return (
       <div className="container mt-24">
@@ -62,23 +64,25 @@ const Results: React.FC = () => {
             {globalState.progress.total}
           </span>
         </h4>
-        <BarChart
-          width={globalState.selectedElements.length * 70 < 500 ? 500 : globalState.selectedElements.length * 70}
-          height={100}
-          data={data}
-          className="mt-8"
-          margin={{
-            top: 0, right: 0, left: 0, bottom: 0,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="character" />
-          <YAxis allowDecimals={false} />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="incorrect" stackId="a" fill="#ff695c" />
-          <Bar dataKey="correct" stackId="a" fill="#90ed7b" />
-        </BarChart>
+        <div className="overflow-x-scroll">
+          <BarChart
+            width={data.length * 70 < 500 ? 500 : data.length * 70}
+            height={100}
+            data={data}
+            className="mt-8"
+            margin={{
+              top: 0, right: 0, left: 0, bottom: 0,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="character" />
+            <YAxis allowDecimals={false} />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="incorrect" stackId="a" fill="#ff695c" />
+            <Bar dataKey="correct" stackId="a" fill="#90ed7b" />
+          </BarChart>
+        </div>
 
         <button
           // onClick={roundState.status === 1 ? nextKana : checkAnswer}

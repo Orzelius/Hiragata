@@ -36,7 +36,7 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <div className="content-center text-center" style={{ marginTop: dimensions.height > 700 ? dimensions.height / 2 - 250 + 'px' : '10px' }}>
+      <div className="content-center text-center h-full" style={{ marginTop: dimensions.height > 700 ? dimensions.height / 2 - 250 + 'px' : '10px' }}>
         <div className="h-44 content-center text-center">
           <h1 className="text-5xl mb-3">
             I want to learn
@@ -46,6 +46,7 @@ const Home: React.FC = () => {
               <span>
                 <span className={`${gState.learningHiragana && 'underline text-green-800'}`}>Hiragana</span>
                 <span className="px-2">/</span>
+                {dimensions.width < 700 && <br />}
                 <span className={`${!gState.learningHiragana && 'underline text-green-800'}`}>Katakana</span>
               </span>
             </button>
@@ -55,7 +56,7 @@ const Home: React.FC = () => {
         <button
           type="button"
           onClick={onStart}
-          className="w-5/12 sm:w-56 border-2 rounded py-3 text-center text-lg font-bold m-1 border-green-500 bg-green-100 text-green-900 hover:bg-green-200"
+          className="w-5/12 sm:w-56 border-2 mt-32 sm:mt-10 rounded py-3 text-center text-lg font-bold m-1 border-green-500 bg-green-100 text-green-900 hover:bg-green-200"
         >
           Start
         </button>

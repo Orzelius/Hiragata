@@ -35,7 +35,7 @@ const MnemonicComponent: React.FC<Props> = ({ mnemonic, showImage, hiragana }) =
         />
       </div>
       {jsx.map(x => ({ ...x, key: Math.random() }))}
-      <h4 className="StrokeOrderFont" style={{ fontSize: '6rem' }}>{mnemonic.kana}</h4>
+      <h4 className="StrokeOrderFont hidden sm:visible" style={{ fontSize: '6rem' }}>{mnemonic.kana}</h4>
     </div>
   );
 };

@@ -24,7 +24,7 @@ const Learn: React.FC<LearnProps> = ({ element, onNextBtnClick }) => {
   return (
     <div className="lg:mt-10">
       <h4>
-        <span className="text-3xl text-gray-900">
+        <span className="text-xl sm:text-3xl text-gray-900">
           <span className="mr-2">Get familiar with letter</span>
           <span className="kanaStyle mr-2">{kanaChar}</span>
           <span className="text-gray-800">
@@ -45,7 +45,7 @@ const Learn: React.FC<LearnProps> = ({ element, onNextBtnClick }) => {
       </div>
       <div className="container lg:flex mt-4 sm:mt-12 w-min lg:w-full md:mx-auto">
         <div className="lg:w-2/5">
-          <h3 className="font-thin">Mnemonic: </h3>
+          <h3 className="font-thin text-2xl">Mnemonic: </h3>
           <MnemonicComponent mnemonic={getMnemonic(element, learningHiragana)} showImage hiragana={learningHiragana} />
         </div>
         <div className="lg:w-3/5">
