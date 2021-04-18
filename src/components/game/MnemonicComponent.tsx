@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { Mnemonic } from '../../models';
 
+const requestImageFile = require.context('../../assets/images', true, /.jpg$/);
+
 interface Props {
   mnemonic: Mnemonic;
   showImage: boolean;
+  hiragana: boolean;
 }
-const MnemonicComponent: React.FC<Props> = ({ mnemonic, showImage }) => {
+const MnemonicComponent: React.FC<Props> = ({ mnemonic, showImage, hiragana }) => {
   const jsx = mnemonic.mnemonic.map(x => {
     if (!x.isCode) {
       return (
@@ -24,10 +27,15 @@ const MnemonicComponent: React.FC<Props> = ({ mnemonic, showImage }) => {
   return (
     <div className="text-center max-w-lg lg:max-w-2xl w-full">
       <div className="flex">
-        <img hidden={!showImage} src={mnemonic.picture.src} alt={mnemonic.picture.alt} className="w-full border border-gray-600 rounded-lg" />
+        <img
+          hidden={!showImage}
+          src={requestImageFile(`./${hiragana ? 'hiragana' : 'katakana'}/${mnemonic.latin}.jpg`).default}
+          alt={mnemonic.picture.alt}
+          className="w-full border border-gray-600 rounded-lg"
+        />
       </div>
       {jsx.map(x => ({ ...x, key: Math.random() }))}
-      <h4 className="StrokeOrderFont" style={{ fontSize: '6rem' }}>{mnemonic.kana}</h4>
+      <h4 className="StrokeOrderFont hidden sm:visible" style={{ fontSize: '6rem' }}>{mnemonic.kana}</h4>
     </div>
   );
 };

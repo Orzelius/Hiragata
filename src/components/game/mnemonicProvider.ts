@@ -13,14 +13,12 @@ const getMnemonic = (element: KanaElement, hiragana: boolean): Mnemonic => {
     latin: wanakana.toRomaji(mnemonicJson.letter),
     picture: {
       alt: mnemonicJson.picture.alt,
-      src: '',
     },
     mnemonic: mnemonicJson.mnemonic.map(x => ({
       isCode: !!x.code,
       text: (x.code ? x.code : x.text) || '',
     })),
   };
-  mnemonic.picture.src = `${process.env.PUBLIC_URL}/images/${hiragana ? 'hiragana' : 'katakana'}/${mnemonic.latin}.jpg`;
   return mnemonic;
 };
 

@@ -38,6 +38,7 @@
     "@types/react-router-dom": "^5.1.7",
     "@types/recharts": "^1.8.19",
     "@types/wanakana": "^4.0.2",
+    "@types/webpack-env": "^1.16.0",
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
     "autoprefixer": "^9.8.6",

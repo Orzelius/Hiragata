@@ -46,9 +46,9 @@ const Practice: React.FC = () => {
   const makeQuestion = (element: KanaElement) => {
     const kana = `${gState.learningHiragana ? 'Hiragana' : 'Katakana'}`;
     return (
-      <span className="text-3xl text-gray-900">
+      <span className="text-xl sm:text-3xl text-gray-900">
         <span className="mr-2">{`Draw the ${kana} for `}</span>
-        <span className="text-gray-800 text-4xl bg-blue-200 rounded-md px-1">
+        <span className="text-gray-800 text-xl sm:text-4xl bg-blue-200 rounded-md px-1">
           {element.latin}
         </span>
       </span>
@@ -228,7 +228,7 @@ const Practice: React.FC = () => {
           <>
             <div className="mt-2">
               <h4 className="mr-3 inline-block">
-                <span className="text-4xl text-gray-600 font-light inline-block mr-2">
+                <span className="text-xl sm:text-4xl text-gray-600 font-light inline-block mr-2">
                   {gState.progress.total}
                 </span>
                 {roundState.question}
@@ -259,18 +259,18 @@ const Practice: React.FC = () => {
               </div>
             </div>
             <div className="container lg:flex mt-4 sm:mt-12 w-min lg:w-full md:mx-auto">
-              <div className="lg:w-2/5  max-w-lg w-max">
+              <div className="lg:w-2/5  max-w-lg w-full">
                 <button onClick={mnemonicClicked} type="button" className="text-left border-b border-gray-600 cursor-pointer w-full">
-                  <h3 className="inline-block">Mnemonic:</h3>
-                  <span className="float-right mt-1 mr-2 text-xl border px-3 border-gray-600 rounded hover:bg-gray-200 ">{roundState.showMnemonic ? '⋀' : '⋁'}</span>
+                  <h3 className="inline-block text-2xl sm:text-3xl">Mnemonic:</h3>
+                  <span className="text-s float-right mt-1 mr-2 sm:text-xl border px-3 border-gray-600 rounded hover:bg-gray-200 ">{roundState.showMnemonic ? '⋀' : '⋁'}</span>
                 </button>
                 <div className="mt-4 text-center items-center" hidden={!roundState.showMnemonic}>
-                  <MnemonicComponent mnemonic={roundState.mnemonic} showImage />
+                  <MnemonicComponent mnemonic={roundState.mnemonic} showImage hiragana={gState.learningHiragana} />
                 </div>
               </div>
               <div className="lg:w-3/5">
                 <div className="lg:float-right">
-                  <h3 className="font-thin">Try to draw it: </h3>
+                  <h3 className="font-thin text-2xl sm:text-3xl">Try to draw it: </h3>
                   <div className="w-auto mx-auto">
                     <DrawBoard
                       key={roundState.mnemonic.kana + gState.progress.total}
