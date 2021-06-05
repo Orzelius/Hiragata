@@ -1,20 +1,19 @@
-## Hiragata
+# Hiragata
 Hiragata is an AI powered Japanese learning app, ckeck it out at [hiragata.com](https://hiragata.com/)
+---
+Other repos that are a part of **Hiragata project**:
+| Repo | Description |
+| ------------- | ------------- |
+| [Hiragata](https://github.com/Orzelius/Hiragata) | React based front-end |
+| [Hiragata_ai](https://github.com/Orzelius/Hiragata_ai) | Source code of the AI model |
+| [test-hiragata-ai](https://github.com/Orzelius/test-hiragata-ai) | AI model testing and visualization react based FE |
+| [japanese-fonts-dataset](https://github.com/Orzelius/japanese-fonts-dataset)  | Source for a small font-based dataset |
 
-## Stuff I used
-I built it on my [React-Typescript-with-other-nice-things-boilerplate](https://github.com/Orzelius/React-Typescript-with-other-nice-things-boilerplate). It mostly has the same stuff.  Also big thanks to [WanaKana](https://github.com/WaniKani/WanaKana) as I used a ton of it for simple conversions.
+## Dev guide
 
-## Japanese vocab
-If you need the Japanese vocabulary, you could copy it from [./japanese_word_source_files](https://github.com/Orzelius/HiraKata/tree/master/japanese_word_source_files) or straight from [all_jap.json](https://github.com/Orzelius/HiraKata/blob/master/src/app/all_jap.json). I originally got the words from [Wikipedia](https://en.wiktionary.org/wiki/Appendix:JLPT) and some other sources.
-
-## Want to contribute?
-Sure thing, just contact me or make a merge request.
-
-## How to run?
-Just run
-
-    npm i
-
-And then
-
-	npm run start
+1. Clone the repository
+2. Navigate to repo root
+3. Install packages `npm ci`
+4. Create an env file `cp .env.example.env .env`
+5. Run the app `npm run start`
+6. Add a feature or fix a bug and submit a pr :D
