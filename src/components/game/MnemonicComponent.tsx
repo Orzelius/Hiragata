@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Mnemonic } from '../../models';
+import useWindowDimensions from '../useWindowDimensions';
 
 const requestImageFile = require.context('../../assets/images', true, /.jpg$/);
 
@@ -9,6 +10,7 @@ interface Props {
   hiragana: boolean;
 }
 const MnemonicComponent: React.FC<Props> = ({ mnemonic, showImage, hiragana }) => {
+  const dimensions = useWindowDimensions();
   const jsx = mnemonic.mnemonic.map(x => {
     if (!x.isCode) {
       return (
@@ -35,7 +37,7 @@ const MnemonicComponent: React.FC<Props> = ({ mnemonic, showImage, hiragana }) =
         />
       </div>
       {jsx.map(x => ({ ...x, key: Math.random() }))}
-      <h4 className="StrokeOrderFont hidden sm:visible" style={{ fontSize: '6rem' }}>{mnemonic.kana}</h4>
+      {dimensions.width > 1024 && <h4 className="StrokeOrderFont" style={{ fontSize: '6rem' }}>{mnemonic.kana}</h4>}
     </div>
   );
 };
