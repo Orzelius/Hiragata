@@ -20,6 +20,7 @@ enum RoundStatus {
   HAS_NOT_DRAWN,
   LEARNING,
   TO_LEARNING,
+  GIVEN_UP,
 }
 
 const Practice: React.FC = () => {
@@ -66,21 +67,23 @@ const Practice: React.FC = () => {
     showCharacter: false,
   });
 
-  const nextStep = (curStep: { action: 'learnt' } | { action: 'guessed', correct: boolean }) => {
+  type CurRoundStatuses = { action: 'learnt' } | { action: 'guessed', correct: boolean, penalty: boolean } | { action: 'given up', correct: false };
+  const nextStep = (curRoundStatuses: CurRoundStatuses) => {
     const progressElI = gState.progress.elements.findIndex(e => e.element === roundState.element);
     const newGstate: GState = ({ ...gState });
 
-    if (curStep.action === 'guessed') {
-      newGstate.progress.elements[progressElI].guesses.unshift({ correct: curStep.correct, time: Date.now() });
+    if ((curRoundStatuses.action === 'guessed' && curRoundStatuses.penalty) || curRoundStatuses.action === 'given up') {
+      newGstate.progress.elements[progressElI].guesses.unshift({ correct: curRoundStatuses.correct, time: Date.now() });
       newGstate.progress.total++;
-      newGstate.progress = evaluator.calculateUrgency({ el: roundState.element, correct: curStep.correct }, newGstate.progress);
-    } else {
+      newGstate.progress = evaluator.calculateUrgency({ el: roundState.element, correct: curRoundStatuses.correct }, newGstate.progress);
+    } else if (curRoundStatuses.action === 'learnt') {
       newGstate.progress.elements[progressElI].status = 'fresh';
       newGstate.progress.elements[progressElI].urgency = 15;
     }
 
     let nextEl: KanaElement;
     let newStatus: RoundStatus;
+    let showMnemonic = false;
 
     const learn = evaluator.chooseLearn(newGstate.progress);
     if (learn !== 'nothing to learn' && learn.mustBeLearnt) {
@@ -89,6 +92,10 @@ const Practice: React.FC = () => {
     } else if (learn !== 'nothing to learn' && learn.canBeLearnt) {
       nextEl = learn.element;
       newStatus = RoundStatus.TO_LEARNING;
+    } else if (curRoundStatuses.action === 'given up') {
+      newStatus = RoundStatus.GIVEN_UP;
+      showMnemonic = true;
+      nextEl = roundState.element; // Same as before
     } else {
       nextEl = evaluator.chooseNextKana(roundState.element, newGstate.progress);
       newStatus = RoundStatus.HAS_NOT_DRAWN;
@@ -101,7 +108,7 @@ const Practice: React.FC = () => {
       question: makeQuestion(nextEl),
       mnemonic: getMnemonic(nextEl, gState.learningHiragana),
       status: newStatus,
-      showMnemonic: false,
+      showMnemonic,
       showCharacter: false,
     });
   };
@@ -111,7 +118,7 @@ const Practice: React.FC = () => {
     setRoundState({
       ...roundState,
       showMnemonic: true,
-      status: 3,
+      status: RoundStatus.SELF_EVAL,
     });
   };
 
@@ -181,6 +188,9 @@ const Practice: React.FC = () => {
   } else if (roundState.status === RoundStatus.SELF_EVAL) {
     btn.buttonText = 'I Got it right';
     btn.buttonStyle = 'bg-green-200 hover:bg-green-300';
+  } else if (roundState.status === RoundStatus.GIVEN_UP) {
+    btn.buttonText = 'Next';
+    btn.buttonStyle = 'bg-red-200 hover:bg-red-300';
   }
 
   const evalButtonClicked = () => {
@@ -190,19 +200,22 @@ const Practice: React.FC = () => {
         checkAnswer();
         break;
       case RoundStatus.CORRECT:
-        nextStep({ action: 'guessed', correct: true });
+        nextStep({ action: 'guessed', penalty: true, correct: true });
         break;
       case RoundStatus.INCORRECT:
-        nextStep({ action: 'guessed', correct: false });
+        nextStep({ action: 'guessed', penalty: true, correct: false });
         break;
       case RoundStatus.SELF_EVAL:
-        nextStep({ action: 'guessed', correct: true });
+        nextStep({ action: 'guessed', penalty: true, correct: true });
         break;
       case RoundStatus.HAS_NOT_DRAWN:
-        nextStep({ action: 'guessed', correct: false });
+        nextStep({ action: 'given up', correct: false });
         break;
       case RoundStatus.TO_LEARNING:
-        nextStep({ action: 'guessed', correct: true });
+        nextStep({ action: 'guessed', penalty: true, correct: true });
+        break;
+      case RoundStatus.GIVEN_UP:
+        nextStep({ action: 'guessed', penalty: false, correct: false });
         break;
     }
   };
@@ -248,7 +261,7 @@ const Practice: React.FC = () => {
                   </button>
                   <button
                     hidden={roundState.status !== RoundStatus.SELF_EVAL}
-                    onClick={() => nextStep({ action: 'guessed', correct: false })}
+                    onClick={() => nextStep({ action: 'guessed', penalty: true, correct: false })}
                     type="submit"
                     className="float-right py-1 px-4 text-xl border border-gray-500 rounded w-40 bg-red-200 hover:bg-red-300 mr-2 h-11"
                   >
