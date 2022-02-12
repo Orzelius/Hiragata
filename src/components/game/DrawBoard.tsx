@@ -114,7 +114,7 @@ const DrawBoard: React.FC<Props> = ({
         <button
           onClick={showKanaClick}
           type="button"
-          className="inline-block float-right border-gray-500 border hover:bg-gray-200 rounded py-1 px-4 mr-2"
+          className="inline-block float-right border-gray-500 border hover:bg-gray-200 rounded py-1 px-4"
         >
           {showCharacter ? 'Hide Kana' : 'Show Kana'}
         </button>
