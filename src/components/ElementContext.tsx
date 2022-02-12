@@ -28,6 +28,7 @@ export interface GState {
   learningHiragana: boolean;
   selectedElements: KanaElement[];
   progress: Progress;
+  ai: boolean;
 }
 interface InitConext {
   setGState: Dispatch<SetStateAction<GState>>;
@@ -42,6 +43,7 @@ export const initConext: InitConext = {
       elements: [],
       total: 0,
     },
+    ai: false,
   },
 };
 export const ElementContext = createContext<InitConext>(initConext);
