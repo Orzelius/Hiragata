@@ -53,3 +53,8 @@ rules:
   react-hooks/rules-of-hooks: off
   react/require-default-props: off
   react/jsx-props-no-spreading: off
+  no-console: 
+    - "error"
+    - allow: 
+      - "warn"
+      - "error"

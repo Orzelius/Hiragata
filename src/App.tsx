@@ -32,6 +32,8 @@ if (process.env.NODE_ENV === 'development') {
     })),
     total: 0,
   };
+  initState.learningHiragana = false;
+  initState.ai = true;
 }
 
 const App: React.FC = () => {

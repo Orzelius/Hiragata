@@ -52,6 +52,12 @@ const Home: React.FC = () => {
             </button>
           </div>
           {!gState.learningHiragana && (<p className="text-base pt-2">It&apos;s recommended to learn Hiragana first</p>)}
+          {!gState.learningHiragana && (
+            <p>
+              <input type="checkbox" onChange={() => setGState({ ...gState, ai: !gState.ai })} className="mr-2" checked={gState.ai} />
+              <span>Use experimental AI to evaluate katakana</span>
+            </p>
+          )}
         </div>
         <button
           type="button"

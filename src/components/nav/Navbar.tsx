@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => (
-  <nav className="flex bg-white fixed top-0 inset-x-0 z-100 h-16 items-center">
+  <nav className="flex bg-white fixed top-0 inset-x-0 z-10 h-16 items-center">
     <div className="w-full max-w-screen-xl relative mx-auto px-6 container">
       <div className="flex items-center -mx-6 border-b-2 border-gray-200">
         <div className="p-2 sm:pl-8">

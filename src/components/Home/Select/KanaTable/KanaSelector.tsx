@@ -41,6 +41,14 @@ const KanaSelector: React.FC = () => {
           <p className="-mb-1">{curentKana}</p>
           <p className="text-sm text-gray-700">{curjapKana}</p>
         </button>
+        <div className="h-8">
+          {!gState.learningHiragana && (
+          <p>
+            <input type="checkbox" onClick={() => setGState({ ...gState, ai: !gState.ai })} className="mr-2" checked={gState.ai} />
+            <span>Use experimental AI to evaluate katakana</span>
+          </p>
+          )}
+        </div>
       </div>
       <button type="button" className="border-l border-r border-t border-gray-600 rounded-t w-64 hover:border-gray-700" onClick={() => { setShowKana(!showKana); }}>
         <div className="h-4 relative">
