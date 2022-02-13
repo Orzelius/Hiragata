@@ -5,6 +5,7 @@
   "dependencies": {
     "@craco/craco": "^6.2.0",
     "@ramonak/react-progress-bar": "^2.1.8",
+    "@tensorflow/tfjs": "^3.7.0",
     "@types/body-scroll-lock": "^2.6.2",
     "body-scroll-lock": "^3.1.5",
     "canvas-free-drawing": "^2.1.0",
