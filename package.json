@@ -10,6 +10,7 @@
     "body-scroll-lock": "^3.1.5",
     "canvas-free-drawing": "^2.1.0",
     "react": "^17.0.2",
+    "react-async-hook": "^4.0.0",
     "react-dom": "^17.0.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
